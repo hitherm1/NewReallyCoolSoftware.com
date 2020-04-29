@@ -61,35 +61,39 @@
 	<script>
 		function submitToAPI(e) {
 
-			if (submitUserForm()) {
+			//if (submitUserForm()) {
 
 				e.preventDefault();
 				var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
 
 				var Namere = /[A-Za-z]{1}[A-Za-z]/;
-				if (!Namere.test($("#uname").val())) {
+				if (!Namere.test($("#name").val())) {
 					alert("Name can not less than 2 char");
 					return;
 				}
-				if (!Namere.test($("#last-name").val())) {
-					alert("Name can not less than 2 char");
+				if (!Namere.test($("#phone").val())) {
+					alert("Subject can not less than 2 char");
+					return;
+			}
+			if (!Namere.test($("#desc").val())) {
+					alert("Message can not less than 2 char");
 					return;
 				}
-				if ($("#pwd").val() == "") {
+				if ($("#email").val() == "") {
 					alert("Please enter your email id");
 					return;
 				}
 
 				var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-				if (!reeamil.test($("#pwd").val())) {
+				if (!reeamil.test($("#email").val())) {
 					alert("Please enter valid email address");
 					return;
 				}
 
-				var name = $("#uname").val();
-				var phone = $("#last-name").val();
-				var email = $("#pwd").val();
-				var desc = $("#comment").val();
+				var name = $("#name").val();
+				var phone = $("#phone").val();
+				var email = $("#email").val();
+				var desc = $("#desc").val();
 
 
 				var data = {
@@ -122,7 +126,7 @@
 					}
 				});
 			}
-		}
+		//}
 	</script>
 
 
@@ -207,7 +211,7 @@
 	<section id="hero" class="d-flex flex-column  align-items-center">
 		<div class="container" data-aos="fade-in">
 			<h1>Welcome to ReallyCoolSoftware</h1>
-			<h2>Helping the world by helping small buisnesses thrive</h2>
+			<h2>Helping the world while helping small buisnesses thrive</h2>
 			<div class="d-flex align-items-center">
 				<i class="bx bxs-right-arrow-alt get-started-icon"></i>
 				<a href="#about" class="btn-get-started scrollto">Get a Quote</a>
@@ -393,7 +397,7 @@
 		</section-->
 		><!-- End Clients Section -->
 		<!-- ======= Values Section ======= -->
-		<section id="values" class="values">
+		<!--<section id="values" class="values">
 			<div class="container">
 
 				<div class="row">
@@ -437,7 +441,8 @@
 				</div>
 
 			</div>
-		</section><!-- End Values Section -->
+		</section>-->
+		<!-- End Values Section -->
 		<!-- ======= Services Section ======= -->
 		<section id="services" class="services section-bg">
 			<div class="container">
@@ -501,7 +506,7 @@
 				<div class="owl-carousel testimonials-carousel">
 
 					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+						<img src="assets/img/testimonials/gregf.gif" class="testimonial-img" alt="">
 						<h3>Greg Fisher </h3>
 						<h4>EDI Support Analyst at Epicor Software</h4>
 						<p>
@@ -516,7 +521,7 @@
 					</div>
 
 					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+						<img src="assets/img/testimonials/kevins.gif" class="testimonial-img" alt="">
 						<h3>Kevin Stack</h3>
 						<h4>Regional Manager at Ultra Consultants</h4>
 						<p>
@@ -529,28 +534,28 @@
 					</div>
 
 					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+						<img src="assets/img/testimonials/markv.gif" class="testimonial-img" alt="">
 						<h3>Mark Vickers</h3>
 						<h4>Enterprise Database Administrator</h4>
 						<p>
 							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							I had the privilege of working with Terry at Grocers Supply for almost 10 years. Terry built a strong (and deserved) reputation as someone with a broad base of experience, great vision, diligence and honor. Terry was a great mentor and he was both a friend and confidant. Bottom line, Terry will not let you down.	
+							I had the privilege of working with Terry at Grocers Supply for almost 10 years. Terry built a strong (and deserved) reputation as someone with a broad base of experience, great vision, diligence and honor. Terry was a great mentor and he was both a friend and confidant. Bottom line, Terry will not let you down.
 							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
 						</p>
 					</div>
 
 					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+						<img src="assets/img/testimonials/jefft.gif" class="testimonial-img" alt="">
 						<h3>Jeff Thompson</h3>
 						<h4>Senior Program Officer at Forward Edge International</h4>
 						<p>
 							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Terry is a great friend and someone I trust. I have worked along side him in the Gulf Coast as we have helped to rebuild homes for families in great need. He has a heart of service, and a willingness to do what it takes to get the job done, but not at the expense of people. If you are looking for a quality leader, you do not need to look any further.	
+							Terry is a great friend and someone I trust. I have worked along side him in the Gulf Coast as we have helped to rebuild homes for families in great need. He has a heart of service, and a willingness to do what it takes to get the job done, but not at the expense of people. If you are looking for a quality leader, you do not need to look any further.
 							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
 						</p>
 					</div>
 
-					
+
 
 				</div>
 
@@ -942,7 +947,9 @@
 
 				<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
 					<div class="col-xl-9 col-lg-12 mt-4">
-						<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+						<form class="php-email-form" method="post" role="form">
+
+							<!--<form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
 							<div class="form-row">
 								<div class="col-md-6 form-group">
 									<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -954,11 +961,11 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<input type="text" class="form-control" name="phone" id="phone" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
 								<div class="validate"></div>
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+								<textarea class="form-control" name="desc" id="desc" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
 								<div class="validate"></div>
 							</div>
 							<div class="mb-3">
@@ -966,14 +973,72 @@
 								<div class="error-message"></div>
 								<div class="sent-message">Your message has been sent. Thank you!</div>
 							</div>
-							<div class="text-center"><button type="submit">Send Message</button></div>
+							<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Send <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
+							<div class="col-lg-3">
+								<div class="g-recaptcha" data-sitekey="6LfS_-oUAAAAAOwGGPKGXMELVOBtgDTW_Zen5NnC" data-callback="verifyCaptcha"></div>
+							</div>
+							<div class="col-lg-3">
+								<div id="g-recaptcha-error"></div>
+							</div>
+							<!--<div class="text-center"><button type="submit">Send Message</button></div>-->
 						</form>
+
+
+						<!--<form class="contact-form" method="post">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<div class="form-group">
+						<input type="text" class="form-control" id="uname" placeholder="Name" name="Name" required="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="form-group">
+						<input type="text" class="form-control" id="last-name" placeholder="Last Name" name="Last Name" required="">
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-group">
+						<input type="Email" class="form-control" id="pwd" placeholder="Email" name="Email" required="">
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<textarea class="form-control" rows="2" id="comment" placeholder="Your Comment"></textarea>
+				</div>
+				<div class="col-lg-6">-->
+						<!--<button type="button" onClick="submitToAPI(event)" class="send-icon" style="margin-top:20px;">Send <span class="send-icon"><i class="fas fa-paper-plane"></i></span></button>-->
+						<!--<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Send <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
+						</div>
+						<div class="col-lg-3">
+							<div class="g-recaptcha" data-sitekey="6LfS_-oUAAAAAOwGGPKGXMELVOBtgDTW_Zen5NnC" data-callback="verifyCaptcha"></div>
+						</div>
+						<div class="col-lg-3">
+							<div id="g-recaptcha-error"></div>
+						</div>
+					</div>
+
+				</form>
+			</div>-->
+
 					</div>
 
 				</div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">Thanks for your Inquiry</h4>
 
-			</div>
-		</section><!-- End Contact Section -->
+							</div>
+							<div class="modal-body">We have recieved you comment.  A representative will be contacting you soon to start our journey toward changing the world one line of code at a time.</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+</section><!-- End Contact Section -->
 
 	</main><!-- End #main -->
 	<!-- ======= Footer ======= -->
@@ -1070,7 +1135,22 @@
 
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script>
+		function submitUserForm() {
+			//var response = grecaptcha.getResponse();
 
+			//if (response.length == 0) {
+			//	document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+			//	return false;
+			//}
+			return true;
+		}
+
+		function verifyCaptcha() {
+			document.getElementById('g-recaptcha-error').innerHTML = '';
+		}
+	</script>
 </body>
 
 </html>

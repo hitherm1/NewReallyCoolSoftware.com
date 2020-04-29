@@ -143,6 +143,10 @@
     <Content Include="assets\img\team\team-3.jpg" />
     <Content Include="assets\img\team\team-4.jpg" />
     <Content Include="assets\img\testimonials-bg.jpg" />
+    <Content Include="assets\img\testimonials\gregf.gif" />
+    <Content Include="assets\img\testimonials\jefft.gif" />
+    <Content Include="assets\img\testimonials\kevins.gif" />
+    <Content Include="assets\img\testimonials\markv.gif" />
     <Content Include="assets\img\testimonials\testimonials-1.jpg" />
     <Content Include="assets\img\testimonials\testimonials-2.jpg" />
     <Content Include="assets\img\testimonials\testimonials-3.jpg" />
