@@ -63,69 +63,69 @@
 
 			//if (submitUserForm()) {
 
-				e.preventDefault();
-				var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
+			e.preventDefault();
+			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
 
-				var Namere = /[A-Za-z]{1}[A-Za-z]/;
-				if (!Namere.test($("#name").val())) {
-					alert("Name can not less than 2 char");
-					return;
-				}
-				if (!Namere.test($("#phone").val())) {
-					alert("Subject can not less than 2 char");
-					return;
+			var Namere = /[A-Za-z]{1}[A-Za-z]/;
+			if (!Namere.test($("#name").val())) {
+				alert("Name can not less than 2 char");
+				return;
+			}
+			if (!Namere.test($("#phone").val())) {
+				alert("Subject can not less than 2 char");
+				return;
 			}
 			if (!Namere.test($("#desc").val())) {
-					alert("Message can not less than 2 char");
-					return;
-				}
-				if ($("#email").val() == "") {
-					alert("Please enter your email id");
-					return;
-				}
-
-				var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-				if (!reeamil.test($("#email").val())) {
-					alert("Please enter valid email address");
-					return;
-				}
-
-				var name = $("#name").val();
-				var phone = $("#phone").val();
-				var email = $("#email").val();
-				var desc = $("#desc").val();
-
-
-				var data = {
-					name: name,
-					phone: phone,
-					email: email,
-					desc: desc
-				};
-
-				$.ajax({
-					type: "POST",
-					url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
-					dataType: "json",
-					crossDomain: "true",
-					contentType: "application/json; charset=utf-8",
-					data: JSON.stringify(data),
-
-
-					success: function () {
-						// clear form and show a success message
-
-						$('#myModal').modal('show');
-
-						document.getElementById("contact-form").reset();
-						location.reload();
-					},
-					error: function () {
-						// show an error message
-						alert("UnSuccessfull");
-					}
-				});
+				alert("Message can not less than 2 char");
+				return;
 			}
+			if ($("#email").val() == "") {
+				alert("Please enter your email id");
+				return;
+			}
+
+			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			if (!reeamil.test($("#email").val())) {
+				alert("Please enter valid email address");
+				return;
+			}
+
+			var name = $("#name").val();
+			var phone = $("#phone").val();
+			var email = $("#email").val();
+			var desc = $("#desc").val();
+
+
+			var data = {
+				name: name,
+				phone: phone,
+				email: email,
+				desc: desc
+			};
+
+			$.ajax({
+				type: "POST",
+				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
+				dataType: "json",
+				crossDomain: "true",
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify(data),
+
+
+				success: function () {
+					// clear form and show a success message
+
+					$('#myModal').modal('show');
+
+					document.getElementById("contact-form").reset();
+					location.reload();
+				},
+				error: function () {
+					// show an error message
+					alert("UnSuccessfull");
+				}
+			});
+		}
 		//}
 	</script>
 
@@ -778,52 +778,61 @@
 				<div class="row">
 
 					<div class="col-lg-3 col-md-6" data-aos="fade-up">
-						<div class="box">
-							<h3>Free</h3>
-							<h4><sup>$</sup>0<span> / month</span></h4>
+						<div class="box featured">
+							<h3>Web Presence</h3>
+							<h4><sup>$</sup>1000<span> /Flat Rate</span></h4>
 							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li class="na">Pharetra massa</li>
-								<li class="na">Massa ultricies mi</li>
+								<li>Responsive Web Site</li>
+								<li>Search Engine Optimized</li>
+								<li>Domain Registration</li>
+								<li>Email forwarding</li>
+								<li>Site hosted 1 year on AWS</li>
+								<li>Fackbook page</li>
+								<li>Linkedin Page</li>
+								<li>25% donated to Charity in your name</li>
 							</ul>
 							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
+								<a href="#contact" class="btn-buy">Contact Us</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="100">
-						<div class="box featured">
-							<h3>Business</h3>
-							<h4><sup>$</sup>19<span> / month</span></h4>
+						<div class="box">
+							<h3>SharePoint</h3>
+							<h4><span>Price Quoted</span></h4>
 							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li class="na">Massa ultricies mi</li>
+								<li>Work with you to define work</li>
+								<li>Develop Project Plan</li>
+								<li>Manage the Plan</li>
+								<li>Develop Solution</li>
+								<li>Implementation</li>
+								<li>1 month post support</li>
+								<li>&nbsp;</li>
+								<li>25% donated to Charity in your name</li>
 							</ul>
 							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
+								<a href="#contact" class="btn-buy">Contact Us</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
 						<div class="box">
-							<h3>Developer</h3>
-							<h4><sup>$</sup>29<span> / month</span></h4>
+							<h3>Cloud</h3>
+							<h4><span>Price Quoted</span></h4>
 							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li>Massa ultricies mi</li>
+								<li>Work with you to define work</li>
+								<li>Develop Project Plan</li>
+								<li>Manage the Plan</li>
+								<li>Develop Solution</li>
+								<li>Implementation</li>
+								<li>1 month post support</li>
+								<li>&nbsp;</li>
+								<li>25% donated to Charity in your name</li>
 							</ul>
 							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
+								<a href="#contact" class="btn-buy">Contact Us</a>
 							</div>
 						</div>
 					</div>
@@ -831,17 +840,20 @@
 					<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
 						<div class="box">
 							<span class="advanced">Advanced</span>
-							<h3>Ultimate</h3>
-							<h4><sup>$</sup>49<span> / month</span></h4>
+							<h3>RCS Compass</h3>
+							<h4><sup>$</sup>75<span> / month</span></h4>
 							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li>Massa ultricies mi</li>
+								<li>questions Answered</li>
+								<li>Custom development</li>
+								<li>Migrations</li>
+								<li>Cloud Solutions</li>
+								<li>Implementations</li>
+								<li>Software Upgrades</li>
+								<li>Business Hours Support</li>
+								<li>10% donated to Charity in your name</li>
 							</ul>
 							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
+								<a href="#contact" class="btn-buy">Contact Us</a>
 							</div>
 						</div>
 					</div>
@@ -851,7 +863,7 @@
 			</div>
 		</section><!-- End Pricing Section -->
 		<!-- ======= F.A.Q Section ======= -->
-		<section id="faq" class="faq section-bg">
+		<!--<section id="faq" class="faq section-bg">
 			<div class="container">
 
 				<div class="section-title">
@@ -910,7 +922,7 @@
 				</div>
 
 			</div>
-		</section><!-- End F.A.Q Section -->
+		</section>--><!-- End F.A.Q Section -->
 		<!-- ======= Contact Section ======= -->
 		<section id="contact" class="contact">
 			<div class="container">
@@ -973,51 +985,54 @@
 								<div class="error-message"></div>
 								<div class="sent-message">Your message has been sent. Thank you!</div>
 							</div>
-							<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Send <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
-							<div class="col-lg-3">
+							<div class="col-lg-4">
+
 								<div class="g-recaptcha" data-sitekey="6LfS_-oUAAAAAOwGGPKGXMELVOBtgDTW_Zen5NnC" data-callback="verifyCaptcha"></div>
 							</div>
 							<div class="col-lg-3">
 								<div id="g-recaptcha-error"></div>
 							</div>
+							<br/>
+							<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Send <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
+
 							<!--<div class="text-center"><button type="submit">Send Message</button></div>-->
 						</form>
 
 
 						<!--<form class="contact-form" method="post">
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<div class="form-group">
-						<input type="text" class="form-control" id="uname" placeholder="Name" name="Name" required="">
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="form-group">
-						<input type="text" class="form-control" id="last-name" placeholder="Last Name" name="Last Name" required="">
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="form-group">
-						<input type="Email" class="form-control" id="pwd" placeholder="Email" name="Email" required="">
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<textarea class="form-control" rows="2" id="comment" placeholder="Your Comment"></textarea>
-				</div>
-				<div class="col-lg-6">-->
+						<div class="row">
+							<div class="col-lg-6 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="uname" placeholder="Name" name="Name" required="">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="last-name" placeholder="Last Name" name="Last Name" required="">
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="form-group">
+									<input type="Email" class="form-control" id="pwd" placeholder="Email" name="Email" required="">
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<textarea class="form-control" rows="2" id="comment" placeholder="Your Comment"></textarea>
+							</div>
+							<div class="col-lg-6">-->
 						<!--<button type="button" onClick="submitToAPI(event)" class="send-icon" style="margin-top:20px;">Send <span class="send-icon"><i class="fas fa-paper-plane"></i></span></button>-->
 						<!--<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Send <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
-						</div>
-						<div class="col-lg-3">
-							<div class="g-recaptcha" data-sitekey="6LfS_-oUAAAAAOwGGPKGXMELVOBtgDTW_Zen5NnC" data-callback="verifyCaptcha"></div>
-						</div>
-						<div class="col-lg-3">
-							<div id="g-recaptcha-error"></div>
-						</div>
-					</div>
+									</div>
+									<div class="col-lg-3">
+										<div class="g-recaptcha" data-sitekey="6LfS_-oUAAAAAOwGGPKGXMELVOBtgDTW_Zen5NnC" data-callback="verifyCaptcha"></div>
+									</div>
+									<div class="col-lg-3">
+										<div id="g-recaptcha-error"></div>
+									</div>
+								</div>
 
-				</form>
-			</div>-->
+							</form>
+						</div>-->
 
 					</div>
 
@@ -1038,7 +1053,7 @@
 						</div>
 					</div>
 				</div>
-</section><!-- End Contact Section -->
+		</section><!-- End Contact Section -->
 
 	</main><!-- End #main -->
 	<!-- ======= Footer ======= -->
