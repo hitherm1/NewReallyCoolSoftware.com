@@ -388,69 +388,7 @@
 			</div>
 		</section><!-- End About Section -->
 		<!-- ======= Clients Section ======= -->
-		<!--<section id="clients" class="clients">
-			<div class="container" data-aos="fade-up">
-
-				<div class="owl-carousel clients-carousel">
-					<img src="assets/img/clients/client-1.png" alt="">
-					<img src="assets/img/clients/client-2.png" alt="">
-					<img src="assets/img/clients/client-3.png" alt="">
-					<img src="assets/img/clients/client-4.png" alt="">
-					<img src="assets/img/clients/client-5.png" alt="">
-					<img src="assets/img/clients/client-6.png" alt="">
-					<img src="assets/img/clients/client-7.png" alt="">
-					<img src="assets/img/clients/client-8.png" alt="">
-				</div>
-
-			</div>
-		</section-->
-		><!-- End Clients Section -->
-		<!-- ======= Values Section ======= -->
-		<!--<section id="values" class="values">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-						<div class="card" style="background-image: url(assets/img/values-1.jpg);">
-							<div class="card-body">
-								<h5 class="card-title"><a href="">Our Mission</a></h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-								<div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="100">
-						<div class="card" style="background-image: url(assets/img/values-2.jpg);">
-							<div class="card-body">
-								<h5 class="card-title"><a href="">Our Plan</a></h5>
-								<p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.</p>
-								<div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="200">
-						<div class="card" style="background-image: url(assets/img/values-3.jpg);">
-							<div class="card-body">
-								<h5 class="card-title"><a href="">Our Vision</a></h5>
-								<p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.</p>
-								<div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="300">
-						<div class="card" style="background-image: url(assets/img/values-4.jpg);">
-							<div class="card-body">
-								<h5 class="card-title"><a href="">Our Care</a></h5>
-								<p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.</p>
-								<div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>-->
+		
 		<!-- End Values Section -->
 		<!-- ======= Services Section ======= -->
 		<section id="services" class="services section-bg">
@@ -872,12 +810,12 @@
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<script>
 		function submitUserForm() {
-			//var response = grecaptcha.getResponse();
+			var response = grecaptcha.getResponse();
 
-			//if (response.length == 0) {
-			//	document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
-			//	return false;
-			//}
+			if (response.length == 0) {
+				document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+				return false;
+			}
 			return true;
 		}
 
