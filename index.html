@@ -3,7 +3,9 @@
 
 <head>
 	
-	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self';frame-src *; worker-src *; frame-ancestors 'self'; X-Frame-Options: SAMEORIGINX-XSS-Protection: 1; mode=block; X-Content-Type-Options: nosniff; form-action 'self'; base-uri 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' *; script-src 'self' 'unsafe-inline' *; object-src 'none'; style-src *; img-src *; media-src 'self' *; frame-src 'self'; font-src *; connect-src 'self'" />
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self' *; script-src 'self' 'unsafe-inline' *; object-src 'none' ; style-src *; img-src *; media-src 'self' *; frame-src 'self' ; font-src *; connect-src 'self' "/>
+	<meta http-equiv="X-WebKit-CSP" content="default-src 'self' *; script-src 'self' 'unsafe-inline' *; object-src 'none' ; style-src *; img-src *; media-src 'self' *; frame-src 'self' ; font-src *; connect-src 'self' "/>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
