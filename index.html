@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self';frame-src *; worker-src *; frame-ancestors 'none'">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,9 +17,6 @@
 	<meta property="og:description" content="Helping small businesses thrive while making a global impact. 25% of all sales revenue goes directly to charity in your name.">
 	<meta property="og:type" content="article">
 	<meta property="og:image" content="https://reallycoolsoftwarellc.com/assets/img/RCSFB.PNG">
-	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'">
-	<!--<script data-ad-client="ca-pub-5000210483516245" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-
 	<!-- Favicons -->
 	<link href="assets/img/favicon.png" rel="icon">
 	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -27,7 +24,7 @@
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<!-- Vendor CSS Files -->
-	
+
 
 
 	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -91,8 +88,7 @@
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
 	<script>
 		function submitToAPI(e) {
 
