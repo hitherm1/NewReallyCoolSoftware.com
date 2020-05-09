@@ -103,6 +103,7 @@
     <Content Include="assets\img\blog-recent-3.jpg" />
     <Content Include="assets\img\blog-recent-4.jpg" />
     <Content Include="assets\img\blog-recent-5.jpg" />
+    <Content Include="assets\img\blog\lead-funnel.png" />
     <Content Include="assets\img\certsawssa.gif" />
     <Content Include="assets\img\clients\client-1.png" />
     <Content Include="assets\img\clients\client-2.png" />
