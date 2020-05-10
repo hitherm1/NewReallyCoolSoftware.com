@@ -100,19 +100,19 @@
 			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
 
 		 
-			if ($("#email").val() == "") {
+			if ($("#email2").val() == "") {
 				alert("Please enter your email id");
 				return;
 			}
 
 			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-			if (!reeamil.test($("#email").val())) {
+			if (!reeamil.test($("#email2").val())) {
 				alert("Please enter valid email address");
 				return;
 			}
  			var name ="";
 			var phone = "";
-			var email = $("#email").val();
+			var email = $("#email2").val();
 			var desc = "newsletter";
 
 			var data = {
@@ -859,7 +859,7 @@
 						<h4>Join Our Newsletter</h4>
 						<p>Keep up to date on all things Really Cool</p>
 						<form action="" method="post">
-							<input type="email" id="email" name="email"><input type="submit"onClick="submitToAPI2(event)" value="Subscribe">
+							<input type="email" id="email2" name="email2"><input type="submit" onClick="submitToAPI2(event)" value="Subscribe">
 						</form>
 					</div>
 				</div>
