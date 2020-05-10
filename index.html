@@ -92,6 +92,57 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
 	<script>
+				function submitToAPI2(e) {
+
+			//if (submitUserForm()) {
+
+			e.preventDefault();
+			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
+
+		 
+			if ($("#email").val() == "") {
+				alert("Please enter your email id");
+				return;
+			}
+
+			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			if (!reeamil.test($("#email").val())) {
+				alert("Please enter valid email address");
+				return;
+			}
+ 			var email = "newsletter only " + $("#email").val();
+		 
+
+			var data = {
+				name: name,
+				phone: phone,
+				email: email,
+				desc: desc
+			};
+
+			$.ajax({
+				type: "POST",
+				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
+				dataType: "json",
+				crossDomain: "true",
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify(data),
+
+
+				success: function () {
+					// clear form and show a success message
+
+					$('#myModal').modal('show');
+
+					document.getElementById("contact-form").reset();
+					location.reload();
+				},
+				error: function () {
+					// show an error message
+					alert("UnSuccessfull");
+				}
+			});
+		}
 		function submitToAPI(e) {
 
 			//if (submitUserForm()) {
@@ -806,7 +857,7 @@
 						<h4>Join Our Newsletter</h4>
 						<p>Keep up to date on all things Really Cool</p>
 						<form action="" method="post">
-							<input type="email" name="email"><input type="submit"onClick="submitToAPI(event)" value="Subscribe">
+							<input type="email" name="email"><input type="submit"onClick="submitToAPI2(event)" value="Subscribe">
 						</form>
 					</div>
 				</div>
