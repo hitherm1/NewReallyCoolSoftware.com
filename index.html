@@ -110,8 +110,10 @@
 				alert("Please enter valid email address");
 				return;
 			}
- 			var email = "newsletter only " + $("#email").val();
-		 
+ 			var name ="";
+			var phone = "";
+			var email = $("#email").val();
+			var desc = "newsletter";
 
 			var data = {
 				name: name,
@@ -857,7 +859,7 @@
 						<h4>Join Our Newsletter</h4>
 						<p>Keep up to date on all things Really Cool</p>
 						<form action="" method="post">
-							<input type="email" name="email"><input type="submit"onClick="submitToAPI2(event)" value="Subscribe">
+							<input type="email" id="email" name="email"><input type="submit"onClick="submitToAPI2(event)" value="Subscribe">
 						</form>
 					</div>
 				</div>
