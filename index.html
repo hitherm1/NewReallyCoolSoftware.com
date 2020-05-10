@@ -805,9 +805,14 @@
 					<div class="col-lg-4 col-md-6 footer-newsletter">
 						<h4>Join Our Newsletter</h4>
 						<p>Keep up to date on all things Really Cool</p>
-						<form action="" method="post">
-							<input type="email" name="email"><input type="submit" value="Subscribe">
+						<form class="php-email-form" method="post" role="form">
+							<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+							<div class="validate"></div>
+
+							<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Subscribe <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
+
 						</form>
+
 					</div>
 
 				</div>
