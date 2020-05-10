@@ -3,13 +3,8 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\img",
-    "\\assets\\vendor\\boxicons",
-    "\\assets\\vendor\\boxicons\\css",
-    "\\assets\\vendor\\boxicons\\fonts",
-    "\\assets\\vendor\\icofont",
-    "\\assets\\vendor\\icofont\\fonts"
+    "\\assets\\img"
   ],
-  "SelectedNode": "\\ReallyCoolSoftwareNewWeb.sln",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
