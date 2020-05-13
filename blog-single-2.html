@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' *; script-src 'self' 'unsafe-inline' *; object-src 'none'; style-src 'self' * 'unsafe-inline' https://fonts.googleapis.com ; img-src * data:; media-src 'self' *; frame-src 'self' https://www.google.com https://c.sharethis.mgr.consensu.org  https://l.sharethis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://muzdbczmmh.execute-api.us-east-1.amazonaws.com https://l.sharethis.com" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Really Cool Software LLC. Blog</title>
+	<meta property="fb:app_id" content="2564984233607509" />
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	<meta name="google-site-verification" content="YXGf0foSiO9QmTMxHo6baD-RxARVebeGcu8gaGBNztw" />
+	<meta property="og:title" content="Setting up Secret Access keys for SharePoint">
+	<meta property="og:site_name" content="Really cool Software LLC">
+	<meta property="og:url" content="https://reallycoolsoftwarellc.com/blog-single2.html">
+	<meta property="og:description" content="Setting up Secret Access keys for SharePoint">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://reallycoolsoftwarellc.com/assets/img/blog-6.jpg">
+	<!-- Favicons -->
+	<link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+	<!-- Vendor CSS Files -->
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5eb703019fbb400012e5ae22&product=inline-share-buttons' async='async'></script>
+
+
+
+
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+	<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<!-- Template Main CSS File -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<link rel="assets/img/apple-touch-icon" sizes="57x57" href="/assets/img/apple-icon-57x57.png">
+	<link rel="assets/img/apple-touch-icon" sizes="60x60" href="/assets/img/apple-icon-60x60.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="72x72" href="/assets/img/apple-icon-72x72.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon-76x76.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="114x114" href="/assets/img/apple-icon-114x114.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="120x120" href="/assets/img/apple-icon-120x120.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="144x144" href="/assets/img/apple-icon-144x144.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="152x152" href="/assets/img/apple-icon-152x152.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="180x180" href="/assets/img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+	<!-- <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" > </script >-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', '', { 'optimize_id': 'OPT-NTX2R4L' });
+	</script>
+	<!-- Global site tag (gtag.js) - Google Ads: 1071252390 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1071252390"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'AW-1071252390');
+	</script>
+	<!-- Event snippet for Website traffic conversion page -->
+	<script>
+		gtag('event', 'conversion', { 'send_to': 'AW-1071252390/qwmuCK_16M4BEKaH6P4D' });
+	</script>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDPG2QEHR8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-DDPG2QEHR8');
+	</script>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+	<script>
+		function submitToAPI(e) {
+
+			//if (submitUserForm()) {
+
+			e.preventDefault();
+			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
+
+			var Namere = /[A-Za-z]{1}[A-Za-z]/;
+			if (!Namere.test($("#name").val())) {
+				alert("Name can not less than 2 char");
+				return;
+			}
+			if (!Namere.test($("#phone").val())) {
+				alert("Subject can not less than 2 char");
+				return;
+			}
+			if (!Namere.test($("#desc").val())) {
+				alert("Message can not less than 2 char");
+				return;
+			}
+			if ($("#email").val() == "") {
+				alert("Please enter your email id");
+				return;
+			}
+
+			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			if (!reeamil.test($("#email").val())) {
+				alert("Please enter valid email address");
+				return;
+			}
+
+			var name = $("#name").val();
+			var phone = $("#phone").val();
+			var email = $("#email").val();
+			var desc = $("#desc").val();
+
+
+			var data = {
+				name: name,
+				phone: phone,
+				email: email,
+				desc: desc
+			};
+
+			$.ajax({
+				type: "POST",
+				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
+				dataType: "json",
+				crossDomain: "true",
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify(data),
+
+
+				success: function () {
+					// clear form and show a success message
+
+					$('#myModal').modal('show');
+
+					document.getElementById("contact-form").reset();
+					location.reload();
+				},
+				error: function () {
+					// show an error message
+					alert("UnSuccessfull");
+				}
+			});
+		}
+		//}
+	</script>
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5eb703019fbb400012e5ae22&product=sticky-share-buttons&cms=sop' async='async'></script>
+
+	<!-- =======================================================
+	* Template Name: Flexor - v2.1.1
+	* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+	* Author: BootstrapMade.com
+	* License: https://bootstrapmade.com/license/
+	======================================================== -->
+</head>
+
+<body>
+
+	<!-- ======= Top Bar ======= -->
+	<section id="topbar" class="d-none d-lg-block">
+		<div class="container d-flex">
+			<div class="contact-info mr-auto">
+				<ul>
+					<li><i class="icofont-envelope"></i>info@reallycoolsoftwarellc.com</li>
+					<li><i class="icofont-phone"></i> +1 713 732 2778</li>
+					<li><i class="icofont-clock-time icofont-flip-horizontal"></i> Mon-Fri 9am - 5pm or by Appt.</li>
+				</ul>
+
+
+			</div>
+			<div class="cta">
+				&nbsp;
+			</div>
+		</div>
+	</section>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container d-flex">
+
+			<div class="logo mr-auto">
+				<h1 class="text-light">
+					<a href="index.html">
+						<!--<img src="assets/img/apple-icon-72x72.png" alt="" class="img-fluid">-->
+					</a>
+					<a href="index.html"><span>ReallyCoolSoftware LLC</span></a>
+
+				</h1>
+
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!--<a href="#about" class="scrollto">Get Started</a>-->
+
+
+			</div>
+
+			<nav class="nav-menu d-none d-lg-block">
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<!--<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#team">Team</a></li>-->
+					<li><a href="index.html#pricing">Pricing</a></li>
+					<!--<li><a href="blog.html">Blog</a></li>-->
+					<!--<li class="drop-down">
+						<a href="">Drop Down</a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="drop-down">
+								<a href="#">Drop Down 2</a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+							<li><a href="#">Drop Down 5</a></li>
+						</ul>
+					</li>-->
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+
+
+				</ul>
+			</nav><!-- .nav-menu -->
+			<p>
+				<div id="google_translate_element"></div>
+
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+					}
+				</script>
+
+				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			</p>
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Breadcrumbs ======= -->
+		<section id="breadcrumbs" class="breadcrumbs">
+			<div class="container">
+				<ol>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+				</ol>
+				<h2>Setting up Secret Access keys for SharePoint</h2>
+			</div>
+		</section><!-- End Breadcrumbs -->
+		<!-- ======= Blog Section ======= -->
+		<section id="blog" class="blog">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-lg-8 entries">
+
+						<article class="entry entry-single">
+
+							<div class="entry-img">
+								<img src="assets/img/blog-6.jpg" alt="" class="img-fluid">
+							</div>
+
+							<h2 class="entry-title">
+								<a href="blog-single.html">Setting up Secret Access keys for Sharepoint</a>
+							</h2>
+
+							<div class="entry-meta">
+								<ul>
+									<li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="blog-single-2.html">Terry Higginbotham</a></li>
+									<li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="blog-single-2.html"><time datetime="2020-05-09">2020-05-13</time></a></li>
+									<!--<li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="blog-single.html">12 Comments</a></li>-->
+								</ul>
+							</div>
+
+							<div class="entry-content">
+								<p>
+									Every need to access a SharePoint online site from a Visual Studio Console application?  In this article we will show you how. This is the best way to access your Sharepoint artifacts without a service account or userid/password combination.  Instead register an App then  generate a secret key.  You can then use the secret key to access your SharePoint environment via an application
+								</p> <p>
+								<p><b>Step 1: How to Register a new app </b></p>
+								</p>
+								<p>
+									Go to -> https://<site>/_layouts/15/AppRegNew.aspx
+								</p>
+								<p>
+									Click Generate to create App Id and App Secret then save the values for use in later steps.  You can give descriptive language as Title and App Domain, then enter a Redirect URI.
+								</p>
+								<p><b>Step 2: How to give permission to the App ID created in Step 1 </b></p>
+
+								<p>
+									Go to -> https://<site>/_layouts/15/appinv.aspx
+								</p>
+								<p>
+									Enter the App ID you created in the Step 1 then click on the Lookup button. SharePoint will find the account and fills the rest of the values,
+									In Permission Request XML, paste the below XML
+								</p>
+								<code>
+									<AppPermissionRequests AllowAppOnlyPolicy="true">
+										<AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+									</AppPermissionRequests>
+
+								</code>
+								This will give FullConrol to the site collection, you may set any permissions you need. Use the following example to give Read permission to Web and Write Permission to list
+
+								<AppPermissionRequests AllowAppOnlyPolicy="true">
+									<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Read" />
+									<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Read" />
+									<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web/list" Right="Write" />
+								</AppPermissionRequests>
+								<p>
+									<b>
+										Step 3: Check whether you app is available in Site App Permission list
+									</b>
+								</p>
+								<p>
+									Go to Site Settings -> Site app permission or (https://<site>/_layouts/15/appprincipals.aspx )
+								</p>
+
+								<p>Now we have app which can access SharePoint with FullControl</p>
+
+							</div>
+
+							<div class="entry-footer clearfix">
+								<div class="float-left">
+									<i class="icofont-folder"></i>
+									<ul class="cats">
+										<li><a href="#">Business</a></li>
+									</ul>
+
+									<i class="icofont-tags"></i>
+									<ul class="tags">
+										<li><a href="#">Creative</a></li>
+										<li><a href="#">Tips</a></li>
+										<li><a href="#">Marketing</a></li>
+									</ul>
+								</div>
+
+								<div class="float-right share">
+									<a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
+									<a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
+								</div>
+
+							</div>
+
+						</article><!-- End blog entry -->
+
+						<div class="blog-author clearfix">
+							<img src="assets/img/favicon.png" class="rounded-circle float-left" alt="">
+							<h5>Terry Higginbotham</h5>
+							<div class="social-links">
+								<a href="https://twitter.com/#"><i class="icofont-twitter"></i></a>
+								<a href="https://facebook.com/#"><i class="icofont-facebook"></i></a>
+							</div>
+							<p>
+								Not all who wander are lost, but those whot do not wonder always will be.
+							</p>
+						</div><!-- End blog author bio -->
+
+
+
+					</div><!-- End blog entries list -->
+
+					<div class="col-lg-4">
+
+						<div class="sidebar">
+
+							<h3 class="sidebar-title">Search</h3>
+							<div class="sidebar-item search-form">
+								<form action="">
+									<input type="text">
+									<button type="submit"><i class="icofont-search"></i></button>
+								</form>
+
+							</div><!-- End sidebar search formn-->
+
+							<h3 class="sidebar-title">Categories</h3>
+							<div class="sidebar-item categories">
+								<ul>
+									<li><a href="#">Small Business <span>(1)</span></a></li>
+									<li><a href="#">Technology <span>(1)</span></a></li>
+									<li><a href="#">Cloud Computing <span>(0)</span></a></li>
+									<li><a href="#">Software Design <span>(0)</span></a></li>
+									<li><a href="#">Coding Examples<span>(0)</span></a></li>
+									<li><a href="#">General <span>(0)</span></a></li>
+								</ul>
+
+							</div><!-- End sidebar categories-->
+
+							<h3 class="sidebar-title">Recent Posts</h3>
+							<div class="sidebar-item recent-posts">
+								<div class="post-item clearfix">
+									<img src="assets/img/blog-recent-1.jpg" alt="">
+									<h4><a href="blog-single.html">Starting an Online Business</a></h4>
+									<time datetime="2020-01-01">May 09, 2020</time>
+								</div>
+
+								<div class="post-item clearfix">
+									<img src="assets/img/blog-recent-2.jpg" alt="">
+									<h4><a href="blog-single-2.html">Setting up Secret Access keys for SharePoint</a></h4>
+									<time datetime="2020-05-13">May 13, 2020</time>
+								</div>
+
+								<!--<div class="post-item clearfix">
+									<img src="assets/img/blog-recent-3.jpg" alt="">
+									<h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+									<time datetime="2020-01-01">Jan 1, 2020</time>
+								</div>
+
+								<div class="post-item clearfix">
+									<img src="assets/img/blog-recent-4.jpg" alt="">
+									<h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+									<time datetime="2020-01-01">Jan 1, 2020</time>
+								</div>
+
+								<div class="post-item clearfix">
+									<img src="assets/img/blog-recent-5.jpg" alt="">
+									<h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+									<time datetime="2020-01-01">Jan 1, 2020</time>
+								</div>-->
+
+							</div><!-- End sidebar recent posts-->
+
+							<h3 class="sidebar-title">Tags</h3>
+							<div class="sidebar-item tags">
+								<ul>
+									<li><a href="#">Apps</a></li>
+									<li><a href="#">IT</a></li>
+									<li><a href="#">SharePoint</a></li>
+									<li><a href="#">Business</a></li>
+									<li><a href="#">Mac</a></li>
+									<li><a href="#">Design</a></li>
+									<li><a href="#">Office</a></li>
+									<li><a href="#">Creative</a></li>
+									<li><a href="#">Studio</a></li>
+									<li><a href="#">Smart</a></li>
+									<li><a href="#">Tips</a></li>
+									<li><a href="#">Marketing</a></li>
+								</ul>
+
+							</div><!-- End sidebar tags-->
+
+						</div><!-- End sidebar -->
+
+					</div><!-- End blog sidebar -->
+
+				</div>
+
+			</div>
+		</section><!-- End Blog Section -->
+
+	</main><!-- End #main -->
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 footer-contact">
+						<h3>ReallyCoolSoftware LLC</h3>
+						<p>
+							13319 S 21st St <br>
+							Bixby, OK 74008<br>
+							United States <br><br>
+							<strong>Phone:</strong> +1 713 732 2778<br>
+							<strong>Email:</strong> info@reallycoolsoftwarellc.com<br>
+						</p>
+					</div>
+
+					<div class="col-lg-2 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/G3t9ZbMB">Terms of service</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/iH6pLlMd">Privacy policy</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/b3H3qoZw">Cookie policy</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/k75tkWMw">Refund policy</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/c1imx3oD">Disclaimer</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Our Services</h4>
+						<ul>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Web Presence Packages</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Cloud Development</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Mobil App Development</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">SharePoint Development</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Cloud Migrations</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">DevOps</a>
+							</li>
+						</ul>
+					</div>
+
+					<!--<div class="col-lg-4 col-md-6 footer-newsletter">
+						<h4>Join Our Newsletter</h4>
+						<p>Keep up to date on all things Really Cool</p>
+						<form action="" method="post">
+							<input type="email" name="email"><input type="submit" value="Subscribe">
+						</form>
+					</div>-->
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container d-lg-flex py-4">
+
+			<div class="mr-lg-auto text-center text-lg-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>ReallyCoolSoftware LLC.</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/ -->
+					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				</div>
+			</div>
+			<div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+				<a href="https://www.facebook.com/ReallyCoolSoftware" class="facebook"><i class="bx bxl-facebook"></i></a>
+				<a href="https://www.linkedin.com/company/really-cool-software-llc" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			</div>
+		</div>
+	</footer><!-- End Footer -->
+
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+	<script src="assets/vendor/venobox/venobox.min.js"></script>
+	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script>
+		function submitUserForm() {
+			var response = grecaptcha.getResponse();
+
+			if (response.length == 0) {
+				document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+				return false;
+			}
+			return true;
+		}
+
+		function verifyCaptcha() {
+			document.getElementById('g-recaptcha-error').innerHTML = '';
+		}
+	</script>
+</body>
+
+<
