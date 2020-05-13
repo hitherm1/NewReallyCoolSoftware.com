@@ -205,6 +205,7 @@
     <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="MediumBlog.html" />
     <Content Include="Readme.txt" />
     <Content Include="Web.config" />
     <Content Include="ydft3mxvr0ow5mtdj2j90ke829revr.html" />
