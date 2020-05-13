@@ -188,7 +188,7 @@
 				email: email,
 				desc: desc
 			};
-
+			var tester = JSON.stringify(data);
 			$.ajax({
 				type: "POST",
 				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
@@ -208,7 +208,7 @@
 				},
 				error: function () {
 					// show an error message
-					alert("UnSuccessfull " + data);
+					alert("UnSuccessfull " + tester);
 				}
 			});
 		}
