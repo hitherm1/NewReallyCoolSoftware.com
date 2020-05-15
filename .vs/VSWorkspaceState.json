@@ -3,8 +3,10 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\img"
+    "\\assets\\img",
+    "\\assets\\img\\blog",
+    "\\packages"
   ],
-  "SelectedNode": "\\blog-single.html",
+  "SelectedNode": "\\ReallyCoolSoftwareNewWeb.sln",
   "PreviewInSolutionExplorer": false
 }
