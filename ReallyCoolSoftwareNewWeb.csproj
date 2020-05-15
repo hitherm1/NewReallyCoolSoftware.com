@@ -199,6 +199,7 @@
     <Content Include="assets\vendor\venobox\venobox.min.css" />
     <Content Include="assets\vendor\venobox\venobox.min.js" />
     <Content Include="blog-single-2.html" />
+    <Content Include="blog-single-3.html" />
     <Content Include="blog-single.html" />
     <Content Include="blog.html" />
     <Content Include="changelog.txt" />
