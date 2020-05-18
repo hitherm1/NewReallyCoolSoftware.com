@@ -209,6 +209,8 @@
     <Content Include="index.html" />
     <Content Include="MediumBlog.html" />
     <Content Include="Readme.txt" />
+    <Content Include="robots.txt" />
+    <Content Include="sitemap.xml" />
     <Content Include="Web.config" />
     <Content Include="ydft3mxvr0ow5mtdj2j90ke829revr.html" />
   </ItemGroup>
