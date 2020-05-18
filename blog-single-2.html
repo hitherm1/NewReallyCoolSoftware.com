@@ -308,48 +308,39 @@
 
 							<div class="entry-content">
 								<p>
-									Ever need to access a SharePoint online site from a Visual Studio Console application?  In this article we will show you how. This is the best way to access your Sharepoint artifacts without a service account or userid/password combination.  Instead register an App then  generate a secret key.  You can then use the secret key to access your SharePoint environment via an application
+									Ever need to access a SharePoint online site from a Visual Studio Console application? In this article, we will show you how. This is the best way to access your Sharepoint artifacts without a service account or user-id/password combination. Instead, register an App then generate a secret key. You can then use the secret key to access your SharePoint environment via an application
 								</p> <p>
 								<p><b>Step 1: How to Register a new app </b></p>
 								</p>
 								<p>
-									Go to -> https://<site>/_layouts/15/AppRegNew.aspx
+									Go to -> https://<i>site</i>/_layouts/15/AppRegNew.aspx
 								</p>
 								<p>
-									Click Generate to create App Id and App Secret then save the values for use in later steps.  You can give descriptive language as Title and App Domain, then enter a Redirect URI.
+									Click Generate to create App Id and App Secret then save the values for use in later steps. You can give descriptive language as Title and App Domain, then enter a Redirect URI.
 								</p>
-								<p><b>Step 2: How to give permission to the App ID created in Step 1 </b></p>
+								<p><b>Step 2: How to give permission to the App ID created in Step 1</b></p>
 
 								<p>
-									Go to -> https://<site>/_layouts/15/appinv.aspx
+									Go to -> https://<i>site</i>/_layouts/15/appinv.aspx
 								</p>
 								<p>
-									Enter the App ID you created in the Step 1 then click on the Lookup button. SharePoint will find the account and fills the rest of the values,
-									In Permission Request XML, paste the below XML
+									Enter the App ID you created in Step 1 then click on the Lookup button. SharePoint will find the account and fills the rest of the values, In Permission Request XML, paste the below XML
 								</p>
-								<code>
-									<AppPermissionRequests AllowAppOnlyPolicy="true">
-										<AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
-									</AppPermissionRequests>
 
-								</code>
-								This will give FullConrol to the site collection, you may set any permissions you need. Use the following example to give Read permission to Web and Write Permission to list
+								<img src="assets/blog2-1.PNG" />
+								This will give full control to the site collection; you may set any permissions you need. Use the following example to give Read permission to Web and Write Permission to list
 
-								<AppPermissionRequests AllowAppOnlyPolicy="true">
-									<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Read" />
-									<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Read" />
-									<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web/list" Right="Write" />
-								</AppPermissionRequests>
+								<img src="assets/blog2-2.PNG" />
 								<p>
 									<b>
-										Step 3: Check whether you app is available in Site App Permission list
+										Step 3: Check whether your app is available in the Site App Permission list
 									</b>
 								</p>
 								<p>
-									Go to Site Settings -> Site app permission or (https://<site>/_layouts/15/appprincipals.aspx )
+									Go to Site Settings -> Site app permission or (https://<i>site</i>/_layouts/15/appprincipals.aspx )
 								</p>
 
-								<p>Now we have app which can access SharePoint with FullControl</p>
+								<p>Now we have an app which can access SharePoint with Full Control</p>
 
 							</div>
 

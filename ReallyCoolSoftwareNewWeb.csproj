@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\blog2-1.PNG" />
+    <Content Include="assets\blog2-2.PNG" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\about-img.jpg" />
     <Content Include="assets\img\android-icon-144x144.png" />
