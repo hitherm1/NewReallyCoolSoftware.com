@@ -203,11 +203,11 @@
     <Content Include="assets\vendor\venobox\venobox.js" />
     <Content Include="assets\vendor\venobox\venobox.min.css" />
     <Content Include="assets\vendor\venobox\venobox.min.js" />
-    <Content Include="Blog\blog.html" />
-    <Content Include="Blog\Setting-up-Secret-Access-keys-for-SharePoint.html" />
-    <Content Include="Blog\Why-Migrate-to-the-Cloud.html" />
-    <Content Include="Blog\Starting-an-Online-Business.html" />
-    <Content Include="Blog\blog2.html" />
+    <Content Include="blog.html" />
+    <Content Include="Setting-up-Secret-Access-keys-for-SharePoint.html" />
+    <Content Include="Why-Migrate-to-the-Cloud.html" />
+    <Content Include="Starting-an-Online-Business.html" />
+    <Content Include="blog2.html" />
     <Content Include="changelog.txt" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
