@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="assets\blog2-1.PNG" />
     <Content Include="assets\blog2-2.PNG" />
+    <Content Include="assets\css\blog.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\style4.css" />
     <Content Include="assets\img\about-img.jpg" />
@@ -212,6 +213,7 @@
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
+    <Content Include="blogfeed.html" />
     <Content Include="index.html" />
     <Content Include="MediumBlog.html" />
     <Content Include="Readme.txt" />
