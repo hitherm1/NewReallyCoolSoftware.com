@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		pre, code {
+			font-family: monospace, monospace;
+		}
+
+		pre {
+			overflow: auto;
+		}
+
+			pre > code {
+				display: block;
+				padding: 1rem;
+				word-wrap:normal;
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1200' height='256' viewBox='0 0 1200 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3,.1'%3E%3C/feTurbulence%3E%3C/filter%3E%3C/defs%3E%3Crect height='256' width='1200' filter='url(%23noise)' opacity='.1'/%3E%3C/svg%3E");
+			}
+
+		.shadowlift {
+			position: relative;
+			margin: 1.5rem 0 2.5rem;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+		}
+
+			.shadowlift::before,
+			.shadowlift::after {
+				content: "";
+				z-index: -1;
+				position: absolute;
+				width: 48%;
+				top: 80%;
+				bottom: 0.5rem;
+				box-shadow: 0 0.5rem 0.5rem rgba(119, 119, 119, 0.6);
+			}
+
+			.shadowlift::before {
+				left: 0.5rem;
+				transform: rotate(-2deg);
+			}
+
+			.shadowlift::after {
+				right: 0.5rem;
+				transform: rotate(2deg);
+			}
+	</style>
+</head>
+<body>
+	<figure style="width:100%">
+		<pre>
+		<figcaption>Add this &lt;div&gt; in the &lt;body&gt; of your webpage where you want the blog entries to show</figcaption>
+		<code contenteditable spellcheck="false">
+			&lt;div class="blog" id="blogdiv" style="width:100%"&gt;&lt;/div&gt;
+		</code>
+<figcaption>Place this JavaScript function in the &lt;head&gt; section of your page</figcaption>
+		<code contenteditable spellcheck="false">
+				function loadXMLDoc() {
+					var content;
+					var title;
+					var creator;
+					var published;
+					var categories;
+
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+					if (this.readyState == 4 && this.status == 200) 
+						{
+							var xmlDoc = xhttp.responseXML;
+							var z = xmlDoc.getElementsByTagName('item');
+							document.write("&lt;div&gt;");
+							categories = "";
+							for (var k = 0; k < z.length; k++) {
+								var x = z[k].childNodes;
+								for (var i = 0; i < x.length; i++) {
+									var y = x[i];
+									if (y.nodeType == 1) {
+									if (y.nodeName == "content:encoded") {
+										content = y.firstChild.nodeValue;
+									}
+									if (y.nodeName == "title") {
+										title = y.firstChild.nodeValue;
+										categories = "";
+									}
+									if (y.nodeName == "dc:creator") {
+										creator = y.firstChild.nodeValue;
+									}
+									if (y.nodeName == "pubDate") {
+										published = y.firstChild.nodeValue;
+									}
+									if (y.nodeName == "category") {
+										categories = categories + y.firstChild.nodeValue + " | ";
+									}
+								}
+							}
+					document.write('&lt;img{height:150px;float:left;margin:10px;}&lt;/style &gt;&lt;div style=" border-radius: 25px;background: transparent; padding: 10px;width: 100%; height: 25px;"&gt; &lt;h2&gt;' + title + " &lt;/h2 &gt;");
+					document.write("&lt;h4 &gt;" + creator + " " + published + " &lt;/h4&gt;&lt;br/&gt;&lt;br/ &gt;&lt;br/&gt; &lt;/div&gt;");
+					document.write('&lt;br/&gt; &lt;br/&gt;&lt;div style="margin:10px;width:100%;font-size:18px;" &gt;' + content + "&lt;br/&gt;&lt;br/&gt;tags:" + categories);
+					document.write("&lt;/div &gt;&lt;hr &gt;");
+							}
+						}
+					};
+					xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://medium.com/feed/@mediumusername", true);
+					xhttp.send();
+					}
+
+			</code>
+<figcaption>Add this to the  &lt;body&gt; tag of your webpage &lt;body onload="loadXMLDoc()"&gt; and change @mediumusername in the JS function to your MEDIUM Blog user name.  <p>Voila, you now can see your Medium posts on your website.  <br />Note: the feeds are not updated instantly, they usually show up in 5 minutes or less.</p>
+</figcaption>
+		
+  </pre>
+	</figure>
+</body>
+</html>
