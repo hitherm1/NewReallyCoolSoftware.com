@@ -176,6 +176,12 @@
 	* Author: BootstrapMade.com
 	* License: https://bootstrapmade.com/license/
 	======================================================== -->
+	<style>
+		body {
+			overflow-x: hidden;
+		}
+	</style>
+	}
 </head>
 
 <body onload="loadXMLDoc()">
@@ -269,7 +275,7 @@
 	<section id="blog" class="blog">
 		<div class="container">
 
-			<div class="blog" id="blogdiv"></div>
+			<div class="blog" id="blogdiv" style="width:100%"></div>
 
 			<script>
 				var content;
@@ -287,7 +293,7 @@
 							//alert(this.responseText);
 
 							var xmlDoc = xhttp.responseXML;
-							 
+
 							var z = xmlDoc.getElementsByTagName('item');
 							document.write('<div>');
 							categories = "";
@@ -312,15 +318,15 @@
 										if (y.nodeName == "category") {
 											categories = categories + y.firstChild.nodeValue + " | ";
 										}
-										
+
 
 									}
 								}
-								document.write('<style>img{height:300px;float:left;margin:10px;}</style><div  style=" border-radius: 25px;background: transparent; padding: 20px;width: 100%; height: 100px;"><h2>' + title + "</h2>");
+								document.write('<style>img{height:100px;float:left;margin:10px;}</style><div  style=" border-radius: 25px;background: transparent; padding: 10px;width: 100%; height: 25px;"><h2>' + title + "</h2>");
 								document.write("<h4>" + creator + " " + published + " </h4><br/><br/><br/></div>");
-								document.write('<br/><br/><div style="margin:10px;width:100%;font-size:20px;">' + content + "<br/><br/>tags: " + categories);
+								//document.write('<br/><br/><div style="margin:10px;width:100%;font-size:15px;">' + content + "<br/><br/>tags: " + categories);
 								document.write("</div><hr>");
-							
+
 							}
 
 						}
