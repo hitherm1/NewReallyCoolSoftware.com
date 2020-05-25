@@ -269,9 +269,7 @@
 	<section id="blog" class="blog">
 		<div class="container">
 
-			<div class="blog" id="demo">
-
-			</div>
+			<div class="blog" id="blogdiv"></div>
 
 			<script>
 				var content;
@@ -287,8 +285,9 @@
 							//alert(this.responseText);
 
 							var xmlDoc = xhttp.responseXML;
+							 
 							var z = xmlDoc.getElementsByTagName('item');
-							document.write("<div>");
+							document.write('<div>');
 							for (var k = 0; k < z.length; k++) {
 								var x = z[k].childNodes;
 								for (var i = 0; i < x.length; i++) {
@@ -309,10 +308,10 @@
 
 									}
 								}
-								document.write('<style>img{height:300px}</style><div  style=" border-radius: 25px;background: #FF5821; padding: 20px;width: 100%; height: 100px;"><h2>' + title + "</h2>");
+								document.write('<style>img{height:300px;float:left;margin:50px;}</style><div  style=" border-radius: 25px;background: transparent; padding: 20px;width: 100%; height: 100px;"><h2>' + title + "</h2>");
 								document.write("<h4>" + creator + " " + published + " </h4><br/><br/><br/></div>");
-								document.write('<br/><br/><div style="width:60%;font-size:20px;">' + content + "</div>");
-								document.write("</div>");
+								document.write('<br/><br/><div style="margin:10px;width:100%;font-size:20px;">' + content);
+								document.write("</div><hr>");
 							}
 
 						}
