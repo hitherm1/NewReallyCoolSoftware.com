@@ -213,7 +213,7 @@
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
-    <Content Include="blogfeed.html" />
+    <Content Include="BlogFeed.html" />
     <Content Include="index.html" />
     <Content Include="MediumBlog.html" />
     <Content Include="Readme.txt" />
