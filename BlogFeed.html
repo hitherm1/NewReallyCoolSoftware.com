@@ -276,6 +276,8 @@
 				var title;
 				var creator;
 				var published;
+				var categories;
+
 
 				function loadXMLDoc() {
 
@@ -288,6 +290,7 @@
 							 
 							var z = xmlDoc.getElementsByTagName('item');
 							document.write('<div>');
+							categories = "";
 							for (var k = 0; k < z.length; k++) {
 								var x = z[k].childNodes;
 								for (var i = 0; i < x.length; i++) {
@@ -298,6 +301,7 @@
 										}
 										if (y.nodeName == "title") {
 											title = y.firstChild.nodeValue;
+											categories = "";
 										}
 										if (y.nodeName == "dc:creator") {
 											creator = y.firstChild.nodeValue;
@@ -305,13 +309,18 @@
 										if (y.nodeName == "pubDate") {
 											published = y.firstChild.nodeValue;
 										}
+										if (y.nodeName == "category") {
+											categories = categories + y.firstChild.nodeValue + " | ";
+										}
+										
 
 									}
 								}
-								document.write('<style>img{height:300px;float:left;margin:50px;}</style><div  style=" border-radius: 25px;background: transparent; padding: 20px;width: 100%; height: 100px;"><h2>' + title + "</h2>");
+								document.write('<style>img{height:300px;float:left;margin:10px;}</style><div  style=" border-radius: 25px;background: transparent; padding: 20px;width: 100%; height: 100px;"><h2>' + title + "</h2>");
 								document.write("<h4>" + creator + " " + published + " </h4><br/><br/><br/></div>");
-								document.write('<br/><br/><div style="margin:10px;width:100%;font-size:20px;">' + content);
+								document.write('<br/><br/><div style="margin:10px;width:100%;font-size:20px;">' + content + "<br/><br/>tags: " + categories);
 								document.write("</div><hr>");
+							
 							}
 
 						}
