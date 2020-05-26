@@ -70,57 +70,58 @@
 			&lt;div class="blog" id="blogdiv" style="width:100%"&gt;&lt;/div&gt;
 		</code>
 <figcaption>Place this JavaScript function in the &lt;head&gt; section of your page</figcaption>
-		<code contenteditable spellcheck="false">
-				function loadXMLDoc() {
-					var content;
-					var title;
-					var creator;
-					var published;
-					var categories;
+<code contenteditable spellcheck="false">
+	function loadXMLDoc() {
+	var content;
+	var title;
+	var creator;
+	var published;
+	var categories;
 
-					var xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function () {
-					if (this.readyState == 4 && this.status == 200) 
-						{
-							var xmlDoc = xhttp.responseXML;
-							var z = xmlDoc.getElementsByTagName('item');
-							document.write("&lt;div&gt;");
-							categories = "";
-							for (var k = 0; k < z.length; k++) {
-								var x = z[k].childNodes;
-								for (var i = 0; i < x.length; i++) {
-									var y = x[i];
-									if (y.nodeType == 1) {
-									if (y.nodeName == "content:encoded") {
-										content = y.firstChild.nodeValue;
-									}
-									if (y.nodeName == "title") {
-										title = y.firstChild.nodeValue;
-										categories = "";
-									}
-									if (y.nodeName == "dc:creator") {
-										creator = y.firstChild.nodeValue;
-									}
-									if (y.nodeName == "pubDate") {
-										published = y.firstChild.nodeValue;
-									}
-									if (y.nodeName == "category") {
-										categories = categories + y.firstChild.nodeValue + " | ";
-									}
-								}
-							}
-					document.write('&lt;img{height:150px;float:left;margin:10px;}&lt;/style &gt;&lt;div style=" border-radius: 25px;background: transparent; padding: 10px;width: 100%; height: 25px;"&gt; &lt;h2&gt;' + title + " &lt;/h2 &gt;");
-					document.write("&lt;h4 &gt;" + creator + " " + published + " &lt;/h4&gt;&lt;br/&gt;&lt;br/ &gt;&lt;br/&gt; &lt;/div&gt;");
-					document.write('&lt;br/&gt; &lt;br/&gt;&lt;div style="margin:10px;width:100%;font-size:18px;" &gt;' + content + "&lt;br/&gt;&lt;br/&gt;tags:" + categories);
-					document.write("&lt;/div &gt;&lt;hr &gt;");
-							}
-						}
-					};
-					xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://medium.com/feed/@mediumusername", true);
-					xhttp.send();
-					}
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function () {
+	if (this.readyState == 4 && this.status == 200)
+	{
+	var xmlDoc = xhttp.responseXML;
+	var z = xmlDoc.getElementsByTagName('item');
+	document.write("&lt;div&gt;");
+	categories = "";
+	for (var k = 0; k < z.length; k++) {
+	var x = z[k].childNodes;
+	for (var i = 0; i < x.length; i++) {
+	var y = x[i];
+	if (y.nodeType == 1) {
+	if (y.nodeName == "content:encoded") {
+	content = y.firstChild.nodeValue;
+	}
+	if (y.nodeName == "title") {
+	title = y.firstChild.nodeValue;
+	categories = "";
+	}
+	if (y.nodeName == "dc:creator") {
+	creator = y.firstChild.nodeValue;
+	}
+	if (y.nodeName == "pubDate") {
+	published = y.firstChild.nodeValue;
+	}
+	if (y.nodeName == "category") {
+	categories = categories + y.firstChild.nodeValue + " | ";
+	}
+	}
+	}
+	document.write('&lt;img{height:150px;float:left;margin:10px;}&lt;/style &gt;&lt;div style=" border-radius: 25px;background: transparent; padding: 10px;width: 100%; height: 25px;"&gt; &lt;h2&gt;' + title + " &lt;/h2 &gt;");
+	document.write("&lt;h4 &gt;" + creator + " " + published + " &lt;/h4&gt;&lt;br/&gt;&lt;br/ &gt;&lt;br/&gt; &lt;/div&gt;");
+	document.write('&lt;br/&gt; &lt;br/&gt;&lt;div style="margin:10px;width:100%;font-size:18px;" &gt;' + content + "&lt;br/&gt;&lt;br/&gt;");
+	document.write('tags:" + categories);
+	document.write("&lt;/div &gt;&lt;hr &gt;");
+	}
+	}
+	};
+	xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://medium.com/feed/@mediumusername", true);
+	xhttp.send();
+	}
 
-			</code>
+</code>
 <figcaption>Add this to the  &lt;body&gt; tag of your webpage &lt;body onload="loadXMLDoc()"&gt; and change @mediumusername in the JS function to your MEDIUM Blog user name.  <p>Voila, you now can see your Medium posts on your website.  <br />Note: the feeds are not updated instantly, they usually show up in 5 minutes or less.</p>
 </figcaption>
 		

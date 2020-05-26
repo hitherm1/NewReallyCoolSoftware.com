@@ -209,6 +209,7 @@
     <Content Include="Blog-Why-Migrate-to-the-Cloud.html" />
     <Content Include="Blog-Starting-an-Online-Business.html" />
     <Content Include="blog2.html" />
+    <Content Include="BlogFeed2.html" />
     <Content Include="changelog.txt" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
