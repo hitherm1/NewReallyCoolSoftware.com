@@ -1,0 +1,2003 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="Creating-a-PGP-Key-Pair_files/filelist.xml">
+<link rel=Edit-Time-Data href="Creating-a-PGP-Key-Pair_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Higginbotham, Terry</o:Author>
+  <o:LastAuthor>Higginbotham, Terry</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>144</o:TotalTime>
+  <o:Created>2020-05-28T20:27:00Z</o:Created>
+  <o:LastSaved>2020-05-28T20:27:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1041</o:Words>
+  <o:Characters>5939</o:Characters>
+  <o:Lines>49</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>6967</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="Creating-a-PGP-Key-Pair_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Creating-a-PGP-Key-Pair_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <w:DocumentVariables>
+   <w:__Grammarly_42____i>H4sIAAAAAAAEAKtWckksSQxILCpxzi/NK1GyMqwFAAEhoTITAAAA</w:__Grammarly_42____i>
+   <w:__Grammarly_42___1>H4sIAAAAAAAEAKtWcslP9kxRslIyNDYyNjU0MzIzNDEysTQyMjBQ0lEKTi0uzszPAykwrAUAUecd6CwAAAA=</w:__Grammarly_42___1>
+  </w:DocumentVariables>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="377">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link Error"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 1073786111 1 0 511 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536869121 64767 1 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:0pt;
+	font-weight:normal;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:18.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:174080621;
+	mso-list-template-ids:324327472;}
+@list l1
+	{mso-list-id:250745225;
+	mso-list-template-ids:-244010344;}
+@list l2
+	{mso-list-id:450592006;
+	mso-list-template-ids:1202762060;}
+@list l3
+	{mso-list-id:500852637;
+	mso-list-template-ids:-1693123198;}
+@list l4
+	{mso-list-id:540021959;
+	mso-list-template-ids:-1720571246;}
+@list l5
+	{mso-list-id:1115058363;
+	mso-list-template-ids:-298441250;}
+@list l6
+	{mso-list-id:1847138110;
+	mso-list-template-ids:-1791431486;}
+@list l7
+	{mso-list-id:2146850030;
+	mso-list-template-ids:-600253004;}
+@list l2:level1 lfo1
+	{mso-level-start-at:2;}
+@list l2:level1 lfo2
+	{mso-level-start-at:3;}
+@list l2:level1 lfo3
+	{mso-level-start-at:4;}
+@list l7:level1 lfo5
+	{mso-level-start-at:2;}
+@list l7:level1 lfo6
+	{mso-level-start-at:3;}
+@list l0:level1 lfo9
+	{mso-level-start-at:2;}
+@list l0:level1 lfo10
+	{mso-level-start-at:3;}
+@list l0:level1 lfo11
+	{mso-level-start-at:4;}
+@list l0:level1 lfo12
+	{mso-level-start-at:5;}
+@list l0:level1 lfo13
+	{mso-level-start-at:6;}
+@list l0:level1 lfo14
+	{mso-level-start-at:7;}
+@list l0:level1 lfo15
+	{mso-level-start-at:8;}
+@list l0:level1 lfo16
+	{mso-level-start-at:9;}
+@list l4:level1 lfo18
+	{mso-level-start-at:2;}
+@list l4:level1 lfo19
+	{mso-level-start-at:3;}
+@list l4:level1 lfo20
+	{mso-level-start-at:4;}
+@list l4:level1 lfo21
+	{mso-level-start-at:5;}
+@list l4:level1 lfo22
+	{mso-level-start-at:6;}
+@list l4:level1 lfo23
+	{mso-level-start-at:7;}
+@list l4:level1 lfo24
+	{mso-level-start-at:8;}
+@list l4:level1 lfo25
+	{mso-level-start-at:9;}
+@list l5:level1 lfo27
+	{mso-level-start-at:2;}
+@list l5:level1 lfo28
+	{mso-level-start-at:3;}
+@list l3:level1 lfo30
+	{mso-level-start-at:2;}
+@list l3:level1 lfo31
+	{mso-level-start-at:3;}
+@list l3:level1 lfo32
+	{mso-level-start-at:4;}
+@list l1:level1 lfo34
+	{mso-level-start-at:2;}
+@list l1:level1 lfo35
+	{mso-level-start-at:3;}
+@list l1:level1 lfo36
+	{mso-level-start-at:4;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td valign=top style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+  7.5pt;margin-left:0in;line-height:normal;mso-outline-level:1'><b><span
+  style='font-size:24.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  "Times New Roman";color:#44546A;mso-font-kerning:18.0pt'>Creating a PGP Key
+  Pair<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-bottom:11.25pt;line-height:normal'><span
+  style='font-size:9.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  "Times New Roman";color:#222222'>Complete Encryption. Total Protection</span><span
+  style='font-size:13.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  "Times New Roman";color:#222222'>.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-top:37.5pt;margin-right:0in;margin-bottom:
+  15.75pt;margin-left:0in;line-height:normal;mso-outline-level:2'><b><span
+  style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  "Times New Roman";color:#44546A'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td valign=top style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:37.5pt;margin-right:0in;margin-bottom:
+  15.75pt;margin-left:0in;line-height:normal;mso-outline-level:2'><span
+  style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="Picture_x0020_56" o:spid="_x0000_i1080" type="#_x0000_t75"
+   style='width:155.4pt;height:99.6pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Creating-a-PGP-Key-Pair_files/image001.jpg" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=207 height=133
+  src="Creating-a-PGP-Key-Pair_files/image002.jpg" v:shapes="Picture_x0020_56"><![endif]></span><b><span
+  style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  "Times New Roman";color:#44546A'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<div style='mso-element:para-border-div;border:none;border-bottom:solid #EEEEEE 1.0pt;
+mso-border-bottom-alt:solid #EEEEEE .75pt;padding:0in 0in 0in 0in;background:
+white'>
+
+<p class=MsoNormal style='margin-top:37.5pt;margin-right:0in;margin-bottom:
+15.75pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white;
+border:none;mso-border-bottom-alt:solid #EEEEEE .75pt;padding:0in;mso-padding-alt:
+0in 0in 0in 0in'><b><span style='font-size:27.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#44546A'>Overview<o:p></o:p></span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#222222'>Pretty Good Privacy (PGP) provides data
+encryption and decryption for communication data such as texts, emails,
+directories, and files. It uses <span class=GramE>a</span> algorithmic
+combination of hashing, data compression, symmetric-key cryptography, and
+public-key cryptography to sign, encrypt, and decrypt messages using a
+combination of private and public cryptographic keys.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#222222'>This tutorial provides step-by-step
+instructions on how to generate private and public PGP keys using the key
+generator tool&nbsp;<a href="https://www.gpg4win.org/"><span style='color:#358CCB'>GPG4Win</span></a>.
+You can use any key generator tool to create, decrypt, and encrypt messages;
+however, the GPG4Win application is free and easy to install.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#222222'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Install the Key Generator Tool<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo8;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Navigate to the&nbsp;<a
+href="https://gpg4win.org/download.html"><span style='color:#358CCB'>GPG4Win
+download site</span></a>&nbsp;and download the full version of the application.
+As of this writing, the full version is Gpg4win v2.3.0.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo9;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Save the download
+package and open it. If you have User Account Control enabled, click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_55"
+ o:spid="_x0000_i1079" type="#_x0000_t75" style='width:54pt;height:17.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=23
+src="Creating-a-PGP-Key-Pair_files/image003.png" v:shapes="Picture_x0020_55"><![endif]></span>&nbsp;when
+the warning message displays. The Installer displays a Language Preference
+dialog box.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_54"
+ o:spid="_x0000_i1078" type="#_x0000_t75" style='width:216.6pt;height:115.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image004.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=289 height=154
+src="Creating-a-PGP-Key-Pair_files/image004.png" v:shapes="Picture_x0020_54"><![endif]></span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'><br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo10;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Use the dropdown the
+select your language preference and click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_53" o:spid="_x0000_i1077" type="#_x0000_t75" style='width:54pt;
+ height:15.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=21
+src="Creating-a-PGP-Key-Pair_files/image005.png" v:shapes="Picture_x0020_53"><![endif]></span>.
+The GPG4Win Setup window displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_52"
+ o:spid="_x0000_i1076" type="#_x0000_t75" style='width:372.6pt;height:289.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image006.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=497 height=386
+src="Creating-a-PGP-Key-Pair_files/image006.png" v:shapes="Picture_x0020_52"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo11;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_51"
+ o:spid="_x0000_i1075" type="#_x0000_t75" style='width:54pt;height:15pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=20
+src="Creating-a-PGP-Key-Pair_files/image007.png" v:shapes="Picture_x0020_51"><![endif]></span>.
+The License Agreement screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_50"
+ o:spid="_x0000_i1074" type="#_x0000_t75" style='width:374.4pt;height:291pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image008.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=499 height=388
+src="Creating-a-PGP-Key-Pair_files/image008.png" v:shapes="Picture_x0020_50"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo12;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_49"
+ o:spid="_x0000_i1073" type="#_x0000_t75" style='width:54pt;height:15pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=20
+src="Creating-a-PGP-Key-Pair_files/image007.png" v:shapes="Picture_x0020_49"><![endif]></span>.
+The Choose Components screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_48"
+ o:spid="_x0000_i1072" type="#_x0000_t75" style='width:372.6pt;height:290.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=497 height=387
+src="Creating-a-PGP-Key-Pair_files/image009.png" v:shapes="Picture_x0020_48"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo13;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Ensure the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>,&nbsp;<span class=SpellE><b>GpgEX</b></span>,
+and&nbsp;<b>Gpg4win</b>&nbsp;<b>Compendium</b>&nbsp;components are checked and
+then click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_47" o:spid="_x0000_i1071" type="#_x0000_t75" style='width:54pt;
+ height:15pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=20
+src="Creating-a-PGP-Key-Pair_files/image007.png" v:shapes="Picture_x0020_47"><![endif]></span>.
+The Choose Install Location screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_46"
+ o:spid="_x0000_i1070" type="#_x0000_t75" style='width:372.6pt;height:4in;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image010.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=497 height=384
+src="Creating-a-PGP-Key-Pair_files/image010.png" v:shapes="Picture_x0020_46"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo14;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Choose the default
+install location or click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_45" o:spid="_x0000_i1069" type="#_x0000_t75" style='width:65.4pt;
+ height:15pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=87 height=20
+src="Creating-a-PGP-Key-Pair_files/image011.png" v:shapes="Picture_x0020_45"><![endif]></span>&nbsp;to
+look for an alternative destination folder. After selecting the appropriate
+folder click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_44" o:spid="_x0000_i1068" type="#_x0000_t75" style='width:54pt;
+ height:15pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=20
+src="Creating-a-PGP-Key-Pair_files/image007.png" v:shapes="Picture_x0020_44"><![endif]></span>.
+The Install Options screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_43"
+ o:spid="_x0000_i1067" type="#_x0000_t75" style='width:373.8pt;height:290.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image012.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=498 height=387
+src="Creating-a-PGP-Key-Pair_files/image012.png" v:shapes="Picture_x0020_43"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo15;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Select if and where
+you'd like to install a shortcut to the GPG4Win application and then
+click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_42"
+ o:spid="_x0000_i1066" type="#_x0000_t75" style='width:54pt;height:15pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=20
+src="Creating-a-PGP-Key-Pair_files/image007.png" v:shapes="Picture_x0020_42"><![endif]></span>.
+The application begins to install.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_41"
+ o:spid="_x0000_i1065" type="#_x0000_t75" style='width:373.8pt;height:291.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=498 height=389
+src="Creating-a-PGP-Key-Pair_files/image013.png" v:shapes="Picture_x0020_41"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo16;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>When the installation
+completes, click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_40" o:spid="_x0000_i1064" type="#_x0000_t75" style='width:54pt;
+ height:15pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=20
+src="Creating-a-PGP-Key-Pair_files/image007.png" v:shapes="Picture_x0020_40"><![endif]></span>&nbsp;and
+then&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_39"
+ o:spid="_x0000_i1063" type="#_x0000_t75" style='width:54pt;height:16.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image014.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=22
+src="Creating-a-PGP-Key-Pair_files/image014.png" v:shapes="Picture_x0020_39"><![endif]></span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#222222'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Generate Your Key Pair<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo17;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>&nbsp;component. The following screen
+displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_38"
+ o:spid="_x0000_i1062" type="#_x0000_t75" style='width:468pt;height:194.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=259
+src="Creating-a-PGP-Key-Pair_files/image016.png" v:shapes="Picture_x0020_38"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo18;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<b>File</b>&nbsp;&gt;&nbsp;<b>New
+Certificate</b>. The Certificate Creation Wizard screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_37"
+ o:spid="_x0000_i1061" type="#_x0000_t75" style='width:363pt;height:285.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image017.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=484 height=381
+src="Creating-a-PGP-Key-Pair_files/image017.png" v:shapes="Picture_x0020_37"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo19;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click the&nbsp;<b>Create
+a personal <span class=SpellE>OpenPGP</span> key pair</b>&nbsp;option. The
+following Enter Details screen displays:<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_36"
+ o:spid="_x0000_i1060" type="#_x0000_t75" style='width:361.8pt;height:284.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image018.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=482 height=379
+src="Creating-a-PGP-Key-Pair_files/image018.png" v:shapes="Picture_x0020_36"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo20;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Enter pertinent values
+in the&nbsp;<b>Name</b>,&nbsp;<b>Email</b>, and&nbsp;<b>Comment</b>&nbsp;fields
+and then click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_35" o:spid="_x0000_i1059" type="#_x0000_t75" style='width:84pt;
+ height:16.8pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image019.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=112 height=22
+src="Creating-a-PGP-Key-Pair_files/image019.png" v:shapes="Picture_x0020_35"><![endif]></span>.
+The Advanced Settings screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_34"
+ o:spid="_x0000_i1058" type="#_x0000_t75" style='width:283.8pt;height:344.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image020.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=378 height=459
+src="Creating-a-PGP-Key-Pair_files/image020.png" v:shapes="Picture_x0020_34"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo21;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Ensure that the&nbsp;<b>RSA</b>&nbsp;radio
+button is selected under the Key Material section. Use the dropdown in the
+field next to it to select the&nbsp;<b>4,096</b>&nbsp;<b>bits</b>&nbsp;option.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_33"
+ o:spid="_x0000_i1057" type="#_x0000_t75" style='width:282pt;height:342.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image021.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=376 height=457
+src="Creating-a-PGP-Key-Pair_files/image021.png" v:shapes="Picture_x0020_33"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo22;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_32"
+ o:spid="_x0000_i1056" type="#_x0000_t75" style='width:57.6pt;height:19.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image022.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=77 height=26
+src="Creating-a-PGP-Key-Pair_files/image022.png" v:shapes="Picture_x0020_32"><![endif]></span>&nbsp;and
+then click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_31" o:spid="_x0000_i1055" type="#_x0000_t75" style='width:57pt;
+ height:18pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image023.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=76 height=24
+src="Creating-a-PGP-Key-Pair_files/image023.png" v:shapes="Picture_x0020_31"><![endif]></span>&nbsp;on
+the Enter Details screen. A Review Certificate Parameters screen displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_30"
+ o:spid="_x0000_i1054" type="#_x0000_t75" style='width:363.6pt;height:287.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image024.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=485 height=383
+src="Creating-a-PGP-Key-Pair_files/image024.png" v:shapes="Picture_x0020_30"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo23;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>To change a parameter,
+click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_29"
+ o:spid="_x0000_i1053" type="#_x0000_t75" style='width:15pt;height:13.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image025.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=20 height=18
+src="Creating-a-PGP-Key-Pair_files/image025.png" v:shapes="Picture_x0020_29"><![endif]></span>;
+otherwise, click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_28" o:spid="_x0000_i1052" type="#_x0000_t75" style='width:57pt;
+ height:18pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image026.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=76 height=24
+src="Creating-a-PGP-Key-Pair_files/image026.png" v:shapes="Picture_x0020_28"><![endif]></span>.
+An Enter Passphrase dialog box displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_27"
+ o:spid="_x0000_i1051" type="#_x0000_t75" style='width:202.8pt;height:130.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image027.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=270 height=174
+src="Creating-a-PGP-Key-Pair_files/image027.png" v:shapes="Picture_x0020_27"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo24;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Enter a value in
+the&nbsp;<b>Passphrase</b>&nbsp;field and click&nbsp;<span style='mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_26" o:spid="_x0000_i1050"
+ type="#_x0000_t75" style='width:54pt;height:15.6pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image028.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=21
+src="Creating-a-PGP-Key-Pair_files/image028.png" v:shapes="Picture_x0020_26"><![endif]></span>.
+A Passphrase Confirmation dialog box displays asking you to re-enter your
+passphrase. Do so in the&nbsp;<b>Passphrase</b>&nbsp;field. The application
+creates the key and displays it in the Key Pair Successfully Created screen.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_25"
+ o:spid="_x0000_i1049" type="#_x0000_t75" style='width:364.8pt;height:323.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image029.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=486 height=431
+src="Creating-a-PGP-Key-Pair_files/image029.png" v:shapes="Picture_x0020_25"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo25;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_24"
+ o:spid="_x0000_i1048" type="#_x0000_t75" style='width:57.6pt;height:18.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image030.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=77 height=25
+src="Creating-a-PGP-Key-Pair_files/image030.png" v:shapes="Picture_x0020_24"><![endif]></span>.
+The new key displays in the <span class=SpellE>Kleopatra</span> certificate
+list.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_23"
+ o:spid="_x0000_i1047" type="#_x0000_t75" style='width:468pt;height:195pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image031.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=260
+src="Creating-a-PGP-Key-Pair_files/image032.png" v:shapes="Picture_x0020_23"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Obtain Your Public Key<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l5 level1 lfo26;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>&nbsp;component. Right-click on your key
+and select&nbsp;<b>Export Certificates</b>.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_22"
+ o:spid="_x0000_i1046" type="#_x0000_t75" style='width:468pt;height:303pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image033.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=404
+src="Creating-a-PGP-Key-Pair_files/image034.png" v:shapes="Picture_x0020_22"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l5 level1 lfo27;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Browse where you want
+to save the certificate, give the file a name, and click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_21"
+ o:spid="_x0000_i1045" type="#_x0000_t75" style='width:64.8pt;height:19.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image035.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=86 height=26
+src="Creating-a-PGP-Key-Pair_files/image035.png" v:shapes="Picture_x0020_21"><![endif]></span>.<br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l5 level1 lfo28;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the file in your
+preferred text editor.&nbsp;<b>NOTE:</b>&nbsp;To see the file properly
+displayed in the Save location, you may need to select the&nbsp;<b>All Files</b>&nbsp;option
+in the&nbsp;<b>File Types</b>&nbsp;dropdown next to the&nbsp;<b>File Name</b>&nbsp;field
+in your File Explorer window. Your public key displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_20"
+ o:spid="_x0000_i1044" type="#_x0000_t75" style='width:364.2pt;height:9in;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image036.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=486 height=864
+src="Creating-a-PGP-Key-Pair_files/image037.png" v:shapes="Picture_x0020_20"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Obtain your Private Key<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo29;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>&nbsp;component. Right-click on your key
+and select&nbsp;<b>Export Secret Keys</b>.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_19"
+ o:spid="_x0000_i1043" type="#_x0000_t75" style='width:468pt;height:303.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image038.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=405
+src="Creating-a-PGP-Key-Pair_files/image039.png" v:shapes="Picture_x0020_19"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo30;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>An Export Secret
+Certificate dialog box displays. Click the&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_18" o:spid="_x0000_i1042" type="#_x0000_t75" style='width:17.4pt;
+ height:17.4pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image040.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=23 height=23
+src="Creating-a-PGP-Key-Pair_files/image040.png" v:shapes="Picture_x0020_18"><![endif]></span>&nbsp;to
+select where you want to save the key and then click the&nbsp;<b>ASCII armor</b>&nbsp;check
+box.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_17"
+ o:spid="_x0000_i1041" type="#_x0000_t75" style='width:280.8pt;height:169.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image041.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=374 height=226
+src="Creating-a-PGP-Key-Pair_files/image041.png" v:shapes="Picture_x0020_17"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo31;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_16"
+ o:spid="_x0000_i1040" type="#_x0000_t75" style='width:54pt;height:15.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=72 height=21
+src="Creating-a-PGP-Key-Pair_files/image005.png" v:shapes="Picture_x0020_16"><![endif]></span>.
+A &quot;Secret key successfully exported&quot; confirmation message displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_15"
+ o:spid="_x0000_i1039" type="#_x0000_t75" style='width:183.6pt;height:96.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image042.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=245 height=129
+src="Creating-a-PGP-Key-Pair_files/image042.png" v:shapes="Picture_x0020_15"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo32;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_14"
+ o:spid="_x0000_i1038" type="#_x0000_t75" style='width:57.6pt;height:20.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image043.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=77 height=27
+src="Creating-a-PGP-Key-Pair_files/image043.png" v:shapes="Picture_x0020_14"><![endif]></span>.
+Be sure to keep this key in a safe place and never share it.<br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Import a Public Key<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo33;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Obtain the public key
+of the vendor to whom you will be sending encrypted messages. Forte's public
+key is as follows:<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman";color:#222222'>-----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+<br>
+mQGiBDnTWtgRBADRPX9RN8MZSlNRyoAKaxOYgTsKgauYNer1d3 X9Q7O0awzrKfES<br>
+CnhUw95LDvwaGjj58DjUZDrDkW2N5S1WjXpPJepqA28zxQyrWB <span class=SpellE>tvxtqRVpcEewiD</span><br>
+6ZUO8S+YGrvMvpfUwLuKUWkjxEMbX6ofXxooO00t6UZk8hUah1 <span class=SpellE>DQVXGlBwCg</span>/92U<br>
+<span class=SpellE>DUldiy</span>/X92QNDtIetmP7m90EAMoIb45c+G/UhTQCfhq8U7RmrEpx0xxdvdHoV344<br>
+gZRzF5pNnh5zbyW3onQjpH+ti7v58hYzcy1yNuPJLcY+T5jBe0 eCQ1PrkYhLmfSS<br>
+iAAd5Be+YgCGcb0KX0ku87dMgHRhmgjM3a8YrmJ/yxEsAA84SPOAtDC0tYJHOIzv<br>
+Ob+8BAC10ZZEpIYvqBMfmH+0e4I/7riBDowzVY4n7SAIbA/4qHo4lmzCBjJ7vpg6<br>
+0fSUbbEpdOrHKIQHTzGCeFWLdxxNzXedQh/tZYYACYPkpFxiVyi8bZqsDrbBiRku<br>
+rDogLDM5uwF61fCJ1k/x7IlxeL3jORJygLqbjqK+qfUFE7mxWLQwUGF5bWVudHNH<br>
+YXRld2F5IDxQcm9jZXNzaW5nQFBheW1lbnRzR2F0ZXdheS5uZX <span class=SpellE>Q+iQBOBBARAgAO</span><br>
+BQI501rYBAsDAgECGQEACgkQUaPpPpkZVFzGHACcCA8ZypVyeW <span class=SpellE>iZnmFovsOVa+gc</span><br>
+YrUAn1HmqQhPiVlKFO9Wo6Wmv76GcOQQuQINBDnTWtgQCAD2Ql e3CH8IF3Kiutap<br>
+QvMF6PlTETlPtvFuuUs4INoBp1ajFOmPQFXz0AfGy0OplK33TG SGSfgMg71l6RfU<br>
+odNQ+PVZX9x2Uk89PY3bzpnhV5JZzf24rnRPxfx2vIPFRzBhzn zJZv8V+bv9kV7H<br>
+AarTW56NoKVyOtQa8L9GAFgr5fSI/VhOSdvNILSd5JEHNmszbDgNRR0PfIizHHxb<br>
+LY7288kjwEPwpVsYjY67VYy4XTjTNP18F1dDox0YbN4zISy1Kv 884bEpQBgRjXyE<br>
+pwpy1obEAxnIByl6ypUM2Zafq9AKUJsCRtMIPWakXUGfnHy9iU siGSa6q6Jew1Xp<br>
+Mgs7AAICB/4qadF3lHmqtLlAci1FXs4TRTKRCHOVvZJ1tVOFcIv58bdQSFB0 <span
+class=SpellE>yYxu</span><br>
+zu5bINDc9FJmeHo/AyVO1c+ureVp8cYcjqbu/v77yBLQegNalEvkiQw5vbHqE637<br>
+VnbFgDztw9vQ6JBEHl3iYcfy14hc09QwtxMo7jYa2204jokZG5 1+ZfeMICeijZjf<br>
+yNPAIU3jWsUfBOgPWBtTR8xNbvyCoJjWRX/dvl70mcPCXomyN/r5EgfJtOB75VM6<br>
+OJ5U79bCdHIWhPnIZ+C5lxo7wsKbmkezTxUfMknD+K/lYyexVg7cczrCwUBUjrDw<br>
+MdKn4uTozixpB/2zoLpd/<span class=SpellE>il</span>/GHaggzaxiQBGBBgRAgAGBQI501rYAAoJEFGj6T6Z<br>
+GVRcowUAoKXG5vrlZec+4R/JdqXTTfHOFLWwAJ9XWtTpbTdbeTEyT7SQ1ItpULNp<br>
+4A==<br>
+=bA9r<br>
+<br>
+-----END PGP PUBLIC KEY BLOCK-----</span><span style='font-size:10.5pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";
+color:#222222'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo34;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Copy the entire key
+block including&nbsp;</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Courier New";
+color:#2A6496'>---BEGIN PGP PUBLIC KEY BLOCK---</span><span style='font-size:
+10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";
+color:#222222'>&nbsp;to&nbsp;</span><span style='font-size:9.5pt;font-family:
+Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Courier New";
+color:#2A6496'>---END PGP PUBLIC KEY BLOCK---</span><span style='font-size:
+10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";
+color:#222222'>.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_13"
+ o:spid="_x0000_i1037" type="#_x0000_t75" style='width:390pt;height:199.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image044.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=520 height=266
+src="Creating-a-PGP-Key-Pair_files/image044.png" v:shapes="Picture_x0020_13"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo35;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>&nbsp;component. Click&nbsp;<b>Clipboard</b>&nbsp;&gt;&nbsp;<b>Certificate
+Import</b>. A Certificate Import Result dialog box displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_12"
+ o:spid="_x0000_i1036" type="#_x0000_t75" style='width:201.6pt;height:107.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image045.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=269 height=143
+src="Creating-a-PGP-Key-Pair_files/image045.png" v:shapes="Picture_x0020_12"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo36;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_11"
+ o:spid="_x0000_i1035" type="#_x0000_t75" style='width:56.4pt;height:21.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image046.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=75 height=29
+src="Creating-a-PGP-Key-Pair_files/image046.png" v:shapes="Picture_x0020_11"><![endif]></span>.
+The imported public key now displays under the&nbsp;<b>Other</b>&nbsp;<b>Certificates</b>&nbsp;tab.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_10"
+ o:spid="_x0000_i1034" type="#_x0000_t75" style='width:468pt;height:196.2pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image047.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=262
+src="Creating-a-PGP-Key-Pair_files/image048.png" v:shapes="Picture_x0020_10"><![endif]></span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Importing Your Private Key<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l7 level1 lfo4;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>&nbsp;component. Click&nbsp;<b>File</b>&nbsp;&gt;&nbsp;<b>Import</b>&nbsp;<b>Certificates</b>.<br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l7 level1 lfo5;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Use the File Explorer
+tool to browse to where you've saved your private key. Select the key file and
+click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_9"
+ o:spid="_x0000_i1033" type="#_x0000_t75" style='width:51pt;height:14.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image049.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=68 height=19
+src="Creating-a-PGP-Key-Pair_files/image049.png" v:shapes="Picture_x0020_9"><![endif]></span>.
+The Certificate Import Result dialog box displays.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_8"
+ o:spid="_x0000_i1032" type="#_x0000_t75" style='width:311.4pt;height:133.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image050.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=415 height=178
+src="Creating-a-PGP-Key-Pair_files/image050.png" v:shapes="Picture_x0020_8"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l7 level1 lfo6;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Click&nbsp;<span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_7"
+ o:spid="_x0000_i1031" type="#_x0000_t75" style='width:56.4pt;height:21.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image046.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=75 height=29
+src="Creating-a-PGP-Key-Pair_files/image046.png" v:shapes="Picture_x0020_7"><![endif]></span>.
+The imported private key now displays under the&nbsp;<b>My Certificates</b>&nbsp;tab.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6"
+ o:spid="_x0000_i1030" type="#_x0000_t75" style='width:468pt;height:225pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image051.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=300
+src="Creating-a-PGP-Key-Pair_files/image051.png" v:shapes="Picture_x0020_6"><![endif]></span><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#222222'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2;background:white'><b><span
+style='font-size:27.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#44546A'>Decrypting a Message<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
+white'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+"Times New Roman";color:#222222'>Only your private key can decrypt encrypted
+messages from Forte. This ensures that only the intended recipient of a message
+can view its contents. To decrypt a message using GPG4Win, complete the
+following steps:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l6 level1 lfo7;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Copy the entire
+contents of the message.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_5"
+ o:spid="_x0000_i1029" type="#_x0000_t75" style='width:405.6pt;height:210.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image052.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=541 height=281
+src="Creating-a-PGP-Key-Pair_files/image052.png" v:shapes="Picture_x0020_5"><![endif]></span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;tab-stops:list .5in;
+background:white'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l2 level1 lfo1;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the&nbsp;<span
+class=SpellE><b>Kleopatra</b></span>&nbsp;component. Click&nbsp;<b>Clipboard</b>&nbsp;&gt;&nbsp;<b>Decrypt/Verify</b>.
+A <span class=SpellE>Pinentry</span> window displays asking for the passphrase
+you created when you generated your key pair.<br>
+<br>
+<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4"
+ o:spid="_x0000_i1028" type="#_x0000_t75" style='width:364.8pt;height:149.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image053.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=486 height=199
+src="Creating-a-PGP-Key-Pair_files/image053.png" v:shapes="Picture_x0020_4"><![endif]></span><br>
+<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l2 level1 lfo2;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Enter the passphrase
+and click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
+ o:spid="_x0000_i1027" type="#_x0000_t75" style='width:57.6pt;height:19.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image022.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=77 height=26
+src="Creating-a-PGP-Key-Pair_files/image022.png" v:shapes="Picture_x0020_3"><![endif]></span>.
+A window displays indicating that the file was decrypted and has been copied to
+your clipboard. Click&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:57.6pt;
+ height:18.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image030.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=77 height=25
+src="Creating-a-PGP-Key-Pair_files/image030.png" v:shapes="Picture_x0020_2"><![endif]></span>.<br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.25in;text-indent:-.25in;line-height:normal;mso-list:l2 level1 lfo3;
+tab-stops:list .5in;background:white'><![if !supportLists]><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial;color:#222222'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:#222222'>Open the text editor
+of your choice and paste the decrypted message.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:417.6pt;
+ height:289.8pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Creating-a-PGP-Key-Pair_files/image054.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=557 height=386
+src="Creating-a-PGP-Key-Pair_files/image054.png" v:shapes="Picture_x0020_1"><![endif]></span></p>
+
+</div>
+
+</body>
+
+</html>
