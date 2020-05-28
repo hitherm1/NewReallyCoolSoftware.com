@@ -161,9 +161,10 @@
 						// clear form and show a success message
 
 						$('#myModal').modal('show');
-
+						
 						document.getElementById("contact-form").reset();
 						location.reload();
+						
 					},
 					error: function () {
 						// show an error message
@@ -173,13 +174,57 @@
 			}
 			//}
 		</script>
+		
+		<style>
+			/* Container holding the image and the text */
+.container2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+		</style>
 		<!-- =======================================================
-		* Template Name: Flexor - v2.1.1
-		* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
-		* Author: BootstrapMade.com
-		* License: https://bootstrapmade.com/license/
-		======================================================== -->
+	* Template Name: Flexor - v2.1.1
+	* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+	* Author: BootstrapMade.com
+	* License: https://bootstrapmade.com/license/
+	======================================================== -->
 	</head>
 
 	<body>
@@ -273,9 +318,16 @@
 
 						<div class="col-xl-6 col-lg-6 mt-6" data-aos="fade-up">
 							<div class="info-box">
-								
-								<h3>Download here</h3>
-								<p>13319 S 21st St,<br /> Bixby, OK 74008</p>
+								<div class="container2">									
+									<img src="assets/img/downloads/download-idc.png" style="width:100%" />
+
+									<!--<div class="bottom-left">Bottom Left</div>
+									<div class="top-left">Top Left</div>
+									<div class="top-right">Top Right</div>
+									<div class="bottom-right">Bottom Right</div>-->
+									<!--<div class="centered"><h1>Centered</h1></div>-->
+								</div>
+							
 							</div>
 						</div>
 
@@ -324,10 +376,12 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-									<h4 class="modal-title" id="myModalLabel">Thanks for your Inquiry</h4>
+									<h4 class="modal-title" id="myModalLabel">Here's your download</h4>
 
 								</div>
-								<div class="modal-body">We have recieved you comment.  A representative will be contacting you soon to start our journey toward changing the world one line of code at a time.</div>
+								<div class="modal-body">
+									<img src="assets/img/clearicon.png" /> <a href="assets/img/downloads/IDC-cloud-workbook-2019.pdf" target="_blank">Your download</a><h6> ReallyCoolSoftware<br />changing the world one line of code at a time.</h6>
+								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 

@@ -125,6 +125,7 @@
     <Content Include="assets\img\comments-5.jpg" />
     <Content Include="assets\img\comments-6.jpg" />
     <Content Include="assets\img\clearicon.png" />
+    <Content Include="assets\img\downloads\download-idc.png" />
     <Content Include="assets\img\favicon-16x16.png" />
     <Content Include="assets\img\favicon-32x32.png" />
     <Content Include="assets\img\favicon-96x96.png" />
@@ -255,6 +256,7 @@
     <Content Include="assets\vendor\jquery\jquery.min.map" />
     <Content Include="assets\vendor\owl.carousel\LICENSE" />
     <Content Include="assets\vendor\owl.carousel\README.md" />
+    <Content Include="assets\img\downloads\IDC-cloud-workbook-2019.pdf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
