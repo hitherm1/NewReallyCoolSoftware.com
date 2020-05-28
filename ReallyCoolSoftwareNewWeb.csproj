@@ -70,6 +70,7 @@
     <Content Include="assets\blog2-1.PNG" />
     <Content Include="assets\blog2-2.PNG" />
     <Content Include="assets\css\blog.css" />
+    <Content Include="assets\css\download.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\style4.css" />
     <Content Include="assets\img\about-img.jpg" />
@@ -163,6 +164,7 @@
     <Content Include="assets\img\values-2.jpg" />
     <Content Include="assets\img\values-3.jpg" />
     <Content Include="assets\img\values-4.jpg" />
+    <Content Include="assets\js\dlemail.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\rss-feed.js" />
     <Content Include="assets\vendor\aos\aos.css" />
@@ -211,6 +213,7 @@
     <Content Include="blog2.html" />
     <Content Include="BlogFeed2.html" />
     <Content Include="changelog.txt" />
+    <Content Include="downloaddigital.html" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
