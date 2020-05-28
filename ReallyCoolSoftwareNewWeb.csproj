@@ -214,7 +214,7 @@
     <Content Include="blog2.html" />
     <Content Include="BlogFeed2.html" />
     <Content Include="changelog.txt" />
-    <Content Include="downloaddigital.html" />
+    <Content Include="downloaddigital-IDC.html" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
