@@ -49,59 +49,25 @@
 
 	<!-- ShareThis JS File -->
 	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5eb703019fbb400012e5ae22&product=inline-share-buttons' async='async'></script>
-	
+
 	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+	<!-- Google Tag Manager -->
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
+	(function (w, d, s, l, i) {
+		w[l] = w[l] || []; w[l].push({
+			'gtm.start':
+				new Date().getTime(), event: 'gtm.js'
+		}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MHQV6D7');</script>
+	<!-- End Google Tag Manager -->
 
-		gtag('config', '', { 'optimize_id': 'OPT-NTX2R4L' });
-	</script>
-
-	<!-- Global site tag (gtag.js) - Google Ads: 1071252390 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1071252390"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'AW-1071252390');
-	</script>
-	<!-- Event snippet for Website traffic conversion page -->
-	<script>
-		gtag('event', 'conversion', { 'send_to': 'AW-1071252390/qwmuCK_16M4BEKaH6P4D' });
-	</script>
-
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDPG2QEHR8"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-DDPG2QEHR8');
-	</script><!-- Global site tag (gtag.js) - Google Analytics -->
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57189171-3">
-	</script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-57189171-3');
-	</script>
+	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
-	
+
 	<script>
 		function submitToAPI2(e) {
 
@@ -243,7 +209,12 @@
 </head>
 
 <body>
-
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHQV6D7"
+				height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<!-- ======= Top Bar ======= -->
 	<section id="topbar" class="d-none d-lg-block">
 		<div class="container d-flex">
@@ -291,28 +262,28 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<!--<li><a href="#portfolio">Portfolio</a></li>
-	<li><a href="#team">Team</a></li>-->
+					<li><a href="#team">Team</a></li>-->
 					<li><a href="#pricing">Pricing</a></li>
 					<!--<li><a href="blog.html">Blog</a></li>-->
 					<!--<li class="drop-down">
-		<a href="">Drop Down</a>
-		<ul>
-			<li><a href="#">Drop Down 1</a></li>
-			<li class="drop-down">
-				<a href="#">Drop Down 2</a>
-				<ul>
-					<li><a href="#">Deep Drop Down 1</a></li>
-					<li><a href="#">Deep Drop Down 2</a></li>
-					<li><a href="#">Deep Drop Down 3</a></li>
-					<li><a href="#">Deep Drop Down 4</a></li>
-					<li><a href="#">Deep Drop Down 5</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Drop Down 3</a></li>
-			<li><a href="#">Drop Down 4</a></li>
-			<li><a href="#">Drop Down 5</a></li>
-		</ul>
-	</li>-->
+						<a href="">Drop Down</a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="drop-down">
+								<a href="#">Drop Down 2</a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+							<li><a href="#">Drop Down 5</a></li>
+						</ul>
+					</li>-->
 					<li><a href="blog.html">Blog</a></li>
 					<li><a href="FAQ.html">FAQ </a></li>
 					<li><a href="#contact">Contact</a></li>
@@ -571,7 +542,7 @@
 			</div>
 		</section><!-- End Services Section -->
 		<!-- ======= Testimonials Section ======= -->
-		<!--<section id="testimonials" class="testimonials"> 
+		<!--<section id="testimonials" class="testimonials">
 			<div class="container" data-aos="fade-up">
 
 				<div class="owl-carousel testimonials-carousel">
@@ -584,38 +555,35 @@
 							Terry built a website for me. He was so knowledgeable, caring, and consistent. He completed it in a great time span and was extremely flexible throughout the process. I recommend him highly. Trust me, you will really enjoy working with him.
 							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
 						</p>-->
+		<!--</div>-->
+		<!--<div class="testimonial-item">
+			<img src="assets/img/testimonials/gregf.gif" class="testimonial-img" alt="">
+			<h3>Greg Fisher </h3>
+			<h4>EDI Support Analyst at Epicor Software</h4>
+			<p>
+				<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+				Honestly, my happiest days at Grocers Supply Houston were when Terry was my immediate manager. Our weekly staff meetings were always a positive, productive, and enjoyable experience.
+				All too many managers in my IT career have been terrible bosses - Terry was never a terrible boss - he was always an inspiring leader. Leader, not Boss.
+				I have experienced only three extraordinary manager-leaders in my IT career worthy of an A+ rating: two of them were part of my IBM/ISSC career; Terry is the third A+ manager I’ve ever been lucky enough to serve.
+				<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+			</p>
 
 
-					<!--</div>-->
-					<!--<div class="testimonial-item">
-						<img src="assets/img/testimonials/gregf.gif" class="testimonial-img" alt="">
-						<h3>Greg Fisher </h3>
-						<h4>EDI Support Analyst at Epicor Software</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Honestly, my happiest days at Grocers Supply Houston were when Terry was my immediate manager. Our weekly staff meetings were always a positive, productive, and enjoyable experience.
-							All too many managers in my IT career have been terrible bosses - Terry was never a terrible boss - he was always an inspiring leader. Leader, not Boss.
-							I have experienced only three extraordinary manager-leaders in my IT career worthy of an A+ rating: two of them were part of my IBM/ISSC career; Terry is the third A+ manager I’ve ever been lucky enough to serve.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
+		</div>-->
+		<
+		<!--div class="testimonial-item">
+			<img src="assets/img/testimonials/kevins.gif" class="testimonial-img" alt="">
+			<h3>Kevin Stack</h3>
+			<h4>Regional Manager at Ultra Consultants</h4>
+			<p>
+				<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+				Over the past 2-3 years, I've had the privilege of working with and learning from Terry. He is a very qualified leader who possesses a unique portfolio of skills. Terry can inspire teams, be an educator, provide thought leadership and work in the technical details. Most importantly, Terry always puts his team and customers ahead of himself. Combined with his interest and practice in the technology market, Terry delivers quality results and is respected by all levels of the organization.
+				<i class="bx bxs-quote-alt-right quote-icon-right"></i>
 
+			</p>
 
-					</div>-->
-
-					<<!--div class="testimonial-item">
-						<img src="assets/img/testimonials/kevins.gif" class="testimonial-img" alt="">
-						<h3>Kevin Stack</h3>
-						<h4>Regional Manager at Ultra Consultants</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Over the past 2-3 years, I've had the privilege of working with and learning from Terry. He is a very qualified leader who possesses a unique portfolio of skills. Terry can inspire teams, be an educator, provide thought leadership and work in the technical details. Most importantly, Terry always puts his team and customers ahead of himself. Combined with his interest and practice in the technology market, Terry delivers quality results and is respected by all levels of the organization.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-
-						</p>
-
-					</div>-->
-
-					<!--<div class="testimonial-item">
+		</div>-->
+		<!--<div class="testimonial-item">
 						<img src="assets/img/testimonials/markv.gif" class="testimonial-img" alt="">
 						<h3>Mark Vickers</h3>
 						<h4>Enterprise Database Administrator</h4>
@@ -642,7 +610,8 @@
 				</div>
 
 			</div>
-		</section>--><!-- End Testimonials Section -->
+		</section>-->
+		<!-- End Testimonials Section -->
 		<!-- ======= Pricing Section ======= -->
 		<section id="pricing" class="pricing">
 			<div class="container">
