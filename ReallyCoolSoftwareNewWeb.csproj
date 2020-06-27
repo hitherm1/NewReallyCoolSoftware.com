@@ -268,8 +268,6 @@
     <Content Include="Blog-Setting-up-Secret-Access-keys-for-SharePoint.html" />
     <Content Include="Blog-Why-Migrate-to-the-Cloud.html" />
     <Content Include="Blog-Starting-an-Online-Business.html" />
-    <Content Include="blog2.html" />
-    <Content Include="BlogFeed2.html" />
     <Content Include="changelog.txt" />
     <Content Include="downloaddigital-IDC.html" />
     <Content Include="FAQ.html" />
@@ -278,7 +276,6 @@
     <Content Include="Global.asax" />
     <Content Include="BlogFeed.html" />
     <Content Include="index.html" />
-    <Content Include="MediumBlog.html" />
     <Content Include="Readme.txt" />
     <Content Include="robots.txt" />
     <Content Include="sitemap.xml" />

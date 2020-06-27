@@ -12,8 +12,8 @@
 	<meta content="" name="descriptison">
 	<meta content="" name="keywords">
 	<meta name="google-site-verification" content="YXGf0foSiO9QmTMxHo6baD-RxARVebeGcu8gaGBNztw" />
-	<meta property="og:title" content="Making a difference one line of code at a time.">
-	<meta property="og:site_name" content="Really cool Software LLC">
+	<meta property="og:title" content="Frequently Asked Questions about our AWS, Cloud Computing, SharePoint, and Software Design Services">
+	<meta property="og:site_name" content="Really cool Software LLC FAQs">
 	<meta property="og:url" content="https://www.reallycoolsoftwarellc.com/FAQ.html" />
 	<meta property="og:description" content="Frequently Asked Questions about our AWS, Cloud Computing, SharePoint, and Software Design Services">
 	<meta property="og:type" content="article">
@@ -52,178 +52,23 @@
 
 	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+
+	<!-- Google Tag Manager -->
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MHQV6D7');</script>
+	<!-- End Google Tag Manager -->
 
-		gtag('config', '', { 'optimize_id': 'OPT-NTX2R4L' });
-	</script>
-
-	<!-- Global site tag (gtag.js) - Google Ads: 1071252390 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1071252390"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'AW-1071252390');
-	</script>
-	<!-- Event snippet for Website traffic conversion page -->
-	<script>
-		gtag('event', 'conversion', { 'send_to': 'AW-1071252390/qwmuCK_16M4BEKaH6P4D' });
-	</script>
-
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDPG2QEHR8"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-DDPG2QEHR8');
-	</script><!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57189171-3">
-	</script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-57189171-3');
-	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
 
-	<script>
-		function submitToAPI2(e) {
-
-			//if (submitUserForm()) {
-
-			e.preventDefault();
-			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
-
-
-			if ($("#email2").val() == "") {
-				alert("Please enter your email id");
-				return;
-			}
-
-			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-			if (!reeamil.test($("#email2").val())) {
-				alert("Please enter valid email address");
-				return;
-			}
-			var name = "";
-			var phone = "";
-			var email = $("#email2").val();
-			var desc = "newsletter";
-
-			var data = {
-				name: name,
-				phone: phone,
-				email: email,
-				desc: desc
-			};
-
-			$.ajax({
-				type: "POST",
-				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
-				dataType: "json",
-				crossDomain: "true",
-				contentType: "application/json; charset=utf-8",
-				data: JSON.stringify(data),
-
-
-				success: function () {
-					// clear form and show a success message
-
-					$('#myModal').modal('show');
-
-					document.getElementById("contact-form").reset();
-					location.reload();
-				},
-				error: function () {
-					// show an error message
-					alert("UnSuccessfull");
-				}
-			});
-		}
-		function submitToAPI(e) {
-
-			//if (submitUserForm()) {
-
-			e.preventDefault();
-			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
-
-			var Namere = /[A-Za-z]{1}[A-Za-z]/;
-			if (!Namere.test($("#name").val())) {
-				alert("Name can not less than 2 char");
-				return;
-			}
-			if (!Namere.test($("#phone").val())) {
-				alert("Subject can not less than 2 char");
-				return;
-			}
-			if (!Namere.test($("#desc").val())) {
-				alert("Message can not less than 2 char");
-				return;
-			}
-			if ($("#email").val() == "") {
-				alert("Please enter your email id");
-				return;
-			}
-
-			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-			if (!reeamil.test($("#email").val())) {
-				alert("Please enter valid email address");
-				return;
-			}
-
-			var name = $("#name").val();
-			var phone = $("#phone").val();
-			var email = $("#email").val();
-			var desc = $("#desc").val();
-
-
-			var data = {
-				name: name,
-				phone: phone,
-				email: email,
-				desc: desc
-			};
-			var tester = JSON.stringify(data);
-			$.ajax({
-				type: "POST",
-				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
-				dataType: "json",
-				crossDomain: "true",
-				contentType: "application/json; charset=utf-8",
-				data: JSON.stringify(data),
-
-
-				success: function () {
-					// clear form and show a success message
-
-					$('#myModal').modal('show');
-
-					document.getElementById("contact-form").reset();
-					location.reload();
-				},
-				error: function () {
-					// show an error message
-					alert("UnSuccessfull " + tester);
-				}
-			});
-		}
-		//}
-	</script>
+	
 	<style>
 		@font-face {
 			font-family: 'Pacifico';
@@ -242,7 +87,12 @@
 </head>
 
 <body>
-
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHQV6D7"
+				height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<!-- ======= Top Bar ======= -->
 	<section id="topbar" class="d-none d-lg-block">
 		<div class="container d-flex">
@@ -377,7 +227,7 @@
 				</b>
 				<p>
 					On average, the design and build process takes between 8-12 weeks. There are many variables involved that can influence the length of the project including:
-				  
+
 
 					<br /><br />The size of the website
 

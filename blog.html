@@ -13,10 +13,10 @@
 	<meta content="" name="descriptison">
 	<meta content="" name="keywords">
 	<meta name="google-site-verification" content="YXGf0foSiO9QmTMxHo6baD-RxARVebeGcu8gaGBNztw" />
-	<meta property="og:title" content="Making a difference one line of code at a time.">
-	<meta property="og:site_name" content="Really cool Software LLC">
+	<meta property="og:title" content="Really Cool Software - Blogging on Computer Design, Development, and Small Buinesses.  Making a difference one line of code at a time.">
+	<meta property="og:site_name" content="Really cool Software LLC Blog">
 	<meta property="og:url" content="https://reallycoolsoftwarellc.com/Blog/blog.html">
-	<meta property="og:description" content="Blogging on  Computer Design, Development, and Small Buinesses.">
+	<meta property="og:description" content="Really Cool Software - Blogging on Computer Design, Development, and Small Buinesses.  Making a difference one line of code at a time.">
 	<meta property="og:type" content="article">
 	<meta property="og:image" content="https://reallycoolsoftwarellc.com//assets/img/blog-1.jpg">
 	<!-- Favicons -->
@@ -67,77 +67,7 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
-	<script>
-		function submitToAPI(e) {
-
-			//if (submitUserForm()) {
-
-			e.preventDefault();
-			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
-
-			var Namere = /[A-Za-z]{1}[A-Za-z]/;
-			if (!Namere.test($("#name").val())) {
-				alert("Name can not less than 2 char");
-				return;
-			}
-			if (!Namere.test($("#phone").val())) {
-				alert("Subject can not less than 2 char");
-				return;
-			}
-			if (!Namere.test($("#desc").val())) {
-				alert("Message can not less than 2 char");
-				return;
-			}
-			if ($("#email").val() == "") {
-				alert("Please enter your email id");
-				return;
-			}
-
-			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-			if (!reeamil.test($("#email").val())) {
-				alert("Please enter valid email address");
-				return;
-			}
-
-			var name = $("#name").val();
-			var phone = $("#phone").val();
-			var email = $("#email").val();
-			var desc = $("#desc").val();
-
-
-			var data = {
-				name: name,
-				phone: phone,
-				email: email,
-				desc: desc
-			};
-
-			$.ajax({
-				type: "POST",
-				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
-				dataType: "json",
-				crossDomain: "true",
-				contentType: "application/json; charset=utf-8",
-				data: JSON.stringify(data),
-
-
-				success: function () {
-					// clear form and show a success message
-
-					$('#myModal').modal('show');
-
-					document.getElementById("contact-form").reset();
-					location.reload();
-				},
-				error: function () {
-					// show an error message
-					alert("UnSuccessfull");
-				}
-			});
-		}
-		//}
-	</script>
-
+	
 
 	<!-- =======================================================
 	* Template Name: Flexor - v2.1.1
