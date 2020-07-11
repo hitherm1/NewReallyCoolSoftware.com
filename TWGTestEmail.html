@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "hitherm@gmail.com",
+                Password: "s#IP288jO&Hu",
+                To: 'thigginbotham@dovertwg.com',
+                From: "hitherm@gmail.com",
+                Subject: "test from cpq call",
+                Body: "got a download happen",
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
+</head>
+<body>
+    <form method="post">
+        <input type="button" value="Send Email" onclick="sendEmail()" />
+    </form>
+</body>
+</html>
