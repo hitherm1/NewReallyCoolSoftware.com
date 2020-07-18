@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Configuring SSL for an Elastic Beanstalk Application</title>
+</head>
+<body>
+    The SSL lock gives your users peace of mind; so it is a great idea to add an SSL certificate to your web site. Google is starting to require it and it also boosts your SEO ranking in Google. but setting it up for an Elastic Beanstalk app is a bear, right? Not really, it can be done in a few steps.
+    Step 1 — Set up your Record Sets.
+    For the sake of this tutorial let’s assume you have registered domain, either AWS Route 53 or another domain provider like GoDaddy. First, make the entries for an A Record with a value of your Elastic BeanStalk URL
+    Image for post
+    Elastic Beanstalk Management Console
+    In this example, it’s Competitorcomparison-env.eba-vsb6733n.us-east-1.elasticbeanstalk.com. When adding this to your domain, ensure the A record is set to Yes for Alias. The value will then be your app’s Elastic Beanstalk URL.
+    Image for post
+    Route 53 Configuration for an A Record
+    Now, if you visit your domain, in my case sslexample.somedomainname.com, you’ll see your app!
+    You can try to type https://sslexample.somedomainname.com but as there’s no certificate, the request will timeout. So let’s add a certificate!
+    Step 2 — Configure your EB Application to use a Load Balancer.
+    You can not set an SSL Certificate onto an ElasticBeanstalk application, directly. But SSL Certificates can be attached to Load Balancers. In order to make Secure HTTPS calls to your Elastic BeanStalk application, you must first configure your application to use a Load Balancer.
+    Configuring your application for this is done on the Configuration tab of your Elastic Beanstalk dashboard. and click the modify link on the Capacity card.
+    Image for post
+    Click the Edit button then modify Environment Type to be Load Balance.
+    Image for post
+    This will then take you back to the configuration page, where you’ll need to hit Apply for your changes to take place. As your app will be unavailable for a short period whilst the changes take place, you’ll need to confirm again after hitting Apply.
+    Step 3 — Creating an SSL Certificate with ACM
+    Drum Roll Please! Now the moment we have all been waiting for. Let’s create a Certificate. You can create a Certificate using any Certificate Manager, but since this is all about AWS we will use ACM(Amazon Certificate Manager) for this example.
+    You can have a different cert for every subdomain, but I like simple and for this exercise, we will keep it simple. I will set up a wildcard certificate for the entire domain. This means all sub-domains, (i.e sslexample.yourdomainname.com) will be covered by the same SSL certificate. To do this, head over to ACM and request a certificate. Type in your domain, if you wish to set up a wild card add a * to the beginning of your domain.
+    AWS Certificate Manager Requesting a Certificate
+    You’ll have two options to validate that you’re the owner of the domain. DNS or Email. I like DNS, just because I am usually already in AWS and it is convenient. If you choose to do this via email make sure you have the required access to the email account to get receive and read the email.
+    DNS Config for domain
+    To verify via DNS, you’ll need to add a CNAME record with whatever values are generated in your DNS_Configuration.csv file.
+    Enter the Name value from the .csv file and the Value from the .csv file and hit create.
+    This will take a little time to verify, but once done, your certificate should move from Pending to Issued.
+    Bringing it all together
+    Lastly, we need to apply our newly created SSL Certificate to our App’s Load Balancer. To do this, navigate to the Configuration Tab of your Elastic Beanstalk App. There should be a new card labeled Load Balancer.
+    Click modify on the Load Balancer card
+    In order to add the certificate, we’ll need to open up port 443 (SSL Port) and assign our certificate.
+    If your certificate doesn’t appear in the dropdown, try refreshing and waiting a bit. Once it does, choose it and hit save. Again, you’ll be directed back to the Configuration page where you’ll have to Apply your changes.
+    Once completed, navigate to https://yourdomainname.com and you should see your site served through HTTPS.
+    See more useful AWS tutorials at https://www.ReallyCoolSoftwarellc.com
+</body>
+</html>

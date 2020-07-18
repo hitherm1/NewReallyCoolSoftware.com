@@ -288,6 +288,7 @@
     <Content Include="assets\vendor\venobox\venobox.js" />
     <Content Include="assets\vendor\venobox\venobox.min.css" />
     <Content Include="assets\vendor\venobox\venobox.min.js" />
+    <Content Include="Blog-Configuring-ssl-for-an-elastic-beanstalk-application.html" />
     <Content Include="blog.html" />
     <Content Include="Blog-Setting-up-Secret-Access-keys-for-SharePoint.html" />
     <Content Include="Blog-Why-Migrate-to-the-Cloud.html" />
