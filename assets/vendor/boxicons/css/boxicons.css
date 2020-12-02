@@ -284,7 +284,7 @@
                 transform: scale3d(1, 1, 1);
     }
 
-    10%,
+    25%,
     20%
     {
         -webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
@@ -323,7 +323,7 @@
                 transform: scale3d(1, 1, 1);
     }
 
-    10%,
+    25%,
     20%
     {
         -webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);
