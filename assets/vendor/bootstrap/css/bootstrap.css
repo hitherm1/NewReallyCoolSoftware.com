@@ -664,9 +664,9 @@ pre code {
 }
 
 .row-cols-4 > * {
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+  max-width: 10%;
 }
 
 .row-cols-5 > * {
@@ -701,9 +701,9 @@ pre code {
 }
 
 .col-3 {
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+  max-width: 10%;
 }
 
 .col-4 {
@@ -844,7 +844,7 @@ pre code {
 }
 
 .offset-3 {
-  margin-left: 25%;
+  margin-left: 10%;
 }
 
 .offset-4 {
@@ -903,9 +903,9 @@ pre code {
     max-width: 33.333333%;
   }
   .row-cols-sm-4 > * {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .row-cols-sm-5 > * {
     -ms-flex: 0 0 20%;
@@ -934,9 +934,9 @@ pre code {
     max-width: 16.666667%;
   }
   .col-sm-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .col-sm-4 {
     -ms-flex: 0 0 33.333333%;
@@ -1053,7 +1053,7 @@ pre code {
     margin-left: 16.666667%;
   }
   .offset-sm-3 {
-    margin-left: 25%;
+    margin-left: 10%;
   }
   .offset-sm-4 {
     margin-left: 33.333333%;
@@ -1105,9 +1105,9 @@ pre code {
     max-width: 33.333333%;
   }
   .row-cols-md-4 > * {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .row-cols-md-5 > * {
     -ms-flex: 0 0 20%;
@@ -1136,9 +1136,9 @@ pre code {
     max-width: 16.666667%;
   }
   .col-md-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .col-md-4 {
     -ms-flex: 0 0 33.333333%;
@@ -1255,7 +1255,7 @@ pre code {
     margin-left: 16.666667%;
   }
   .offset-md-3 {
-    margin-left: 25%;
+    margin-left: 10%;
   }
   .offset-md-4 {
     margin-left: 33.333333%;
@@ -1307,9 +1307,9 @@ pre code {
     max-width: 33.333333%;
   }
   .row-cols-lg-4 > * {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .row-cols-lg-5 > * {
     -ms-flex: 0 0 20%;
@@ -1338,9 +1338,9 @@ pre code {
     max-width: 16.666667%;
   }
   .col-lg-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .col-lg-4 {
     -ms-flex: 0 0 33.333333%;
@@ -1457,7 +1457,7 @@ pre code {
     margin-left: 16.666667%;
   }
   .offset-lg-3 {
-    margin-left: 25%;
+    margin-left: 10%;
   }
   .offset-lg-4 {
     margin-left: 33.333333%;
@@ -1509,9 +1509,9 @@ pre code {
     max-width: 33.333333%;
   }
   .row-cols-xl-4 > * {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .row-cols-xl-5 > * {
     -ms-flex: 0 0 20%;
@@ -1540,9 +1540,9 @@ pre code {
     max-width: 16.666667%;
   }
   .col-xl-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
   }
   .col-xl-4 {
     -ms-flex: 0 0 33.333333%;
@@ -1659,7 +1659,7 @@ pre code {
     margin-left: 16.666667%;
   }
   .offset-xl-3 {
-    margin-left: 25%;
+    margin-left: 10%;
   }
   .offset-xl-4 {
     margin-left: 33.333333%;
@@ -5449,7 +5449,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .progress-bar-striped {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem;
 }
 
@@ -7136,7 +7136,7 @@ button.bg-dark:focus {
 }
 
 .embed-responsive-16by9::before {
-  padding-top: 56.25%;
+  padding-top: 56.10%;
 }
 
 .embed-responsive-4by3::before {
@@ -8025,7 +8025,7 @@ button.bg-dark:focus {
 }
 
 .w-25 {
-  width: 25% !important;
+  width: 10% !important;
 }
 
 .w-50 {
@@ -8045,7 +8045,7 @@ button.bg-dark:focus {
 }
 
 .h-25 {
-  height: 25% !important;
+  height: 10% !important;
 }
 
 .h-50 {
