@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self' *; script-src 'self' 'unsafe-inline' *; object-src 'none'; style-src 'self' * 'unsafe-inline' https://fonts.googleapis.com ; img-src * data:; media-src 'self' *; frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com https://c.sharethis.mgr.consensu.org https://l.sharethis.com https://s3.us-east-2.amazonaws.com https://tpc.googlesyndication.com; font-src 'self' https://fonts.gstatic.com data: https://kit-free.fontawesome.com https://reallycoolsoftwarellc.com https://ka-f.fontawesome.com; connect-src 'self' https://www.google-analytics.com https://muzdbczmmh.execute-api.us-east-1.amazonaws.com https://l.sharethis.com https://pagead2.googlesyndication.com https://cors-anywhere.herokuapp.com https://ka-f.fontawesome.com" />
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' *; script-src 'self' 'unsafe-inline' *; object-src 'none'; style-src 'self' * 'unsafe-inline' https://fonts.googleapis.com ; img-src * data:; media-src 'self' *; frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com https://c.sharethis.mgr.consensu.org https://l.sharethis.com https://s3.us-east-2.amazonaws.com https://tpc.googlesyndication.com https://feed.surfing-waves.com; font-src 'self' https://fonts.gstatic.com data: https://kit-free.fontawesome.com https://reallycoolsoftwarellc.com https://ka-f.fontawesome.com; connect-src 'self' https://www.google-analytics.com https://muzdbczmmh.execute-api.us-east-1.amazonaws.com https://l.sharethis.com https://pagead2.googlesyndication.com https://cors-anywhere.herokuapp.com https://ka-f.fontawesome.com" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -88,7 +88,7 @@
 	}
 </head>
 
-<body onload="loadXMLDoc()">
+<body>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHQV6D7"
@@ -187,75 +187,52 @@
 
 			<div class="blog" id="blogdiv" style="width:100%"></div>
 
-			<script>
-				var content;
-				var title;
-				var creator;
-				var published;
-				var categories;
-				var link;
+			<!-- start sw-rss-feed code -->
+			<script type="text/javascript">
 
-
-				function loadXMLDoc() {
-
-					var xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function () {
-						if (this.readyState == 4 && this.status == 200) {
-							//alert(this.responseText);
-
-							var xmlDoc = xhttp.responseXML;
-
-							var z = xmlDoc.getElementsByTagName('item');
-							document.write('<div>');
-							categories = "";
-							for (var k = 0; k < z.length; k++) {
-								var x = z[k].childNodes;
-								for (var i = 0; i < x.length; i++) {
-									var y = x[i];
-									if (y.nodeType == 1) {
-										if (y.nodeName == "content:encoded") {
-											content = y.firstChild.nodeValue;
-										}
-										if (y.nodeName == "title") {
-											title = y.firstChild.nodeValue;
-											categories = "";
-										}
-										if (y.nodeName == "dc:creator") {
-											creator = y.firstChild.nodeValue;
-										}
-										if (y.nodeName == "pubDate") {
-											published = y.firstChild.nodeValue;
-										}
-										if (y.nodeName == "category") {
-											categories = categories + y.firstChild.nodeValue + " | ";
-										}
-										if (y.nodeName == "link") {
-											link = y.firstChild.nodeValue;
-										}
-
-
-
-									}
-								}
-								document.write('<style> img{height:100px;float:left;margin:10px;}</style><div style=" border-radius: 12px;background: #FF8B42; padding: 10px;width: 100%; height: 50px;"> <h3>' + title + " </h3>");
-								document.write("<h5 style='color:blue'>" + creator + " " + published + " </h5>");
-								//content = "&nbsp;";
-								var pos = content.indexOf("</figure>");
-								var pos2 = content.indexOf("</p>");
-								document.write('<br/> <br/><div style="margin:10px;width:100%;font-size:18px;">' + content.substring(0, pos) + content.substring(pos + 9, pos2) + "<br/><br/><a href='" + link + "' target='_blank'> Read More </a><br/><br/>");
-								//document.write('tags:' + categories);
-								document.write("</div><br/><br/>");
-
-							}
-
-						}
-					};
-					xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://medium.com/feed/@terryhigginbotham", true);
-					xhttp.send();
-
-				}
-
+<!--
+				rssfeed_url = new Array();
+				rssfeed_url[0] = "https://medium.com/feed/@terryhigginbotham";
+				rssfeed_frame_width = "800";
+				rssfeed_frame_height = "260";
+				rssfeed_scroll = "on";
+				rssfeed_scroll_step = "6";
+				rssfeed_scroll_bar = "off";
+				rssfeed_target = "_blank";
+				rssfeed_font_size = "12";
+				rssfeed_font_face = "";
+				rssfeed_border = "on";
+				rssfeed_css_url = "https://feed.surfing-waves.com/css/style4.css";
+				rssfeed_title = "on";
+				rssfeed_title_name = "";
+				rssfeed_title_bgcolor = "#3366ff";
+				rssfeed_title_color = "#fff";
+				rssfeed_title_bgimage = "";
+				rssfeed_footer = "off";
+				rssfeed_footer_name = "rss feed";
+				rssfeed_footer_bgcolor = "#fff";
+				rssfeed_footer_color = "#333";
+				rssfeed_footer_bgimage = "";
+				rssfeed_item_title_length = "50";
+				rssfeed_item_title_color = "#666";
+				rssfeed_item_bgcolor = "#fff";
+				rssfeed_item_bgimage = "";
+				rssfeed_item_border_bottom = "on";
+				rssfeed_item_source_icon = "off";
+				rssfeed_item_date = "off";
+				rssfeed_item_description = "on";
+				rssfeed_item_description_length = "120";
+				rssfeed_item_description_color = "#666";
+				rssfeed_item_description_link_color = "#333";
+				rssfeed_item_description_tag = "off";
+				rssfeed_no_items = "0";
+				rssfeed_cache = "94105826fb77dcf3dd31c3f4a57f0869";
+				//-->
 			</script>
+			<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+			<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+			<div style="color:#ccc;font-size:10px; text-align:right; width:800px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div>
+			<!-- end sw-rss-feed code -->
 		</div>
 	</section>
 
