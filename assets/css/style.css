@@ -1434,6 +1434,20 @@ section {
 	color: #313030;
 	box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
 	padding: 20px;
+	position: absolute;
+	top: -36px;
+	left: calc(50% - 36px);
+	transition: 0.2s;
+	border-radius: 50%;
+	border: 6px solid #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	width: 72px;
+	height: 72px;
+	background: #ff5821;
 }
 
 	.contact .info-box i {
