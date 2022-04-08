@@ -297,6 +297,7 @@
     <Content Include="changelog.txt" />
     <Content Include="downloaddigital-IDC.html" />
     <Content Include="FAQ.html" />
+    <Content Include="favicon.ico" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
