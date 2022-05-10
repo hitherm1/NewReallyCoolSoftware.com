@@ -95,7 +95,7 @@ jQuery(document).ready(function($) {
     var this_form = $(this);
     var action = $(this).attr('action');
 
-    if( ! action ) {
+    if( !action ) {
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
       return false;
