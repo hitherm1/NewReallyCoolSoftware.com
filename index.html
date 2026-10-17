@@ -1,948 +1,990 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ff5821">
-  <meta name="description" content="Really Cool Software LLC provides responsive websites, cloud development, SharePoint solutions, custom software, and DevOps consulting.">
-
-  <title>Really Cool Software LLC | Software &amp; Cloud Solutions</title>
-
-  <!-- Original site favicon assets -->
-  <link rel="icon" href="assets/img/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
-
-  <meta property="og:title" content="Really Cool Software LLC">
-  <meta property="og:description" content="Practical software and cloud solutions for small businesses.">
-  <meta property="og:url" content="https://reallycoolsoftware.tech/">
-  <meta property="og:type" content="website">
-
-  <style>
-    :root {
-      --orange: #ff5821;
-      --orange-hover: #e84916;
-      --brown: #635551;
-      --charcoal: #313030;
-      --muted: #716f6f;
-      --cream: #fff9f7;
-      --border: #eadfd9;
-      --white: #ffffff;
-      --radius: 10px;
-      --max-width: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Open Sans", Arial, sans-serif;
-      color: var(--charcoal);
-      line-height: 1.65;
-      background: var(--white);
-    }
-
-    h1, h2, h3, h4 {
-      font-family: "Raleway", Arial, sans-serif;
-      line-height: 1.2;
-    }
-
-    h2, h3 {
-      color: var(--brown);
-    }
-
-    a {
-      color: var(--orange);
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      color: var(--orange-hover);
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--orange);
-      outline-offset: 4px;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      width: min(var(--max-width), calc(100% - 36px));
-      margin-inline: auto;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 10px;
-      z-index: 100;
-      padding: 10px 15px;
-      background: var(--white);
-    }
-
-    .skip-link:focus {
-      top: 10px;
-    }
-
-    /* Header and navigation */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, .98);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-container {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding-block: 10px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--brown);
-      font-size: 1.1rem;
-      font-weight: 800;
-      text-decoration: none;
-      letter-spacing: -.025em;
-    }
-
-    .brand img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-    }
-
-    .menu-toggle {
-      display: none;
-      padding: 9px 13px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--white);
-      color: var(--brown);
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links a {
-      color: var(--brown);
-      font-size: .94rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--orange);
-    }
-
-    /* Hero */
-
-    .hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      padding: clamp(70px, 10vw, 125px) 0;
-      color: var(--white);
-      background-color: #39312f;
-      background-image: url("assets/img/hero-bg.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: rgba(49, 40, 37, .76);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--orange);
-      font-size: .8rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .13em;
-    }
-
-    .hero .eyebrow {
-      color: #ffb69d;
-    }
-
-    .hero h1 {
-      max-width: 800px;
-      margin: 0 0 22px;
-      color: var(--white);
-      font-size: clamp(2.35rem, 6vw, 4.4rem);
-      letter-spacing: -.045em;
-    }
-
-    .hero-description {
-      max-width: 700px;
-      margin: 0 0 24px;
-      color: #fff4ef;
-      font-size: clamp(1.05rem, 2vw, 1.2rem);
-    }
-
-    .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 46px;
-      padding: 11px 20px;
-      border: 2px solid var(--orange);
-      border-radius: 5px;
-      background: var(--orange);
-      color: var(--white);
-      font: inherit;
-      font-weight: 750;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background .2s ease, border-color .2s ease;
-    }
-
-    .button:hover {
-      background: var(--orange-hover);
-      border-color: var(--orange-hover);
-      color: var(--white);
-    }
-
-    .button-light {
-      background: var(--white);
-      border-color: var(--white);
-      color: var(--brown);
-    }
-
-    .button-light:hover {
-      background: var(--cream);
-      border-color: var(--cream);
-      color: var(--orange);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    /* Certification graphics */
-
-    .certifications {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 15px;
-      margin-top: 36px;
-    }
-
-    .certifications a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 145px;
-      min-height: 105px;
-      padding: 10px;
-      border: 1px solid rgba(255, 255, 255, .25);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .96);
-    }
-
-    .certifications img {
-      width: 100%;
-      height: 85px;
-      object-fit: contain;
-    }
-
-    /* Shared section styles */
-
-    section {
-      padding: clamp(52px, 7vw, 82px) 0;
-    }
-
-    .section-light {
-      background: var(--cream);
-    }
-
-    .section-heading {
-      max-width: 760px;
-      margin: 0 auto 38px;
-      text-align: center;
-    }
-
-    .section-heading h2 {
-      margin: 0 0 14px;
-      font-size: clamp(1.85rem, 4vw, 2.7rem);
-      letter-spacing: -.025em;
-    }
-
-    .section-heading > p:last-child {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    /* Service cards */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      min-width: 0;
-      padding: 25px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: 0 3px 18px rgba(49, 48, 48, .055);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 18px;
-      border-radius: 50%;
-      background: var(--orange);
-      color: var(--white);
-      font-size: 1.35rem;
-      font-weight: 800;
-    }
-
-    /* About */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .about-grid h2 {
-      margin: 0;
-      font-size: clamp(1.9rem, 4vw, 2.65rem);
-    }
-
-    .about-copy p {
-      margin-top: 0;
-      color: var(--muted);
-    }
-
-    .check-list {
-      padding-left: 0;
-      list-style: none;
-    }
-
-    .check-list li {
-      position: relative;
-      margin-bottom: 12px;
-      padding-left: 28px;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--orange);
-      font-weight: 900;
-    }
-
-    /* Pricing */
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .price {
-      margin: 12px 0;
-      color: var(--orange);
-      font-size: 1.9rem;
-      font-weight: 850;
-      letter-spacing: -.035em;
-    }
-
-    .price small {
-      color: var(--muted);
-      font-size: .85rem;
-      font-weight: 500;
-      letter-spacing: 0;
-    }
-
-    .price-list {
-      margin: 15px 0 25px;
-      padding-left: 21px;
-      color: var(--muted);
-    }
-
-    .price-list li {
-      margin-bottom: 7px;
-    }
-
-    .pricing-grid .button {
-      margin-top: 5px;
-    }
-
-    /* Contact information only; no form */
-
-    .contact-section {
-      background: var(--cream);
-      text-align: center;
-    }
-
-    .contact-content {
-      max-width: 760px;
-      margin-inline: auto;
-    }
-
-    .contact-content > p {
-      color: var(--muted);
-    }
-
-    .contact-details {
-      margin: 26px 0;
-      padding: 25px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--white);
-    }
-
-    .contact-details p {
-      margin: 8px 0;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-details a {
-      overflow-wrap: anywhere;
-    }
-
-    /* Footer */
-
-    .site-footer {
-      padding: 25px 0;
-      background: #39312f;
-      color: rgba(255, 255, 255, .85);
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .footer-inner p {
-      margin: 0;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-links a {
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      color: #ffb69d;
-    }
-
-    /* Tablet */
-
-    @media (max-width: 850px) {
-      .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .nav-links {
-        gap: 15px;
-      }
-    }
-
-    /* Mobile */
-
-    @media (max-width: 640px) {
-      html {
-        scroll-padding-top: 80px;
-      }
-
-      .container {
-        width: calc(100% - 30px);
-      }
-
-      .nav-container {
-        min-height: 68px;
-      }
-
-      .brand {
-        font-size: .98rem;
-      }
-
-      .brand img {
-        width: 38px;
-        height: 38px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        gap: 0;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links li a {
-        display: block;
-        padding: 12px 2px;
-        border-top: 1px solid var(--border);
-      }
-
-      .hero {
-        padding: 65px 0;
-        background-attachment: scroll;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .hero-actions .button {
-        width: 100%;
-        margin: 0;
-      }
-
-      .certifications {
-        gap: 10px;
-      }
-
-      .certifications a {
-        width: calc(50% - 5px);
-        min-height: 90px;
-      }
-
-      .certifications img {
-        height: 70px;
-      }
-
-      .service-grid,
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        padding: 21px;
-      }
-
-      .footer-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition-duration: .01ms !important;
-      }
-    }
-  </style>
+	<meta http-equiv="Content-Security-Policy"
+		  content="
+		  default-src 'self' *; 
+		  base-uri 'self'; 
+		  script-src		 
+		  'unsafe-inline'
+		  'unsafe-eval'
+		  http:
+		  https:;
+		  object-src 'none'; 
+		  style-src 'self' 
+		  * 
+		  'unsafe-inline' https://fonts.googleapis.com ; 
+		  img-src * data:;
+		  media-src 'self' *; 
+		  frame-src 'self'
+		  https://googleads.g.doubleclick.net
+		  https://pagead2.googlesyndication.com 
+		  https://www.google.com 
+		  https://c.sharethis.mgr.consensu.org 
+		  https://l.sharethis.com 
+		  https://s3.us-east-2.amazonaws.com 
+		  https://tpc.googlesyndication.com; 
+		  font-src 'self' 
+		  https://fonts.gstatic.com data:
+		  https://kit-free.fontawesome.com
+		  https://reallycoolsoftwarellc.com
+		  https://ka-f.fontawesome.com; 
+		  connect-src 'self' 
+		  https://www.google-analytics.com 
+		  https://muzdbczmmh.execute-api.us-east-1.amazonaws.com
+		  https://l.sharethis.com 
+		  https://pagead2.googlesyndication.com 
+		  https://cors-anywhere.herokuapp.com
+		  https://ka-f.fontawesome.com 
+		  https://stats.g.doubleclick.net
+		  https://chimpstatic.com
+		  "
+		  />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Really Cool Software LLC.</title>
+	<meta name=”description” content="Helping small businesses thrive with AWS, Cloud Computing, SharePoint, and Software Design while making a global impact. $10.00 donation to Charity.">
+	<meta property="fb:app_id" content="2564984233607509" />
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	<meta name="google-site-verification" content="YXGf0foSiO9QmTMxHo6baD-RxARVebeGcu8gaGBNztw" />
+	<meta property="og:title" content="Making a difference one line of code at a time.">
+	<meta property="og:site_name" content="Really cool Software LLC">
+	<meta property="og:url" content="https://www.reallycoolsoftware.tech/" />
+	<meta property="og:description" content="Helping small businesses thrive with AWS, Cloud Computing, SharePoint, and Software Design while making a global impact. $10.00 donation to Charity.">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="www.reallycoolsoftware.tec/assets/img/RCSFB.PNG">
+
+	<!-- Favicons -->
+	<link href="assets/img/favicon.ico" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<link rel="assets/img/apple-touch-icon" sizes="57x57" href="/assets/img/apple-icon-57x57.png">
+	<link rel="assets/img/apple-touch-icon" sizes="60x60" href="/assets/img/apple-icon-60x60.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="72x72" href="/assets/img/apple-icon-72x72.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon-76x76.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="114x114" href="/assets/img/apple-icon-114x114.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="120x120" href="/assets/img/apple-icon-120x120.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="144x144" href="/assets/img/apple-icon-144x144.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="152x152" href="/assets/img/apple-icon-152x152.png">
+	<link rel="/assets/img/apple-touch-icon" sizes="180x180" href="/assets/img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<script src="https://kit.fontawesome.com/d4536c14a4.js" crossorigin="anonymous"></script>
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.css" rel="stylesheet" />
+	<!-- RCS Main CSS File -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<!-- ShareThis JS File -->
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5eb703019fbb400012e5ae22&product=inline-share-buttons' async='async'></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MHQV6D7');</script>
+	<!-- End Google Tag Manager -->
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+
+	<script>
+		function submitToAPI2(e) {
+
+			//if (submitUserForm()) {
+
+			e.preventDefault();
+			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
+
+
+			if ($("#email2").val() == "") {
+				alert("Please enter your email id");
+				return;
+			}
+
+			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			if (!reeamil.test($("#email2").val())) {
+				alert("Please enter valid email  address");
+				return;
+			}
+			var name = "";
+			var phone = "";
+			var email = $("#email2").val();
+			var desc = "newsletter";
+
+			var data = {
+				name: name,
+				phone: phone,
+				email: email,
+				desc: desc
+			};
+
+			$.ajax({
+				type: "POST",
+				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
+				dataType: "json",
+				crossDomain: "true",
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify(data),
+
+
+				success: function () {
+					// clear form and show a success message
+
+					$('#myModal').modal('show');
+
+					document.getElementById("contact-form").reset();
+					location.reload();
+				},
+				error: function () {
+					// show an error message
+					alert("UnSuccessfull");
+				}
+			});
+		}
+		function submitToAPI(e) {
+
+			//if (submitUserForm()) {
+
+			e.preventDefault();
+			var URL = "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test";
+
+			var Namere = /[A-Za-z]{1}[A-Za-z]/;
+			if (!Namere.test($("#name").val())) {
+				alert("Name can not less than 2 char");
+				return;
+			}
+			if (!Namere.test($("#phone").val())) {
+				alert("Subject can not less than 2 char");
+				return;
+			}
+			if (!Namere.test($("#desc").val())) {
+				alert("Message can not less than 2 char");
+				return;
+			}
+			if ($("#email").val() == "") {
+				alert("Please enter your email id");
+				return;
+			}
+
+			var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			if (!reeamil.test($("#email").val())) {
+				alert("Please enter valid email address");
+				return;
+			}
+
+			var name = $("#name").val();
+			var phone = $("#phone").val();
+			var email = $("#email").val();
+			var desc = $("#desc").val();
+
+
+			var data = {
+				name: name,
+				phone: phone,
+				email: email,
+				desc: desc
+			};
+			var tester = JSON.stringify(data);
+			$.ajax({
+				type: "POST",
+				url: "https://muzdbczmmh.execute-api.us-east-1.amazonaws.com/prod/test",
+				dataType: "json",
+				crossDomain: "true",
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify(data),
+
+
+				success: function () {
+					// clear form and show a success message
+
+					$('#myModal').modal('show');
+
+					document.getElementById("contact-form").reset();
+					location.reload();
+				},
+				error: function () {
+					// show an error message
+					alert("UnSuccessfull " + tester);
+				}
+			});
+		}
+		//}
+	</script>
+	<style>
+		@font-face {
+			font-family: 'Pacifico';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+			font-display: swap;
+		}
+	</style>
+	<!-- =======================================================
+	* Template Name: Flexor - v2.1.1
+	* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+	* Author: BootstrapMade.com
+	* License: https://bootstrapmade.com/license/
+	======================================================== -->
+	<script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/abe689b2b5401d4f0e1330479/c765493624c3aa249bd6a1f7e.js");</script>
+
+
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHQV6D7"
+				height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- ======= Top Bar ======= -->
+	<section id="topbar" class="d-none d-lg-block">
+		<div class="container d-flex">
+			<div class="contact-info mr-auto">
+				<ul>
+					<li><i class="icofont-envelope"></i>info@reallycoolsoftwarellc-com.awsapps.com</li>
+					<li><i class="icofont-phone"></i> +1 (318) 608-2041</li>
+					<li><i class="icofont-clock-time icofont-flip-horizontal"></i> Mon-Fri 9am - 5pm or by Appt.</li>
+				</ul>
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="brand" href="#home" aria-label="Really Cool Software home">
-        <img src="assets/img/clearicon.png"
-             alt=""
-             width="44"
-             height="44">
-        <span>ReallyCoolSoftware LLC</span>
-      </a>
 
-      <button class="menu-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="primary-navigation">
-        Menu ☰
-      </button>
+			</div>
+			<div class="cta">
+				&nbsp;
+			</div>
+		</div>
+	</section>
 
-      <nav aria-label="Main navigation">
-        <ul class="nav-links" id="primary-navigation">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container d-flex">
 
-  <main id="main">
+			<div class="logo mr-auto">
+				<!--<h1 class="text-light">-->
+				<a href="index.html">
+					<!--<img src="assets/img/apple-icon-72x72.png" alt="" class="img-fluid">-->
+				</a>
+				<a href="index.html">
+					<span>
+						<img src="assets/img/clearicon.png" />ReallyCoolSoftware LLC
+					</span>
+				</a>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <p class="eyebrow">Software · Cloud · Small Business</p>
+				<!--</h1>-->
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!--<a href="#about" class="scrollto">Get Started</a>-->
 
-        <h1>Technology that helps your business thrive.</h1>
 
-        <p class="hero-description">
-          Practical technology solutions for small businesses, including
-          professional websites, cloud development, Microsoft SharePoint,
-          custom software, and DevOps consulting.
-        </p>
+			</div>
 
-        <div class="hero-actions">
-          <a class="button button-light" href="#contact">
-            Let's Talk About Your Project
-          </a>
-          <a class="button" href="#services">
-            Explore Services
-          </a>
-        </div>
+			<nav class="nav-menu d-none d-lg-block">
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<!--<li><a href="#about">About</a></li>-->
+					<li><a href="#services">Services</a></li>
+					<!--<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#team">Team</a></li>-->
+					<li><a href="#pricing">Pricing </a></li>
+					<!--<li><a href="blog.html">Blog</a></li>-->
+					<!--<li class="drop-down">
+						<a href="">Drop Down</a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="drop-down">
+								<a href="#">Drop Down 2</a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+							<li><a href="#">Drop Down 5</a></li>
+						</ul>
+					</li>-->
+					 <!--<li><a href="http://ec2-54-152-208-222.compute-1.amazonaws.com" target="_blank">Blog</a></li>--> 
+					<li><a href="FAQ.html">FAQ </a></li>
+					<li><a href="#contact">Contact</a></li>
 
-        <!-- Original certification graphics -->
-        <div class="certifications" aria-label="Cloud certifications">
-          <a href="https://www.credly.com/badges/79dd6967-8e39-427c-b898-a2cf66fe38af/public_url"
-             target="_blank"
-             rel="noopener noreferrer">
-            <img src="assets/img/AWS-Developer-Associate.png"
-                 alt="AWS Developer Associate certification"
-                 loading="lazy">
-          </a>
+				</ul>
+			</nav><!-- .nav-menu -->
 
-          <a href="https://www.credly.com/badges/558550c6-32ec-442c-99fd-be13bde13b32/public_url"
-             target="_blank"
-             rel="noopener noreferrer">
-            <img src="assets/img/AWS-SolArchitect-Associate.png"
-                 alt="AWS Solutions Architect Associate certification"
-                 loading="lazy">
-          </a>
+		</div>
+	</header><!-- End Header -->
+	<!-- ======= Hero Section ======= -->
+	<section id="hero" class="d-flex flex-column  align-items-center">
+		<div class="container" data-aos="fade-in">
+			<!--<p>
+				<div id="google_translate_element"></div>
 
-          <a href="https://www.credly.com/badges/b585b26f-01d2-4e73-af6a-968f2c0d5fc0/public_url"
-             target="_blank"
-             rel="noopener noreferrer">
-            <img src="assets/img/AzureFundamentals.PNG"
-                 alt="Microsoft Azure Fundamentals certification"
-                 loading="lazy">
-          </a>
-        </div>
-      </div>
-    </section>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+					}
+				</script>
 
-    <!-- Services -->
-    <section class="section-light" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Our Services</p>
-          <h2>Solutions for Your Business</h2>
-          <p>
-            Straightforward technology, practical advice, and solutions
-            built around your business goals.
-          </p>
-        </div>
+				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			</p>-->
+			<h1>Welcome to ReallyCoolSoftware</h1>
+			<h2>
+				Helping the world while helping small businesses thrive
 
-        <div class="service-grid">
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">↗</div>
-            <h3>Websites &amp; Online Presence</h3>
-            <p>
-              Responsive websites, domain setup, hosting guidance,
-              and business email assistance.
-            </p>
-          </article>
+			</h2>
 
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">☁</div>
-            <h3>Cloud Development</h3>
-            <p>
-              Practical AWS and Azure solutions, cloud applications,
-              and application modernization.
-            </p>
-          </article>
 
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">▣</div>
-            <h3>SharePoint Solutions</h3>
-            <p>
-              Intranets, document management, workflows, reporting,
-              and business process improvements.
-            </p>
-          </article>
+			<div class="d-flex align-items-center">
+				<!--<i class="bx bxs-right-arrow-alt get-started-icon"></i>-->
+				<table>
+					<tr>
+						<td>
+							<a href="https://www.credly.com/badges/79dd6967-8e39-427c-b898-a2cf66fe38af/public_url" target="_blank">
+								<img class="certimg" src="assets/img/AWS-Developer-Associate.png" alt="AWS Developer Associate" />
+							</a>
+						</td>
+						<td>
+							<a href="https://www.credly.com/badges/558550c6-32ec-442c-99fd-be13bde13b32/public_url" target="_blank">
+								<img class="certimg" src="assets/img/AWS-SolArchitect-Associate.png" alt="AWS Solutions Architect Associate" />
+							</a>
+						</td>
+						<td>
+							<a href="https://www.credly.com/badges/b585b26f-01d2-4e73-af6a-968f2c0d5fc0/public_url" target="_blank">
+								<img class="certimg" src="assets/img/AzureFundamentals.PNG" alt="Azure Cloud Fundamentals" />
+							</a>
+						</td>
+					</tr>
+					
+				</table>
 
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">⌘</div>
-            <h3>Custom Software</h3>
-            <p>
-              Applications and integrations that simplify business
-              processes and everyday work.
-            </p>
-          </article>
+			</div>
+		</div>
+	</section><!-- End Hero -->
 
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">⇄</div>
-            <h3>Cloud Migrations</h3>
-            <p>
-              Migration planning and implementation to help move
-              systems and information to the cloud.
-            </p>
-          </article>
+	<main id="main">
 
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">⚙</div>
-            <h3>DevOps &amp; Consulting</h3>
-            <p>
-              Deployment automation, technical consulting, and
-              maintainable software delivery processes.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+		<!-- ======= Why Us Section ======= -->
+		<section id="why-us" class="why-us">
+			<div class="container">
 
-    <!-- About -->
-    <section id="about">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">Why Really Cool Software</p>
-          <h2>Personal Service. Practical Technology.</h2>
-        </div>
+				<div class="row">
+					<div class="col-xl-4 col-lg-5" data-aos="fade-up">
+						<div class="content">
+							<h3>Why Choose Us?</h3>
 
-        <div class="about-copy">
-          <p>
-            Technology should solve real problems, not make business
-            more complicated. We help small businesses choose, build,
-            and maintain useful digital solutions.
-          </p>
+							<p>
+								We are changing the world one line of code at a time. We have two passions:<ul><li>Serving Humanity</li><li>Small Businesses</li></ul>
+							</p>
+							<p>
+								So how cool is it to get to do both at the same time? It's Really Cool!
 
-          <ul class="check-list">
-            <li>Solutions shaped around your goals and budget</li>
-            <li>Clear communication and practical recommendations</li>
-            <li>Experience across cloud platforms and business systems</li>
-            <li>A focus on maintainability and long-term value</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- Pricing -->
-    <section class="section-light" id="pricing">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Straightforward Options</p>
-          <h2>Pricing</h2>
-          <p>
-            Website packages have a starting price. Custom projects
-            are quoted based on scope and requirements.
-          </p>
-        </div>
 
-        <div class="pricing-grid">
-          <article class="card">
-            <h3>Web Presence Package</h3>
-            <p class="price">$500 <small>starting price</small></p>
-            <ul class="price-list">
-              <li>Responsive website</li>
-              <li>Search-friendly setup</li>
-              <li>Domain and hosting guidance</li>
-              <li>Business email setup assistance</li>
-            </ul>
-            <a class="button" href="#contact">Ask About a Website</a>
-          </article>
+						</div>
+					</div>
 
-          <article class="card">
-            <h3>Custom Software &amp; Cloud</h3>
-            <p class="price">Custom Quote</p>
-            <ul class="price-list">
-              <li>Requirements and project planning</li>
-              <li>Development and implementation</li>
-              <li>Cloud migrations and integrations</li>
-              <li>Deployment and handoff</li>
-            </ul>
-            <a class="button" href="#contact">Discuss Your Project</a>
-          </article>
+					<div class="col-xl-8 col-lg-7 d-flex">
+						<div class="icon-boxes d-flex flex-column justify-content-center">
+							<div class="row">
+								<div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+									<div class="icon-box mt-4 mt-xl-0">
+										<i class="icofont-web"></i>
+										<h4>Web Presence</h4>
+										<p>
+											<ul>
+												<li>Responsive Web Site</li>
+												<li>Search Engine Optimized</li>
+												<li>Domain Registration</li>
+												<li>Email forwarding</li>
+												<li>Free site hosting(1 year)</li>
+												<li>Facebook page</li>
+												<li>Linkedin Page</li>
 
-          <article class="card">
-            <h3>SharePoint Solutions</h3>
-            <p class="price">Custom Quote</p>
-            <ul class="price-list">
-              <li>Intranets and workflows</li>
-              <li>Document management</li>
-              <li>Reporting and process improvement</li>
-              <li>Implementation support</li>
-            </ul>
-            <a class="button" href="#contact">Discuss SharePoint</a>
-          </article>
+											</ul>
+										</p>
+									</div>
+								</div>
+								<div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+									<div class="icon-box mt-4 mt-xl-0">
+										<i class="icofont-brand-microsoft"></i>
+										<h4>SharePoint Development</h4>
+										<p>
 
-          <article class="card">
-            <h3>RCS Compass</h3>
-            <p class="price">$1,250 <small>per month</small></p>
-            <ul class="price-list">
-              <li>10-hour monthly service block</li>
-              <li>Technical consulting and development</li>
-              <li>Cloud solutions and migrations</li>
-              <li>Additional hours: $150/hour</li>
-            </ul>
-            <a class="button" href="#contact">Ask About RCS Compass</a>
-          </article>
-        </div>
-      </div>
-    </section>
+											<ul>
+												<li>BI Solutions</li>
 
-    <!-- Contact details; no contact form -->
-    <section id="contact" class="contact-section">
-      <div class="container contact-content">
-        <p class="eyebrow">Get in Touch</p>
-        <h2>Let's Discuss Your Next Project.</h2>
-        <p>
-          Have a project in mind or need technical guidance?
-          Contact us directly to discuss your business needs.
-        </p>
+												<li>
+													Branding and Design
+												</li>
+												<li>
+													Corporate Intranets
+												</li>
+												<li>
+													Workflows
+												</li>
+												<li>
+													Record Management
+												</li>
+												<li>
+													Doc Management
+												</li>
+												<li>
+													App Development
+												</li>
+												<li>
+													UI Development
+												</li>
 
-        <div class="contact-details">
-          <p><strong>Really Cool Software LLC</strong></p>
-          <p>13319 S 21st St, Bixby, OK 74008</p>
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:info@reallycoolsoftwarellc-com.awsapps.com">
-              info@reallycoolsoftwarellc-com.awsapps.com
-            </a>
-          </p>
-          <p>
-            <strong>Phone:</strong>
-            <a href="tel:+13186082041">+1 (318) 608-2041</a>
-          </p>
-        </div>
+											</ul>
 
-        <a class="button"
-           href="mailto:info@reallycoolsoftwarellc-com.awsapps.com?subject=Really%20Cool%20Software%20Inquiry">
-          Email Us
-        </a>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>
-        &copy; <span id="current-year"></span>
-        Really Cool Software LLC. All rights reserved.
-      </p>
+										</p>
+									</div>
+								</div>
+								<div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+									<div class="icon-box mt-4 mt-xl-0">
+										<i class="icofont-cloudapp"></i>
+										<h4>AWS/Azure Cloud Computing</h4>
+										<p>
+											<ul>
+												<li>Cloud Native Development</li>
 
-      <div class="footer-links">
-        <a href="FAQ.html">FAQ</a>
-        <a href="#services">Services</a>
-        <a href="#home">Back to Top ↑</a>
-      </div>
-    </div>
-  </footer>
+												<li>
+													DevOps
+												</li>
+												<li>
+													Platform Migrations
+												</li>
+												<li>
+													Consultations
+												</li>
+												<li>
+													Record Management
+												</li>
 
-  <script>
-    (() => {
-      const menuButton = document.querySelector(".menu-toggle");
-      const navigation = document.querySelector(".nav-links");
 
-      menuButton.addEventListener("click", () => {
-        const expanded =
-          menuButton.getAttribute("aria-expanded") !== "true";
+											</ul>
 
-        menuButton.setAttribute("aria-expanded", String(expanded));
-        navigation.classList.toggle("open", expanded);
-      });
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      navigation.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          navigation.classList.remove("open");
-          menuButton.setAttribute("aria-expanded", "false");
-        });
-      });
+			</div>
+		</section><!-- End Why Us Section -->
+		<!-- ======= About Section ======= -->
+		<!-- ======= Clients Section ======= -->
+		<!-- End Values Section -->
+		<!-- ======= Services Section ======= -->
+		<section id="services" class="services section-bg">
+			<div class="container">
 
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-    })();
-  </script>
+				<div class="section-title" data-aos="fade-up">
+					<h2>Services</h2>
+					<p>With over 25 years of experience we have the knowledge to bring powerful solutions to your small business at a lower cost to maintain</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-6" data-aos="fade-up">
+						<div class="icon-box">
+							<div class="icon"><i class="icofont-earth"></i></div>
+							<h4 class="title"><a href="">Web Presence Packages</a></h4>
+							<p class="description">We work with you to develop a Web presence you can be proud of.  We have the expertise to build and optimize a website that fits your business needs.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+						<div class="icon-box">
+							<div class="icon"><i class="icofont-cloudapp"></i></div>
+							<h4 class="title"><a href="">Cloud Development</a></h4>
+							<p class="description">Information is crucial but infrastructure to support it is expensive. We can develope Native Cloud applications to supprt your business and cut costs.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<div class="icon-box">
+							<div class="icon"><i class="icofont-phone"></i></div>
+							<h4 class="title"><a href="">Mobile App Development</a></h4>
+							<p class="description">In today's world you are losing sales if you don't have the ability to interact with your customers on mobile devices. We can connect you to the world.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+						<div class="icon-box">
+							<div class="icon"><i class="icofont-brand-microsoft"></i></div>
+							<h4 class="title"><a href="">SharePoint Development</a></h4>
+							<p class="description">Documents and Records are the life blood of a small business. we can help you find, retain, and present those artifacts easily with SharePoint functionality</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+						<div class="icon-box">
+							<div class="icon"><i class="icofont-settings"></i></div>
+							<h4 class="title"><a href="">Cloud Migrations</a></h4>
+							<p class="description">A proper migration plan is critical to your success in the cloud. But it doesn’t end there – Let us plan and do the heavy lifting to move you to the cloud.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+						<div class="icon-box">
+							<div class="icon"><i class="icofont-tasks-alt"></i></div>
+							<h4 class="title"><a href="">DevOps</a></h4>
+							<p class="description">DevOps principles and practices directly address challenges posed by the cloud. DevOps poses the least risk when migrating data and ensures everything’s in order.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End Services Section -->
+		<!-- ======= Testimonials Section ======= -->
+		<!--<section id="testimonials" class="testimonials">
+	<div class="container" data-aos="fade-up">
+
+		<div class="owl-carousel testimonials-carousel">
+			<div class="testimonial-item">
+				<img src="assets/img/testimonials/gregf.gif" class="testimonial-img" alt="">
+				<h3>Darlene Honeycutt</h3>
+				<h4>Happy Client 5 Star Review</h4>
+				<p>
+					<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+					Terry built a website for me. He was so knowledgeable, caring, and consistent. He completed it in a great time span and was extremely flexible throughout the process. I recommend him highly. Trust me, you will really enjoy working with him.
+					<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+				</p>-->
+		<!--</div>-->
+		<!--<div class="testimonial-item">
+		<img src="assets/img/testimonials/gregf.gif" class="testimonial-img" alt="">
+		<h3>Greg Fisher </h3>
+		<h4>EDI Support Analyst at Epicor Software</h4>
+		<p>
+			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+			Honestly, my happiest days at Grocers Supply Houston were when Terry was my immediate manager. Our weekly staff meetings were always a positive, productive, and enjoyable experience.
+			All too many managers in my IT career have been terrible bosses - Terry was never a terrible boss - he was always an inspiring leader. Leader, not Boss.
+			I have experienced only three extraordinary manager-leaders in my IT career worthy of an A+ rating: two of them were part of my IBM/ISSC career; Terry is the third A+ manager I’ve ever been lucky enough to serve.
+			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+		</p>
+
+
+	</div>-->
+		<
+		<!--div class="testimonial-item">
+		<img src="assets/img/testimonials/kevins.gif" class="testimonial-img" alt="">
+		<h3>Kevin Stack</h3>
+		<h4>Regional Manager at Ultra Consultants</h4>
+		<p>
+			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+			Over the past 2-3 years, I've had the privilege of working with and learning from Terry. He is a very qualified leader who possesses a unique portfolio of skills. Terry can inspire teams, be an educator, provide thought leadership and work in the technical details. Most importantly, Terry always puts his team and customers ahead of himself. Combined with his interest and practice in the technology market, Terry delivers quality results and is respected by all levels of the organization.
+			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+
+		</p>
+
+	</div>-->
+		<!--<div class="testimonial-item">
+					<img src="assets/img/testimonials/markv.gif" class="testimonial-img" alt="">
+					<h3>Mark Vickers</h3>
+					<h4>Enterprise Database Administrator</h4>
+					<p>
+						<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+						I had the privilege of working with Terry at Grocers Supply for almost 10 years. Terry built a strong (and deserved) reputation as someone with a broad base of experience, great vision, diligence and honor. Terry was a great mentor and he was both a friend and confidant. Bottom line, Terry will not let you down.
+						<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+					</p>
+				</div>
+
+				<div class="testimonial-item">
+					<img src="assets/img/testimonials/jefft.gif" class="testimonial-img" alt="">
+					<h3>Jeff Thompson</h3>
+					<h4>Senior Program Officer at Forward Edge International</h4>
+					<p>
+						<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+						Terry is a great friend and someone I trust. I have worked along side him in the Gulf Coast as we have helped to rebuild homes for families in great need. He has a heart of service, and a willingness to do what it takes to get the job done, but not at the expense of people. If you are looking for a quality leader, you do not need to look any further.
+						<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+					</p>
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</section>-->
+		<!-- End Testimonials Section -->
+		<!-- ======= Pricing Section ======= -->
+		<section id="pricing" class="pricing">
+			<div class="container">
+
+				<div class="section-title">
+					<h2 data-aos="fade-up">Pricing</h2>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6" data-aos="fade-up">
+						<div class="box featured">
+							<h3>Web Presence</h3>
+							<h4><sup>$</sup>500<span> /Flat Rate</span></h4>
+							<ul>
+								<li>Responsive Web Site</li>
+								<li>Search Engine Optimized</li>
+								<li>Domain Registration</li>
+								<li>Email forwarding</li>
+								<li>Site hosted 1 year on AWS</li>
+								<li>FaceBook page</li>
+								<li>Linkedin Page</li>
+
+							</ul>
+							<div class="btn-wrap">
+								<a href="#contact" class="btn-buy">Contact Us</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="100">
+						<div class="box">
+							<h3>SharePoint</h3>
+							<h4><span>Price Quoted</span></h4>
+							<ul>
+								<li>Work with you to define work</li>
+								<li>Develop Project Plan</li>
+								<li>Manage the Plan</li>
+								<li>Develop Solution</li>
+								<li>Implementation</li>
+								<li>1 month post support</li>
+								<li>&nbsp;</li>
+
+							</ul>
+							<div class="btn-wrap">
+								<a href="#contact" class="btn-buy">Contact Us</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+						<div class="box">
+							<h3>Cloud</h3>
+							<h4><span>Price Quoted</span></h4>
+							<ul>
+								<li>Work with you to define work</li>
+								<li>Develop Project Plan</li>
+								<li>Manage the Plan</li>
+								<li>Develop Solution</li>
+								<li>Implementation</li>
+								<li>1 month post support</li>
+								<li>&nbsp;</li>
+
+							</ul>
+							<div class="btn-wrap">
+								<a href="#contact" class="btn-buy">Contact Us</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+						<div class="box">
+							<span class="advanced">Advanced</span>
+							<h3>RCS Compass</h3>
+							<h4><sup>$</sup>1250<span> / month</span></h4>
+							<ul>
+								<li>10 hour block/ additional hours charged at 150.00 an hour</li>
+								<li>Questions Answered</li>
+								<li>Custom development</li>
+								<li>Migrations</li>
+								<li>Cloud Solutions</li>
+								<li>Implementations</li>
+								<li>Software Upgrades</li>
+								<li>Business Hours Support</li>
+
+							</ul>
+							<div class="btn-wrap">
+								<a href="#contact" class="btn-buy">Contact Us</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Pricing Section -->
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
+
+				<div class="section-title">
+					<h2 data-aos="fade-up">Contact</h2>
+				</div>
+				<br/>
+				<!--<div class="row justify-content-center">
+
+					<div class="col-xl-4 col-lg-4 mt-4" data-aos="fade-up">
+						<div class="info-box">
+							<i class="bx bx-map"></i>
+							<h3>Our Address</h3>
+							<p>13319 S 21st St,<br/>Bixby, OK 74008<br/>&nbsp;</p>
+						</div>
+					</div>
+
+					<div class="col-xl-4 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
+						<div class="info-box">
+						<i class="bx bx-envelope"></i>
+						<h3>Email Us</h3>
+						<p>Use contact form below</p>
+						</div>
+					</div>
+				<div class="col-xl-4 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="info-box">
+						<i class="bx bx-phone-call"></i>
+						<h3>Call Us</h3>
+						<p>+1 (318) 608-2041<br/>&nbsp;<br/>&nbsp;</p>
+					</div>
+				</div>
+			</div>-->
+
+			<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+				<div class="col-xl-9 col-lg-12 mt-4">
+					<form class="php-email-form" method="post" role="form">
+						<div class="form-row">
+							<div class="col-md-6 form-group">
+							 
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validate"></div>
+							</div>
+							<div class="col-md-6 form-group">
+							 
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validate"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							 
+							<input type="text" class="form-control" name="phone" id="phone" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+							<div class="validate"></div>
+						</div>
+						<div class="form-group">
+					 
+							<textarea class="form-control" name="desc" id="desc" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+							<div class="validate"></div>
+						</div>
+						<div class="mb-3">
+							<div class="loading">Loading</div>
+							<div class="error-message"></div>
+							<div class="sent-message">Your message has been sent. Thank you!</div>
+						</div>
+						<div class="col-lg-4">
+
+							<div class="g-recaptcha" data-sitekey="6LfS_-oUAAAAAOwGGPKGXMELVOBtgDTW_Zen5NnC" data-callback="verifyCaptcha"></div>
+						</div>
+						<div class="col-lg-3">
+							<div id="g-recaptcha-error"></div>
+						</div>
+						<br />
+						<div class="text-center">
+							<button type="button" onClick="submitToAPI(event)" class="btn-1 active">Send <span class="send-icon active"><i class="fas fa-paper-plane"></i></span></button>
+						</div>
+
+							<!--<div class="text-center"><button type="submit" onClick="submitToAPI(event)" >Send Message</button></div>-->
+</form>
+
+
+
+				</div>
+
+			</div>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Thanks for your Inquiry</h4>
+
+						</div>
+						<div class="modal-body">We have recieved you comment.  A representative will be contacting you soon to start our journey toward changing the world one line of code at a time.</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	</section><!-- End Contact Section -->
+						<!--<section id="about" class="about section-bg">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+					<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+				</div>
+
+				<div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+					<h4 data-aos="fade-up">About us</h4>
+					<h3 data-aos="fade-up">Our passsions drive us</h3>
+					<p data-aos="fade-up">We are very passionate about two things: Serving humanity and applying technology to small business problems. Our business model allows us to do both. </p>
+
+					<div class="icon-box" data-aos="fade-up">
+						<div class="icon"><i class="bx bx-fingerprint"></i></div>
+						<h4 class="title"><a href="">Casas por Cristo</a></h4>
+						<p class="description">We began building homes along the U.S. / México border in 1993, first in Ciudad Juárez. We have since expanded to Ciudad Acuña, México; San Raymundo, Guatemala; Santiago, Dominican Republic; and Chinandega, Nicaragua. To date, we have provided over 5,000 families with homes. <a href="https://www.casasporcristo.org" target="_blank">Learn more</a></p>
+					</div>
+
+					<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+						<div class="icon"><i class="bx bx-gift"></i></div>
+						<h4 class="title"><a href="">Villa Esperanza</a></h4>
+						<p class="description">Villa Esperanza was born out of the dream to rescue and redeem girls living in and around Nicaragua's largest open-air garbage dump. Over ten years later, the Villa has expanded to serving young boys, families and the entire community as well. <a href="https://www.facebook.com/villaesperanza/" target="_blank">Learn more</a></p>
+					</div>
+
+					<div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+						<div class="icon"><i class="bx bx-atom"></i></div>
+						<h4 class="title"><a href="">City Lights Tulsa</a></h4>
+						<p class="description">Night Light is a weekly outreach event that builds relationships between Tulsa's homeless population, lower income families, and the surrounding community.  <a href="https://www.facebook.com/nightlighttulsa/" target="_blank">Learn more</a></p>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>-->
+						<!-- End About Section -->
+</main><!-- End #main -->
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-4 col-md-6 footer-contact">
+						<h3>ReallyCoolSoftware LLC</h3>
+						<p>
+							13319 S 21st St <br>
+							Bixby, OK 74008<br>
+							United States <br><br>
+							<strong>Phone:</strong> +1 (318) 608-2041<br>
+							<strong>Email:</strong> info@reallycoolsoftwarellc-com.awsapps.com<br>
+						</p>
+					</div>
+
+					<div class="col-lg-4 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/G3t9ZbMB">Terms of service</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/iH6pLlMd">Privacy policy</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/b3H3qoZw">Cookie policy</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/k75tkWMw">Refund policy</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/c1imx3oD">Disclaimer</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-4 col-md-6 footer-links">
+						<h4>Our Services</h4>
+						<ul>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Web Presence Packages</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Cloud Development</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Mobile App Development</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">SharePoint Development</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">Cloud Migrations</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i> <a href="#services">DevOps</a>
+							</li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container d-lg-flex py-4">
+
+			<div class="mr-lg-auto text-center text-lg-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>ReallyCoolSoftware LLC.</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/ -->
+					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				</div>
+			</div>
+			<div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+				<a href="https://www.facebook.com/ReallyCoolSoftware" class="facebook"><i class="bx bxl-facebook"></i></a>
+				<a href="https://www.linkedin.com/company/really-cool-software-llc" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			</div>
+		</div>
+	</footer><!-- End Footer -->
+	</div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+	<script src="assets/vendor/venobox/venobox.min.js"></script>
+	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+
+	<!-- recapcha Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script>
+		function submitUserForm() {
+			var response = grecaptcha.getResponse();
+
+			if (response.length == 0) {
+				document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+				return false;
+			}
+			return true;
+		}
+
+		function verifyCaptcha() {
+			document.getElementById('g-recaptcha-error').innerHTML = '';
+		}
+	</script>
+
 </body>
+
 </html>
