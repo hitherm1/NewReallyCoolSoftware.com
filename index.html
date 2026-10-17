@@ -1,323 +1,655 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10243a">
-  <meta name="description" content="Really Cool Software LLC provides website development, cloud solutions, SharePoint, custom software, and DevOps consulting.">
+  <meta name="theme-color" content="#ff5821">
+  <meta name="description" content="Really Cool Software LLC provides responsive websites, cloud development, SharePoint solutions, custom software, and DevOps consulting.">
 
-  <title>Really Cool Software LLC | Software & Cloud Solutions</title>
+  <title>Really Cool Software LLC | Software &amp; Cloud Solutions</title>
+
+  <!-- Original site favicon assets -->
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+
+  <meta property="og:title" content="Really Cool Software LLC">
+  <meta property="og:description" content="Practical software and cloud solutions for small businesses.">
+  <meta property="og:url" content="https://reallycoolsoftware.tech/">
+  <meta property="og:type" content="website">
 
   <style>
     :root {
-      --navy: #10243a;
-      --blue: #1677c8;
-      --cyan: #42c2d5;
-      --text: #243447;
-      --muted: #5d6b79;
-      --light: #f3f7fb;
-      --border: #dce5ee;
-      --radius: 16px;
-      --width: 1100px;
+      --orange: #ff5821;
+      --orange-hover: #e84916;
+      --brown: #635551;
+      --charcoal: #313030;
+      --muted: #716f6f;
+      --cream: #fff9f7;
+      --border: #eadfd9;
+      --white: #ffffff;
+      --radius: 10px;
+      --max-width: 1120px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      color: var(--text);
+      font-family: "Open Sans", Arial, sans-serif;
+      color: var(--charcoal);
       line-height: 1.65;
+      background: var(--white);
     }
 
-    a { color: var(--blue); }
+    h1, h2, h3, h4 {
+      font-family: "Raleway", Arial, sans-serif;
+      line-height: 1.2;
+    }
 
-    a:focus-visible, button:focus-visible {
-      outline: 3px solid var(--cyan);
-      outline-offset: 3px;
+    h2, h3 {
+      color: var(--brown);
+    }
+
+    a {
+      color: var(--orange);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--orange-hover);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
 
     .container {
-      width: min(var(--width), calc(100% - 32px));
+      width: min(var(--max-width), calc(100% - 36px));
       margin-inline: auto;
     }
 
-    header {
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 10px;
+      z-index: 100;
+      padding: 10px 15px;
+      background: var(--white);
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* Header and navigation */
+
+    .site-header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: #fff;
+      z-index: 50;
+      background: rgba(255, 255, 255, .98);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav {
-      min-height: 72px;
+    .nav-container {
+      min-height: 78px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
       padding-block: 10px;
     }
 
     .brand {
-      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--brown);
+      font-size: 1.1rem;
       font-weight: 800;
-      font-size: 1.15rem;
       text-decoration: none;
+      letter-spacing: -.025em;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--brown);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
-      padding: 0;
-      margin: 0;
+      gap: 25px;
       list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
     .nav-links a {
-      color: var(--navy);
-      font-weight: 650;
+      color: var(--brown);
+      font-size: .94rem;
+      font-weight: 700;
       text-decoration: none;
     }
 
-    .menu-button {
-      display: none;
-      padding: 9px 12px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font: inherit;
-      font-weight: 700;
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--orange);
     }
+
+    /* Hero */
 
     .hero {
-      padding: clamp(65px, 10vw, 120px) 0;
-      color: white;
-      background:
-        radial-gradient(circle at 85% 15%, #245678, transparent 35%),
-        linear-gradient(135deg, var(--navy), #193b5b);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(70px, 10vw, 125px) 0;
+      color: var(--white);
+      background-color: #39312f;
+      background-image: url("assets/img/hero-bg.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
-    .hero h1 {
-      max-width: 780px;
-      margin: 0 0 20px;
-      font-size: clamp(2.4rem, 6vw, 4.4rem);
-      line-height: 1.1;
-      letter-spacing: -.04em;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(49, 40, 37, .76);
     }
 
-    .hero p {
-      max-width: 700px;
-      color: #e1edf7;
-      font-size: 1.15rem;
+    .hero-content {
+      max-width: 850px;
     }
 
     .eyebrow {
-      color: var(--cyan);
-      text-transform: uppercase;
+      margin: 0 0 14px;
+      color: var(--orange);
       font-size: .8rem;
       font-weight: 800;
+      text-transform: uppercase;
       letter-spacing: .13em;
     }
 
+    .hero .eyebrow {
+      color: #ffb69d;
+    }
+
+    .hero h1 {
+      max-width: 800px;
+      margin: 0 0 22px;
+      color: var(--white);
+      font-size: clamp(2.35rem, 6vw, 4.4rem);
+      letter-spacing: -.045em;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      margin: 0 0 24px;
+      color: #fff4ef;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
     .button {
-      display: inline-block;
-      padding: 12px 18px;
-      margin: 10px 8px 0 0;
-      border-radius: 9px;
-      background: var(--blue);
-      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 11px 20px;
+      border: 2px solid var(--orange);
+      border-radius: 5px;
+      background: var(--orange);
+      color: var(--white);
+      font: inherit;
       font-weight: 750;
+      text-align: center;
       text-decoration: none;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .button:hover {
+      background: var(--orange-hover);
+      border-color: var(--orange-hover);
+      color: var(--white);
     }
 
     .button-light {
-      background: white;
-      color: var(--navy);
+      background: var(--white);
+      border-color: var(--white);
+      color: var(--brown);
     }
 
-    section { padding: 72px 0; }
+    .button-light:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+      color: var(--orange);
+    }
 
-    .soft { background: var(--light); }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Certification graphics */
+
+    .certifications {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+      margin-top: 36px;
+    }
+
+    .certifications a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 145px;
+      min-height: 105px;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .96);
+    }
+
+    .certifications img {
+      width: 100%;
+      height: 85px;
+      object-fit: contain;
+    }
+
+    /* Shared section styles */
+
+    section {
+      padding: clamp(52px, 7vw, 82px) 0;
+    }
+
+    .section-light {
+      background: var(--cream);
+    }
 
     .section-heading {
-      max-width: 720px;
-      margin: 0 auto 36px;
+      max-width: 760px;
+      margin: 0 auto 38px;
       text-align: center;
     }
 
-    h2 {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      line-height: 1.2;
+    .section-heading h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.85rem, 4vw, 2.7rem);
+      letter-spacing: -.025em;
     }
 
-    .section-heading p, .card p, .about p {
+    .section-heading > p:last-child {
+      margin: 0;
       color: var(--muted);
     }
 
-    .grid {
+    /* Service cards */
+
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
       min-width: 0;
-      padding: 24px;
+      padding: 25px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      background: white;
-      box-shadow: 0 8px 24px rgb(16 36 58 / 6%);
+      background: var(--white);
+      box-shadow: 0 3px 18px rgba(49, 48, 48, .055);
     }
 
     .card h3 {
       margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
     }
 
-    .icon {
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-icon {
       display: grid;
       place-items: center;
-      width: 44px;
-      height: 44px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      background: #e7f4fc;
-      color: var(--blue);
-      font-size: 1.25rem;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 1.35rem;
       font-weight: 800;
     }
 
-    .about {
+    /* About */
+
+    .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 48px;
       align-items: start;
-      gap: 40px;
     }
 
-    .checks {
-      padding-left: 20px;
+    .about-grid h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 2.65rem);
     }
 
-    .checks li { margin-bottom: 10px; }
+    .about-copy p {
+      margin-top: 0;
+      color: var(--muted);
+    }
 
-    .pricing {
+    .check-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      margin-bottom: 12px;
+      padding-left: 28px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 900;
+    }
+
+    /* Pricing */
+
+    .pricing-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: 22px;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     .price {
-      color: var(--navy);
-      font-size: 1.8rem;
+      margin: 12px 0;
+      color: var(--orange);
+      font-size: 1.9rem;
       font-weight: 850;
+      letter-spacing: -.035em;
     }
 
     .price small {
       color: var(--muted);
       font-size: .85rem;
       font-weight: 500;
+      letter-spacing: 0;
     }
 
-    .card ul {
-      padding-left: 20px;
+    .price-list {
+      margin: 15px 0 25px;
+      padding-left: 21px;
       color: var(--muted);
     }
 
-    .contact {
+    .price-list li {
+      margin-bottom: 7px;
+    }
+
+    .pricing-grid .button {
+      margin-top: 5px;
+    }
+
+    /* Contact information only; no form */
+
+    .contact-section {
+      background: var(--cream);
       text-align: center;
-      background: var(--light);
+    }
+
+    .contact-content {
+      max-width: 760px;
+      margin-inline: auto;
+    }
+
+    .contact-content > p {
+      color: var(--muted);
     }
 
     .contact-details {
-      margin-top: 25px;
+      margin: 26px 0;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .contact-details p {
+      margin: 8px 0;
       overflow-wrap: anywhere;
     }
 
-    .contact-details p { margin: 8px 0; }
+    .contact-details a {
+      overflow-wrap: anywhere;
+    }
 
-    footer {
-      padding: 24px 0;
-      background: #0b1b2b;
-      color: #d2dfeb;
+    /* Footer */
+
+    .site-footer {
+      padding: 25px 0;
+      background: #39312f;
+      color: rgba(255, 255, 255, .85);
     }
 
     .footer-inner {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 14px;
     }
 
-    footer p { margin: 0; }
-
-    footer a { color: #d2dfeb; }
-
-    @media (max-width: 800px) {
-      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .about { grid-template-columns: 1fr; gap: 15px; }
+    .footer-inner p {
+      margin: 0;
     }
 
-    @media (max-width: 600px) {
-      .menu-button { display: block; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ffb69d;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 850px) {
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 640px) {
+      html {
+        scroll-padding-top: 80px;
+      }
+
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .nav-container {
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
 
       .nav-links {
         display: none;
-        width: 100%;
         flex-direction: column;
         align-items: stretch;
+        width: 100%;
         gap: 0;
       }
 
-      .nav-links.open { display: flex; }
+      .nav-links.open {
+        display: flex;
+      }
 
-      .nav-links a {
+      .nav-links li a {
         display: block;
-        padding: 12px 0;
+        padding: 12px 2px;
         border-top: 1px solid var(--border);
       }
 
-      .grid, .pricing { grid-template-columns: 1fr; }
+      .hero {
+        padding: 65px 0;
+        background-attachment: scroll;
+      }
 
-      section { padding: 52px 0; }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-      .card { padding: 20px; }
+      .hero-actions .button {
+        width: 100%;
+        margin: 0;
+      }
 
-      .footer-inner { flex-direction: column; }
+      .certifications {
+        gap: 10px;
+      }
+
+      .certifications a {
+        width: calc(50% - 5px);
+        min-height: 90px;
+      }
+
+      .certifications img {
+        height: 70px;
+      }
+
+      .service-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 21px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home">Really Cool Software LLC</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-      <button class="menu-button"
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="#home" aria-label="Really Cool Software home">
+        <img src="assets/img/clearicon.png"
+             alt=""
+             width="44"
+             height="44">
+        <span>ReallyCoolSoftware LLC</span>
+      </a>
+
+      <button class="menu-toggle"
               type="button"
               aria-expanded="false"
-              aria-controls="navigation">
+              aria-controls="primary-navigation">
         Menu ☰
       </button>
 
       <nav aria-label="Main navigation">
-        <ul class="nav-links" id="navigation">
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#pricing">Pricing</a></li>
@@ -328,87 +660,145 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
+
+    <!-- Hero -->
     <section class="hero" id="home">
-      <div class="container">
+      <div class="container hero-content">
         <p class="eyebrow">Software · Cloud · Small Business</p>
 
         <h1>Technology that helps your business thrive.</h1>
 
-        <p>
+        <p class="hero-description">
           Practical technology solutions for small businesses, including
-          professional websites, cloud development, SharePoint, custom
-          applications, and DevOps consulting.
+          professional websites, cloud development, Microsoft SharePoint,
+          custom software, and DevOps consulting.
         </p>
 
-        <a class="button button-light" href="#contact">Let's Talk</a>
-        <a class="button" href="#services">Explore Services</a>
+        <div class="hero-actions">
+          <a class="button button-light" href="#contact">
+            Let's Talk About Your Project
+          </a>
+          <a class="button" href="#services">
+            Explore Services
+          </a>
+        </div>
+
+        <!-- Original certification graphics -->
+        <div class="certifications" aria-label="Cloud certifications">
+          <a href="https://www.credly.com/badges/79dd6967-8e39-427c-b898-a2cf66fe38af/public_url"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img src="assets/img/AWS-Developer-Associate.png"
+                 alt="AWS Developer Associate certification"
+                 loading="lazy">
+          </a>
+
+          <a href="https://www.credly.com/badges/558550c6-32ec-442c-99fd-be13bde13b32/public_url"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img src="assets/img/AWS-SolArchitect-Associate.png"
+                 alt="AWS Solutions Architect Associate certification"
+                 loading="lazy">
+          </a>
+
+          <a href="https://www.credly.com/badges/b585b26f-01d2-4e73-af6a-968f2c0d5fc0/public_url"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img src="assets/img/AzureFundamentals.PNG"
+                 alt="Microsoft Azure Fundamentals certification"
+                 loading="lazy">
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="soft" id="services">
+    <!-- Services -->
+    <section class="section-light" id="services">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Our services</p>
-          <h2>Solutions for your business</h2>
-          <p>Straightforward technology, practical advice, and solutions built around your goals.</p>
+          <p class="eyebrow">Our Services</p>
+          <h2>Solutions for Your Business</h2>
+          <p>
+            Straightforward technology, practical advice, and solutions
+            built around your business goals.
+          </p>
         </div>
 
-        <div class="grid">
+        <div class="service-grid">
           <article class="card">
-            <div class="icon" aria-hidden="true">↗</div>
-            <h3>Websites & Online Presence</h3>
-            <p>Responsive websites, domain setup, hosting guidance, and business email assistance.</p>
+            <div class="service-icon" aria-hidden="true">↗</div>
+            <h3>Websites &amp; Online Presence</h3>
+            <p>
+              Responsive websites, domain setup, hosting guidance,
+              and business email assistance.
+            </p>
           </article>
 
           <article class="card">
-            <div class="icon" aria-hidden="true">☁</div>
+            <div class="service-icon" aria-hidden="true">☁</div>
             <h3>Cloud Development</h3>
-            <p>Practical AWS and Azure solutions, cloud applications, and modernization.</p>
+            <p>
+              Practical AWS and Azure solutions, cloud applications,
+              and application modernization.
+            </p>
           </article>
 
           <article class="card">
-            <div class="icon" aria-hidden="true">▣</div>
+            <div class="service-icon" aria-hidden="true">▣</div>
             <h3>SharePoint Solutions</h3>
-            <p>Intranets, document management, workflows, reporting, and process improvements.</p>
+            <p>
+              Intranets, document management, workflows, reporting,
+              and business process improvements.
+            </p>
           </article>
 
           <article class="card">
-            <div class="icon" aria-hidden="true">⌘</div>
+            <div class="service-icon" aria-hidden="true">⌘</div>
             <h3>Custom Software</h3>
-            <p>Applications and integrations that simplify business processes and everyday work.</p>
+            <p>
+              Applications and integrations that simplify business
+              processes and everyday work.
+            </p>
           </article>
 
           <article class="card">
-            <div class="icon" aria-hidden="true">⇄</div>
+            <div class="service-icon" aria-hidden="true">⇄</div>
             <h3>Cloud Migrations</h3>
-            <p>Migration planning and implementation to help move systems and information to the cloud.</p>
+            <p>
+              Migration planning and implementation to help move
+              systems and information to the cloud.
+            </p>
           </article>
 
           <article class="card">
-            <div class="icon" aria-hidden="true">⚙</div>
-            <h3>DevOps & Consulting</h3>
-            <p>Deployment automation, technical consulting, and maintainable delivery processes.</p>
+            <div class="service-icon" aria-hidden="true">⚙</div>
+            <h3>DevOps &amp; Consulting</h3>
+            <p>
+              Deployment automation, technical consulting, and
+              maintainable software delivery processes.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- About -->
     <section id="about">
-      <div class="container about">
+      <div class="container about-grid">
         <div>
-          <p class="eyebrow">Why choose us</p>
-          <h2>Personal service. Practical technology.</h2>
+          <p class="eyebrow">Why Really Cool Software</p>
+          <h2>Personal Service. Practical Technology.</h2>
         </div>
 
-        <div>
+        <div class="about-copy">
           <p>
-            Technology should solve real problems, not make business more
-            complicated. We help small businesses choose, build, and maintain
-            useful digital solutions.
+            Technology should solve real problems, not make business
+            more complicated. We help small businesses choose, build,
+            and maintain useful digital solutions.
           </p>
 
-          <ul class="checks">
+          <ul class="check-list">
             <li>Solutions shaped around your goals and budget</li>
             <li>Clear communication and practical recommendations</li>
             <li>Experience across cloud platforms and business systems</li>
@@ -418,19 +808,23 @@
       </div>
     </section>
 
-    <section class="soft" id="pricing">
+    <!-- Pricing -->
+    <section class="section-light" id="pricing">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Straightforward options</p>
+          <p class="eyebrow">Straightforward Options</p>
           <h2>Pricing</h2>
-          <p>Website packages have a starting price. Custom projects are quoted based on scope and requirements.</p>
+          <p>
+            Website packages have a starting price. Custom projects
+            are quoted based on scope and requirements.
+          </p>
         </div>
 
-        <div class="pricing">
+        <div class="pricing-grid">
           <article class="card">
             <h3>Web Presence Package</h3>
             <p class="price">$500 <small>starting price</small></p>
-            <ul>
+            <ul class="price-list">
               <li>Responsive website</li>
               <li>Search-friendly setup</li>
               <li>Domain and hosting guidance</li>
@@ -440,9 +834,9 @@
           </article>
 
           <article class="card">
-            <h3>Custom Software & Cloud</h3>
-            <p class="price">Custom quote</p>
-            <ul>
+            <h3>Custom Software &amp; Cloud</h3>
+            <p class="price">Custom Quote</p>
+            <ul class="price-list">
               <li>Requirements and project planning</li>
               <li>Development and implementation</li>
               <li>Cloud migrations and integrations</li>
@@ -453,8 +847,8 @@
 
           <article class="card">
             <h3>SharePoint Solutions</h3>
-            <p class="price">Custom quote</p>
-            <ul>
+            <p class="price">Custom Quote</p>
+            <ul class="price-list">
               <li>Intranets and workflows</li>
               <li>Document management</li>
               <li>Reporting and process improvement</li>
@@ -466,7 +860,7 @@
           <article class="card">
             <h3>RCS Compass</h3>
             <p class="price">$1,250 <small>per month</small></p>
-            <ul>
+            <ul class="price-list">
               <li>10-hour monthly service block</li>
               <li>Technical consulting and development</li>
               <li>Cloud solutions and migrations</li>
@@ -478,11 +872,15 @@
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <p class="eyebrow">Get in touch</p>
-        <h2>Let's discuss your next project.</h2>
-        <p>Contact us directly to talk about your business and technology needs.</p>
+    <!-- Contact details; no contact form -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-content">
+        <p class="eyebrow">Get in Touch</p>
+        <h2>Let's Discuss Your Next Project.</h2>
+        <p>
+          Have a project in mind or need technical guidance?
+          Contact us directly to discuss your business needs.
+        </p>
 
         <div class="contact-details">
           <p><strong>Really Cool Software LLC</strong></p>
@@ -499,42 +897,50 @@
           </p>
         </div>
 
-        <a class="button" href="mailto:info@reallycoolsoftwarellc-com.awsapps.com?subject=Really%20Cool%20Software%20Inquiry">
+        <a class="button"
+           href="mailto:info@reallycoolsoftwarellc-com.awsapps.com?subject=Really%20Cool%20Software%20Inquiry">
           Email Us
         </a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Really Cool Software LLC.</p>
       <p>
-        <a href="FAQ.html">FAQ</a> ·
-        <a href="#home">Back to top ↑</a>
+        &copy; <span id="current-year"></span>
+        Really Cool Software LLC. All rights reserved.
       </p>
+
+      <div class="footer-links">
+        <a href="FAQ.html">FAQ</a>
+        <a href="#services">Services</a>
+        <a href="#home">Back to Top ↑</a>
+      </div>
     </div>
   </footer>
 
   <script>
     (() => {
-      const button = document.querySelector('.menu-button');
-      const navigation = document.querySelector('.nav-links');
+      const menuButton = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector(".nav-links");
 
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') !== 'true';
-        button.setAttribute('aria-expanded', String(expanded));
-        navigation.classList.toggle('open', expanded);
+      menuButton.addEventListener("click", () => {
+        const expanded =
+          menuButton.getAttribute("aria-expanded") !== "true";
+
+        menuButton.setAttribute("aria-expanded", String(expanded));
+        navigation.classList.toggle("open", expanded);
       });
 
-      navigation.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navigation.classList.remove('open');
-          button.setAttribute('aria-expanded', 'false');
+      navigation.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
         });
       });
 
-      document.getElementById('year').textContent =
+      document.getElementById("current-year").textContent =
         new Date().getFullYear();
     })();
   </script>
