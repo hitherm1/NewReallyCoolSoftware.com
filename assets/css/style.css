@@ -2184,6 +2184,82 @@ section {
     text-decoration: none;
 }
 
+=========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+    display: grid;
+
+    gap: 17px;
+}
+
+.form-group {
+    display: grid;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cfd4d9;
+
+    border-radius: 0;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(49,90,125,0.1);
+}
+
+.form-group textarea {
+    min-height: 170px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.notice {
+    padding: 16px 20px;
+
+    margin-bottom: 25px;
+
+    background: #eef4f8;
+
+    border-left: 4px solid var(--blue);
+
+    color: var(--text);
+}
+
+
 /*--------------------------------------------------------------
 # Responsive Styles
 --------------------------------------------------------------*/
