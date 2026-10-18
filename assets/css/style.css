@@ -2260,3 +2260,41 @@ section {
         local("Pacifico-Regular"),
         url("https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2") format("woff2");
 }
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap: 50px;
+}
+
+.contact-information {
+    padding: 35px;
+
+    background: var(--cream);
+}
+
+.contact-information h2 {
+    margin-top: 0;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    letter-spacing: 0.1em;
+}
+
