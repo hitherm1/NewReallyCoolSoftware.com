@@ -2038,6 +2038,128 @@ section {
     color: #ddd7d6;
 }
 
+#contact .form-group input:focus,
+#contact .form-group textarea:focus {
+    outline: none;
+    border-color: #2487ce;
+    box-shadow: 0 0 0 3px rgba(36, 135, 206, 0.15);
+}
+
+/* Submit button */
+#contact button[type="submit"] {
+    display: inline-block;
+    max-width: 100%;
+    padding: 14px 28px;
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    #contact {
+        padding: 55px 0;
+    }
+
+    #contact .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    #contact h2 {
+        font-size: clamp(25px, 3.5vw, 32px);
+    }
+}
+
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    #contact {
+        padding: 40px 15px;
+    }
+
+    #contact .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #contact h2 {
+        font-size: clamp(24px, 6vw, 30px);
+        line-height: 1.3;
+        margin-bottom: 22px;
+    }
+
+    #contact .eyebrow {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    #contact .contact-item {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    #contact .notice {
+        font-size: 14px;
+    }
+
+    #contact .form-group label {
+        font-size: 15px;
+    }
+
+    #contact .form-group input,
+    #contact .form-group textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #contact .form-group textarea {
+        min-height: 120px;
+    }
+
+    #contact button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 15px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    #contact {
+        padding: 30px 12px;
+    }
+
+    #contact h2 {
+        font-size: 23px;
+    }
+
+    #contact .contact-grid {
+        gap: 25px;
+    }
+
+    #contact .contact-item {
+        font-size: 15px;
+    }
+
+    #contact .form-group input,
+    #contact .form-group textarea {
+        padding: 11px;
+    }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
