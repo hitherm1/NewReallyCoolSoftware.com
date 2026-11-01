@@ -2495,4 +2495,13 @@ section {
 
     letter-spacing: 0.1em;
 }
+/* Match Contact section background to Services section */
+#contact {
+    background-color: var(--section-bg, #f5f5f5) !important;
+}
 
+/* Keep contact content readable */
+#contact .contact-information,
+#contact .contact-form {
+    background-color: transparent;
+}
