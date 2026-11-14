@@ -1,448 +1,760 @@
-
-<style>
-    /* =====================================================
-       REALLY COOL SOFTWARE - ORANGE & BLACK THEME
-       ===================================================== */
-
-    :root {
-        --rcs-orange: #f58220;
-        --rcs-orange-dark: #d96b0b;
-        --rcs-black: #111111;
-        --rcs-dark: #1c1c1c;
-        --rcs-gray: #666666;
-        --rcs-light: #f5f5f5;
-        --rcs-white: #ffffff;
-        --rcs-border: #e5e5e5;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: "Open Sans", sans-serif;
-        color: var(--rcs-dark);
-        background: var(--rcs-white);
-        overflow-x: hidden;
-    }
-
-    /* FULL-WIDTH LAYOUT
-       Remove Bootstrap's fixed maximum container widths. */
-    .container,
-    .container-fluid {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-
-    section {
-        width: 100%;
-    }
-
-    /* TOP BAR */
-    #topbar {
-        background: var(--rcs-black);
-        color: var(--rcs-white);
-        border-bottom: 2px solid var(--rcs-orange);
-    }
-
-    #topbar a {
-        color: var(--rcs-orange);
-        transition: color .2s ease;
-    }
-
-    #topbar a:hover {
-        color: var(--rcs-white);
-    }
-
-    #topbar i {
-        color: var(--rcs-orange);
-    }
-
-    /* HEADER AND NAVIGATION */
-    #header {
-        background: var(--rcs-white);
-        box-shadow: 0 2px 12px rgba(0,0,0,.10);
-        border-bottom: 3px solid var(--rcs-orange);
-    }
-
-    #header .logo a {
-        color: var(--rcs-black);
-        font-weight: 700;
-    }
-
-    #header .logo img {
-        max-height: 48px;
-        width: auto;
-        margin-right: 10px;
-    }
-
-    #header .nav-menu a {
-        color: var(--rcs-black);
-        font-weight: 600;
-        transition: all .2s ease;
-    }
-
-    #header .nav-menu a:hover,
-    #header .nav-menu .active > a {
-        color: var(--rcs-orange);
-    }
-
-    /* GENERAL HEADINGS */
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--rcs-black);
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-    }
-
-    .section-title h2 {
-        color: var(--rcs-black);
-    }
-
-    .section-title h2::after {
-        background: var(--rcs-orange);
-    }
-
-    /* WHY CHOOSE US */
-    #why-us {
-        background: var(--rcs-light);
-        padding: 70px 0;
-    }
-
-    #why-us .content {
-        background: var(--rcs-black);
-        color: var(--rcs-white);
-        padding: 35px;
-        border-radius: 8px;
-        height: 100%;
-        border-top: 5px solid var(--rcs-orange);
-    }
-
-    #why-us .content h3 {
-        color: var(--rcs-orange);
-    }
-
-    #why-us .content p,
-    #why-us .content li {
-        color: var(--rcs-white);
-    }
-
-    #why-us .icon-box {
-        background: var(--rcs-white);
-        border: 1px solid var(--rcs-border);
-        border-bottom: 4px solid var(--rcs-orange);
-        border-radius: 8px;
-        padding: 30px 24px;
-        height: 100%;
-        box-shadow: 0 4px 15px rgba(0,0,0,.06);
-        transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    #why-us .icon-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 22px rgba(0,0,0,.12);
-    }
-
-    #why-us .icon-box i {
-        color: var(--rcs-orange);
-    }
-
-    #why-us .icon-box h4 {
-        color: var(--rcs-black);
-    }
-
-    /* SERVICES */
-    #services {
-        background: var(--rcs-white);
-        padding: 70px 0;
-    }
-
-    #services.section-bg {
-        background: var(--rcs-light);
-    }
-
-    #services .icon-box {
-        background: var(--rcs-white);
-        border: 1px solid var(--rcs-border);
-        border-radius: 8px;
-        padding: 30px;
-        height: 100%;
-        box-shadow: 0 4px 15px rgba(0,0,0,.05);
-        transition: all .2s ease;
-    }
-
-    #services .icon-box:hover {
-        border-color: var(--rcs-orange);
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0,0,0,.10);
-    }
-
-    #services .icon-box .icon {
-        background: var(--rcs-orange);
-        color: var(--rcs-white);
-        border-radius: 8px;
-    }
-
-    #services .icon-box .icon i {
-        color: var(--rcs-white);
-    }
-
-    #services .icon-box h4 a {
-        color: var(--rcs-black);
-    }
-
-    #services .icon-box h4 a:hover {
-        color: var(--rcs-orange);
-    }
-
-    #services .description {
-        color: var(--rcs-gray);
-    }
-
-    /* PRICING */
-    #pricing {
-        background: var(--rcs-white);
-        padding: 70px 0;
-    }
-
-    #pricing .box {
-        background: var(--rcs-white);
-        border: 1px solid var(--rcs-border);
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.06);
-        overflow: hidden;
-        height: 100%;
-    }
-
-    #pricing .box h3 {
-        background: var(--rcs-black);
-        color: var(--rcs-white);
-        border-bottom: 3px solid var(--rcs-orange);
-    }
-
-    #pricing .box h4 {
-        color: var(--rcs-orange);
-    }
-
-    #pricing .box ul li {
-        color: var(--rcs-gray);
-    }
-
-    #pricing .box.featured {
-        border: 2px solid var(--rcs-orange);
-    }
-
-    #pricing .box.featured h3 {
-        background: var(--rcs-orange);
-        color: var(--rcs-black);
-    }
-
-    #pricing .advanced {
-        background: var(--rcs-orange);
-        color: var(--rcs-black);
-    }
-
-    /* BUTTONS */
-    .btn-buy,
-    .button,
-    button[type="submit"] {
-        background: var(--rcs-orange) !important;
-        border: 2px solid var(--rcs-orange) !important;
-        color: var(--rcs-black) !important;
-        border-radius: 5px;
-        font-weight: 700;
-        padding: 12px 25px;
-        transition: all .2s ease;
-    }
-
-    .btn-buy:hover,
-    .button:hover,
-    button[type="submit"]:hover {
-        background: var(--rcs-black) !important;
-        border-color: var(--rcs-black) !important;
-        color: var(--rcs-white) !important;
-    }
-
-    /* CONTACT */
-    #contact {
-        background: var(--rcs-light);
-        padding: 70px 0;
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 50px;
-        align-items: start;
-    }
-
-    .contact-information {
-        background: var(--rcs-black);
-        color: var(--rcs-white);
-        padding: 40px;
-        border-radius: 8px;
-        border-top: 5px solid var(--rcs-orange);
-        height: 100%;
-    }
-
-    .contact-information h2 {
-        color: var(--rcs-white);
-        margin: 15px 0 30px;
-    }
-
-    .contact-information .eyebrow {
-        color: var(--rcs-orange);
-        font-weight: 700;
-        letter-spacing: 2px;
-    }
-
-    .contact-item {
-        margin: 20px 0;
-    }
-
-    .contact-item strong {
-        display: block;
-        color: var(--rcs-orange);
-        margin-bottom: 5px;
-    }
-
-    .contact-item a {
-        color: var(--rcs-white);
-    }
-
-    .contact-item a:hover {
-        color: var(--rcs-orange);
-    }
-
-    .notice {
-        margin-bottom: 20px;
-    }
-
-    .notice strong {
-        color: var(--rcs-black);
-        font-size: 22px;
-    }
-
-    .contact-form {
-        background: var(--rcs-white);
-        padding: 30px;
-        border-radius: 8px;
-        border: 1px solid var(--rcs-border);
-        box-shadow: 0 4px 15px rgba(0,0,0,.05);
-    }
-
-    .contact-form label {
-        color: var(--rcs-black);
-        font-weight: 600;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        border: 1px solid #cccccc;
-        border-radius: 5px;
-        padding: 12px;
-        margin-top: 6px;
-        background: var(--rcs-white);
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-        border-color: var(--rcs-orange);
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(245,130,32,.15);
-    }
-
-    /* FOOTER */
-    #footer {
-        background: var(--rcs-black);
-        color: var(--rcs-white);
-    }
-
-    #footer .footer-top {
-        background: var(--rcs-dark);
-        border-top: 4px solid var(--rcs-orange);
-    }
-
-    #footer h3,
-    #footer h4 {
-        color: var(--rcs-orange);
-    }
-
-    #footer p,
-    #footer li,
-    #footer .copyright,
-    #footer .credits {
-        color: #dddddd;
-    }
-
-    #footer a {
-        color: var(--rcs-white);
-        transition: color .2s ease;
-    }
-
-    #footer a:hover {
-        color: var(--rcs-orange);
-    }
-
-    #footer .social-links a {
-        background: var(--rcs-orange);
-        color: var(--rcs-black);
-        border-radius: 5px;
-    }
-
-    #footer .social-links a:hover {
-        background: var(--rcs-white);
-        color: var(--rcs-black);
-    }
-
-    /* BACK TO TOP */
-    .back-to-top {
-        background: var(--rcs-orange) !important;
-        color: var(--rcs-black) !important;
-    }
-
-    .back-to-top:hover {
-        background: var(--rcs-black) !important;
-        color: var(--rcs-white) !important;
-    }
-
-    /* RESPONSIVE LAYOUT */
-    @media (max-width: 991px) {
-        .container,
-        .container-fluid {
-            padding-left: 20px;
-            padding-right: 20px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Really Cool Software LLC | Software, Cloud & Web Solutions</title>
+
+    <meta name="description" content="Really Cool Software helps small businesses with custom software development, AWS and Azure cloud solutions, SharePoint, website development, and business automation.">
+    <meta name="keywords" content="AWS, Azure, Cloud Computing, SharePoint, Web Development, DevOps, Software Development">
+    <meta name="author" content="ReallyCoolSoftware LLC">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="YXGf0foSiO9QmTMxHo6baD-RxARVebeGcu8gaGBNztw">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Really Cool Software LLC | Technology Solutions for Small Businesses">
+    <meta property="og:site_name" content="ReallyCoolSoftware LLC">
+    <meta property="og:url" content="https://www.reallycoolsoftware.tech/">
+    <meta property="og:description" content="Custom software development, cloud solutions, professional websites, and business automation for small businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.reallycoolsoftware.tech/assets/img/RCSFB.PNG">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        base-uri 'self';
+        object-src 'none';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval'
+            https://www.googletagmanager.com
+            https://kit.fontawesome.com
+            https://ka-f.fontawesome.com
+            https://chimpstatic.com;
+        style-src 'self' 'unsafe-inline'
+            https://fonts.googleapis.com;
+        font-src 'self' data:
+            https://fonts.gstatic.com
+            https://kit-free.fontawesome.com
+            https://ka-f.fontawesome.com;
+        img-src 'self' data: https:;
+        media-src 'self';
+        frame-src 'self'
+            https://www.googletagmanager.com;
+        connect-src 'self'
+            https://www.google-analytics.com
+            https://stats.g.doubleclick.net
+            https://www.googletagmanager.com
+            https://ka-f.fontawesome.com
+            https://chimpstatic.com;
+        form-action 'self' https://api.web3forms.com;
+    ">
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d4536c14a4.js" crossorigin="anonymous" defer></script>
+
+    <!-- Vendor CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Really Cool Software homepage conversion improvements -->
+    <style>
+        .rcs-hero {
+            padding: 76px 0 68px;
+            background: linear-gradient(135deg, #f6f9fe 0%, #ffffff 65%, #eef5fb 100%);
         }
 
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
+        .rcs-hero .eyebrow {
+            color: #2487ce;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
         }
 
-        #why-us .content {
-            margin-bottom: 25px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        #why-us,
-        #services,
-        #pricing,
-        #contact {
-            padding: 45px 0;
+        .rcs-hero h1 {
+            color: #124265;
+            font-family: "Raleway", sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
 
-        .contact-information,
-        .contact-form {
-            padding: 22px;
+        .rcs-hero .rcs-lead {
+            color: #444;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 760px;
+            margin-bottom: 26px;
         }
 
-        #header .logo img {
-            max-height: 38px;
+        .rcs-hero .rcs-supporting {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 760px;
+            margin-bottom: 28px;
         }
-    }
-</style>
+
+        .rcs-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .rcs-hero .rcs-primary-button {
+            display: inline-block;
+            padding: 12px 26px;
+            border-radius: 4px;
+            background: #2487ce;
+            border: 2px solid #2487ce;
+            color: #fff;
+            font-weight: 600;
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .rcs-hero .rcs-primary-button:hover,
+        .rcs-hero .rcs-primary-button:focus {
+            background: #1b6fa9;
+            border-color: #1b6fa9;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .rcs-hero .rcs-secondary-link {
+            color: #124265;
+            font-weight: 600;
+        }
+
+        .rcs-hero .rcs-secondary-link:hover {
+            color: #2487ce;
+        }
+
+        .rcs-hero .rcs-service-summary {
+            margin-top: 30px;
+            color: #52616b;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .rcs-hero .rcs-service-summary span {
+            display: inline-block;
+            margin: 0 16px 0 0;
+        }
+
+        @media (max-width: 767px) {
+            .rcs-hero {
+                padding: 54px 0 48px;
+            }
+
+            .rcs-hero h1 {
+                font-size: 32px;
+            }
+
+            .rcs-hero .rcs-lead {
+                font-size: 17px;
+            }
+
+            .rcs-hero-actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .rcs-hero .rcs-primary-button {
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MHQV6D7');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Mailchimp -->
+    <script id="mcjs">
+        !function(c,h,i,m,p) {
+            m=c.createElement(h);
+            p=c.getElementsByTagName(h)[0];
+            m.async=1;
+            m.src=i;
+            p.parentNode.insertBefore(m,p);
+        }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/abe689b2b5401d4f0e1330479/c765493624c3aa249bd6a1f7e.js");
+    </script>
 </head>
 
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHQV6D7"
+                height="0" width="0"
+                style="display:none;visibility:hidden"
+                title="Google Tag Manager"></iframe>
+    </noscript>
+
+    <!-- Top Bar -->
+    <section id="topbar" class="d-none d-lg-block">
+        <div class="container d-flex">
+            <div class="contact-info mr-auto">
+                <ul>
+                    <li>
+                        <i class="icofont-envelope"></i>
+                        <a href="mailto:terry@reallycoolsoftware.tech">terry@reallycoolsoftware.tech</a>
+                    </li>
+                    <li>
+                        <i class="icofont-phone"></i>
+                        <a href="tel:+13186082041">+1 (318) 608-2041</a>
+                    </li>
+                    <li>
+                        <i class="icofont-clock-time icofont-flip-horizontal"></i>
+                        Mon-Fri 9am - 5pm or by Appointment
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container d-flex">
+
+            <div class="logo mr-auto">
+                <a href="index.html">
+                    <span>
+                        <img src="assets/img/clearicon.png" alt="ReallyCoolSoftware logo">
+                        ReallyCoolSoftware LLC
+                    </span>
+                </a>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block" aria-label="Main navigation">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="get-started-btn scrollto">Free Consultation</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Homepage Hero / Primary Business Message -->
+        <section id="home" class="rcs-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="eyebrow">Really Cool Software LLC</div>
+                        <h1>Technology Solutions That Help Small Businesses Grow.</h1>
+                        <p class="rcs-lead">
+                            Custom software development, cloud solutions, professional websites,
+                            and business automation.
+                        </p>
+                        <p class="rcs-supporting">
+                            We help small businesses solve technology challenges, streamline operations,
+                            and make better use of technology without the expense of maintaining a
+                            full-time development team.
+                        </p>
+                        <div class="rcs-hero-actions">
+                            <a href="#contact" class="rcs-primary-button">Schedule a Free Consultation</a>
+                            <a href="#services" class="rcs-secondary-link">Explore Our Services &raquo;</a>
+                        </div>
+                        <div class="rcs-service-summary" aria-label="Core services">
+                            <span><strong>Custom Software</strong></span>
+                            <span><strong>AWS &amp; Azure</strong></span>
+                            <span><strong>SharePoint</strong></span>
+                            <span><strong>Web Development</strong></span>
+                            <span><strong>Business Automation</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="why-us">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-4 col-lg-5" data-aos="fade-up">
+                        <div class="content">
+                            <h3>Experienced Technology. Practical Solutions.</h3>
+                            <p>
+                                Small businesses need technology that solves real problems,
+                                supports their goals, and makes day-to-day work easier.
+                            </p>
+                            <p>
+                                We bring software development, cloud, and business technology
+                                experience to projects of different sizes, with an emphasis on
+                                practical solutions and long-term value.
+                            </p>
+                            <p>
+                                Our mission is still simple: serving humanity and helping
+                                small businesses thrive. It's Really Cool!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-7 d-flex">
+                        <div class="icon-boxes d-flex flex-column justify-content-center w-100">
+                            <div class="row">
+
+                                <div class="col-xl-4 col-md-4 col-sm-6 d-flex align-items-stretch"
+                                     data-aos="fade-up" data-aos-delay="100">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="icofont-web"></i>
+                                        <h4>Web Presence</h4>
+                                        <ul>
+                                            <li>Responsive Website</li>
+                                            <li>Search Engine Optimized</li>
+                                            <li>Domain Registration</li>
+                                            <li>Email Forwarding</li>
+                                            <li>Free Site Hosting (1 year)</li>
+                                            <li>Facebook Page</li>
+                                            <li>LinkedIn Page</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-4 col-sm-6 d-flex align-items-stretch"
+                                     data-aos="fade-up" data-aos-delay="200">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="icofont-brand-microsoft"></i>
+                                        <h4>SharePoint Development</h4>
+                                        <ul>
+                                            <li>BI Solutions</li>
+                                            <li>Branding and Design</li>
+                                            <li>Corporate Intranets</li>
+                                            <li>Workflows</li>
+                                            <li>Records Management</li>
+                                            <li>Document Management</li>
+                                            <li>App Development</li>
+                                            <li>UI Development</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-4 col-sm-6 d-flex align-items-stretch"
+                                     data-aos="fade-up" data-aos-delay="300">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="icofont-cloudapp"></i>
+                                        <h4>AWS/Azure Cloud Computing</h4>
+                                        <ul>
+                                            <li>Cloud-Native Development</li>
+                                            <li>DevOps</li>
+                                            <li>Platform Migrations</li>
+                                            <li>Consultations</li>
+                                            <li>Records Management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services section-bg">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Services</h2>
+                    <p>
+                        We have the knowledge to bring powerful solutions
+                        to your small business at a lower cost to maintain.
+                    </p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-earth"></i></div>
+                            <h4 class="title"><a href="#pricing">Web Presence Packages</a></h4>
+                            <p class="description">
+                                We work with you to develop a web presence you can be proud of.
+                                We have the expertise to build and optimize a website that fits your business needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-cloudapp"></i></div>
+                            <h4 class="title"><a href="#pricing">Cloud Development</a></h4>
+                            <p class="description">
+                                Information is crucial, but infrastructure to support it is expensive.
+                                We develop cloud-native applications to support your business and cut costs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-phone"></i></div>
+                            <h4 class="title"><a href="#contact">Mobile App Development</a></h4>
+                            <p class="description">
+                                Today's customers expect to interact with businesses on mobile devices.
+                                We can help connect your business to the world.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-brand-microsoft"></i></div>
+                            <h4 class="title"><a href="#pricing">SharePoint Development</a></h4>
+                            <p class="description">
+                                Documents and records are the lifeblood of a small business.
+                                We help you organize, retain, and present those resources using SharePoint.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-settings"></i></div>
+                            <h4 class="title"><a href="#pricing">Cloud Migrations</a></h4>
+                            <p class="description">
+                                A proper migration plan is critical to your success in the cloud.
+                                Let us plan and manage your move to the cloud.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-tasks-alt"></i></div>
+                            <h4 class="title"><a href="#pricing">DevOps</a></h4>
+                            <p class="description">
+                                DevOps practices improve reliability, deployment efficiency,
+                                and control throughout your software delivery lifecycle.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2 data-aos="fade-up">Pricing</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                        <div class="box featured">
+                            <h3>Web Presence</h3>
+                            <h4><sup>$</sup>500<span> / Flat Rate</span></h4>
+                            <ul>
+                                <li>Responsive Website</li>
+                                <li>Search Engine Optimized</li>
+                                <li>Domain Registration</li>
+                                <li>Email Forwarding</li>
+                                <li>Site Hosted 1 Year on AWS</li>
+                                <li>Facebook Page</li>
+                                <li>LinkedIn Page</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#contact" class="btn-buy">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h3>SharePoint</h3>
+                            <h4><span>Price Quoted</span></h4>
+                            <ul>
+                                <li>Define Project Requirements</li>
+                                <li>Develop Project Plan</li>
+                                <li>Manage the Plan</li>
+                                <li>Develop Solution</li>
+                                <li>Implementation</li>
+                                <li>1 Month Post-Implementation Support</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#contact" class="btn-buy">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box">
+                            <h3>Cloud</h3>
+                            <h4><span>Price Quoted</span></h4>
+                            <ul>
+                                <li>Define Project Requirements</li>
+                                <li>Develop Project Plan</li>
+                                <li>Manage the Plan</li>
+                                <li>Develop Solution</li>
+                                <li>Implementation</li>
+                                <li>1 Month Post-Implementation Support</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#contact" class="btn-buy">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                        <div class="box">
+                            <span class="advanced">Advanced</span>
+                            <h3>RCS Compass</h3>
+                            <h4><sup>$</sup>1250<span> / month</span></h4>
+                            <ul>
+                                <li>10-Hour Monthly Block</li>
+                                <li>Additional Hours: $150/hour</li>
+                                <li>Business Hours Support</li>
+                                <li>Custom Development</li>
+                                <li>Migrations and Software Upgrades</li>
+                                <li>Cloud Solutions</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#contact" class="btn-buy">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section section-light">
+            <div class="container contact-grid">
+
+                <div class="contact-information">
+                    <div class="eyebrow">CONTACT US</div>
+
+                    <h2>Changing the world one line of code at a time</h2>
+
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <a href="tel:+13186082041">+1 (318) 608-2041</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:terry@reallycoolsoftware.tech">
+                            terry@reallycoolsoftware.tech
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="notice">
+                        <strong>Contact Form</strong>
+                        <p>Complete the form below and we'll get back to you.</p>
+                    </div>
+
+                    <form class="contact-form"
+                          id="contactForm"
+                          method="POST"
+                          action="https://api.web3forms.com/submit">
+
+                        <input type="hidden"
+                               name="access_key"
+                               value="7c608548-f865-4d60-86c6-688dcce33b29">
+
+                        <input type="hidden"
+                               name="subject"
+                               value="New ReallyCoolSoftware Website Inquiry">
+
+                        <input type="hidden"
+                               name="from_name"
+                               value="ReallyCoolSoftware Website">
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   autocomplete="name"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   autocomplete="email"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   autocomplete="tel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message"
+                                      name="message"
+                                      rows="5"
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit" class="button button-blue">
+                            SEND MESSAGE
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 footer-contact">
+                        <h3>ReallyCoolSoftware LLC</h3>
+                        <p>
+                            13319 S 21st St<br>
+                            Bixby, OK 74008<br>
+                            United States<br><br>
+
+                            <strong>Phone:</strong>
+                            <a href="tel:+13186082041">+1 (318) 608-2041</a><br>
+
+                            <strong>Email:</strong>
+                            <a href="mailto:terry@reallycoolsoftware.tech">
+                                terry@reallycoolsoftware.tech
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#pricing">Pricing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="FAQ.html">FAQ</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/G3t9ZbMB">Terms of Service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/iH6pLlMd">Privacy Policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/b3H3qoZw">Cookie Policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/k75tkWMw">Refund Policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.websitepolicies.com/policies/view/c1imx3oD">Disclaimer</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Web Presence Packages</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Cloud Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Mobile App Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">SharePoint Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Cloud Migrations</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">DevOps</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-lg-flex py-4">
+
+            <div class="mr-lg-auto text-center text-lg-left">
+                <div class="copyright">
+                    &copy; Copyright
+                    <strong><span>ReallyCoolSoftware LLC.</span></strong>
+                    All Rights Reserved
+                </div>
+
+                <div class="credits">
+                    Designed by
+                    <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+
+            <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+                <a href="https://www.facebook.com/ReallyCoolSoftware"
+                   class="facebook"
+                   aria-label="Facebook">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/company/really-cool-software-llc"
+                   class="linkedin"
+                   aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="icofont-simple-up"></i>
+    </a>
+
+    <!-- Vendor JavaScript -->
+    <!-- Load jQuery only once -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+</body>
+</html>
